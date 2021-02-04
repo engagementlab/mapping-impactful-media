@@ -11,13 +11,3 @@
         how to build Svelte apps.
     </p>
 </main>
-
-<style global lang="scss">
-    /* @import 'global'; */
-
-    @media (min-width: 640px) {
-        main {
-            max-width: none;
-        }
-    }
-</style>
