@@ -7,7 +7,7 @@
             }
         ],
         "editor.formatOnSave": true,
-        "eslint.linkTask.enabled": true,
+        "eslint.packageManager": "yarn",
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": true
         },
@@ -16,15 +16,14 @@
         },
         "[typescript]": {
             "editor.formatOnSave": true
-        }
+        },  
+        "[svelte]": {
+            "editor.defaultFormatter": "svelte.svelte-vscode"
+          },
     },
     "folders": [{
             "name": "./",
             "path": "."
-        },
-        {
-            "path": "./api",
-            "name": "API"
         },
         {
             "path": "./client",
