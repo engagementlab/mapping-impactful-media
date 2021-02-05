@@ -1,13 +1,20 @@
 <script lang="ts">
-    import Nav from './components/Nav.svelte';
-    export let name: string;
+    import { Router, Link, Route } from 'svelte-routing';
+    import Nav from './shared/Nav.svelte';
+    import Home from './home/Home.svelte';
+    import About from './about/About.svelte';
+    import PageNotFound from './shared/PageNotFound.svelte';
+    export let url = '';
 </script>
 
-<Nav />
-<main class="container mx-auto">
-    <h1>Hello {name}!</h1>
-    <p>
-        Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-        how to build Svelte apps.
-    </p>
-</main>
+<Router {url}>
+    <Nav />
+
+    <main class="container mx-auto">
+        <div>
+            <Route path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="**" component={PageNotFound} />
+        </div>
+    </main>
+</Router>

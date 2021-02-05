@@ -9,10 +9,14 @@ import
 	sveltePreprocess
  from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
+import replace from '@rollup/plugin-replace';
 import css from 'rollup-plugin-css-only';
 import postcss from 'rollup-plugin-postcss'
 
 const production = !process.env.ROLLUP_WATCH;
+const qa = process.env.QA;
+const api = 'http://localhost:7071/api';
+const API = (process.env.API || (production && !qa) ? '/api' : api);
 
 function serve() {
 	let server;
@@ -44,6 +48,15 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		replace({
+		  // 2 level deep object should be stringify
+		  process: JSON.stringify({
+			env: {
+			  isProd: production,
+			  SVELTE_APP_API: API,
+			},
+		  }),
+		}),
         postcss({
             extract: true
 		}),
