@@ -20,15 +20,20 @@
         "[svelte]": {
             "editor.formatOnSave": true,
             "editor.defaultFormatter": "svelte.svelte-vscode"
-          },
+        },
+        "debug.internalConsoleOptions": "neverOpen",
     },
-    "folders": [{
+    "folders": [
+        {
             "name": "./",
             "path": "."
         },
         {
             "path": "./client",
             "name": "Client"
+        },
+        {
+            "path": "../didactic-happiness"
         }
     ]
 }
