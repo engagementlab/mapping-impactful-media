@@ -1,0 +1,28 @@
+{
+  "apps": [{
+      "name": "mim-api",
+      "script": "npm",
+      "args": "start",
+      "exec_interpreter": "/home/node/.nvm/versions/node/v15.11.0/bin/node"
+    },
+    {
+      "name": "mim-client",
+      "script": "npm",
+      "args": "start",
+      "exec_interpreter": "/home/node/.nvm/versions/node/v15.11.0/bin/node"
+    }
+  ],
+  "deploy": {
+    "staging": {
+      "user": "node",
+      "host": "199.94.80.19",
+      "repo": "git@github.com:engagementlab/mapping-impactful-media.git",
+      "ref": "origin/master",
+      "path": "/srv/mapping-impactful-media",
+      "post-deploy": "bash ./scripts/deploy.sh",
+      "env": {
+        "NODE_ENV": "staging"
+      }
+    }
+  }
+}
