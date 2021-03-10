@@ -1,5 +1,5 @@
 {
-  "name": "mapping-impactful-media",
+  "name": "mapping-impactful-media-api",
   "version": "0.0.1",
   "description": "",
   "scripts": {
@@ -9,9 +9,14 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/mongodb": "^3.6.9",
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.4"
+  },
   "devDependencies": {
     "@azure/functions": "^1.0.2-beta2",
+    "@types/node": "^14.14.33",
     "typescript": "^3.3.3"
   }
 }

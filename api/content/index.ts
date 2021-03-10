@@ -1,17 +1,20 @@
-import { AzureFunction, Context, HttpRequest } from "@azure/functions"
+import { AzureFunction, Context, HttpRequest } from "@azure/functions";
+import { strict as assert } from "assert";
 
-const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
-    context.log('HTTP trigger function processed a request.');
-    const name = (req.query.name || (req.body && req.body.name));
-    const responseMessage = name
-        ? "Hello, " + name + ". This HTTP triggered function executed successfully."
-        : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
+import DB from "../shared/db";
 
-    context.res = {
-        // status: 200, /* Defaults to 200 */
-        body: responseMessage
-    };
-
+const httpTrigger: AzureFunction = async function (
+  context: Context,
+  req: HttpRequest
+): Promise<void> {
+  // Get the documents collection
+  const dbInstance = await DB();
+  // Find some documents
+  const docs = await dbInstance.collection("about").find({}).toArray();
+  assert(null !== docs);
+  console.log("Found the following records");
+  console.log(docs);
+  context.res.status(200).json(docs);
 };
 
 export default httpTrigger;
