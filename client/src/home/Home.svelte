@@ -4,4 +4,4 @@
     onMount(() => watchProduct());
 </script>
 
-<div>Home</div>
+<div>Coming Soon</div>
