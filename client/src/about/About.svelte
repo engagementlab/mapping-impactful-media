@@ -1,7 +1,15 @@
 <script>
     import { onMount } from 'svelte';
+    import { getDataAction } from '../data';
 
-    onMount(() => watchProduct());
+    let content = null;
+
+    onMount(() => getData());
+
+    async function getData() {
+        content = await getDataAction();
+        console.log(content);
+    }
 </script>
 
-<div>About</div>
+<h2>About</h2>
