@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "tsc",
+    "dev": "pkill func; func start & tsc -w",
     "watch": "tsc -w",
     "prestart": "npm run build",
     "start": "func start",
@@ -17,6 +18,12 @@
   "devDependencies": {
     "@azure/functions": "^1.0.2-beta2",
     "@types/node": "^14.14.33",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
     "typescript": "^3.3.3"
   }
 }
