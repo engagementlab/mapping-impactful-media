@@ -1,8 +1,8 @@
-import * as dotenv from "dotenv";
+import * as dotenv from 'dotenv';
 dotenv.config();
 
-import { Db, MongoClient } from "mongodb";
-import { strict as assert } from "assert";
+import { Db, MongoClient } from 'mongodb';
+import { strict as assert } from 'assert';
 
 const DB = async function (): Promise<Db> {
   const dbAddress = process.env.DB_URI;
@@ -10,7 +10,7 @@ const DB = async function (): Promise<Db> {
   try {
     const client = await MongoClient.connect(dbAddress);
     assert(null !== client);
-    console.log("Connected successfully to server");
+    console.log('Connected successfully to DB.');
 
     return client.db();
   } catch (e) {
