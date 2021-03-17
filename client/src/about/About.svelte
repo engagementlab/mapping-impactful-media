@@ -1,15 +1,14 @@
 <script>
-    import { onMount } from 'svelte';
+    import SvelteMarkdown from 'svelte-markdown';
     import { getDataAction } from '../data';
 
-    let content = null;
-
-    onMount(() => getData());
-
     async function getData() {
-        content = await getDataAction();
-        console.log(content);
+        const res = await getDataAction();
+        return res;
     }
 </script>
 
-<h2>About</h2>
+{#await getData() then content}
+    <h2>About</h2>
+    <SvelteMarkdown source={content.body} />
+{/await}
