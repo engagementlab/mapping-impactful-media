@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<nav class="container mx-auto flex flex-row">
+<nav class="container mx-auto px-5 flex flex-row">
     <div class="w-1/2">
         <img src="img/logo.png" alt="Logo" width="250" />
     </div>
