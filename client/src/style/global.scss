@@ -1,0 +1,21 @@
+@import 'variables';
+
+@import 'tailwindcss/dist/base.css';
+@import 'tailwindcss/dist/components.css';
+@import 'tailwindcss/dist/utilities.css';
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+.bold {
+    font-weight: 700;
+}
+
+// GLOBAL
+body {
+    font-size: 17px;
+    font-family: 'Work Sans', sans-serif;
+}
+h1 {
+    font-size: 4rem;
+}
