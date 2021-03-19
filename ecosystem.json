@@ -17,7 +17,7 @@
       "user": "node",
       "host": "199.94.80.19",
       "repo": "git@github.com:engagementlab/mapping-impactful-media.git",
-      "ref": "origin/master",
+      "ref": "origin/main",
       "path": "/srv/mapping-impactful-media",
       "post-deploy": "bash ./scripts/deploy.sh",
       "env": {
