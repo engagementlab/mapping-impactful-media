@@ -3,13 +3,12 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "build:tailwind": "cross-env NODE_ENV=production postcss public/tailwind.css -o public/index.css",
+    "build:tailwind": "cross-env NODE_ENV=production PURGE=true postcss public/tailwind.css -o public/index.css",
     "build:app": "rollup -c",
     "build": "npm-run-all build:tailwind build:app",
     "dev": "npm-run-all -p dev:*",
     "dev:client": "rollup -c -w",
-    "dev:api": "source ~/.nvm/nvm.sh; cd ../api; nvm use; yarn dev",
-    "dev:tailwind": "postcss public/tailwind.css -o public/index.css -w",
+    "dev:tailwind": "cross-env PURGE=false postcss public/tailwind.css -o public/index.css -w",
     "start": "sirv public --cors --single --host",
     "validate": "svelte-check"
   },
