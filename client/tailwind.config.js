@@ -1,14 +1,25 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-    purge: {
-      enabled: true,
-      content: ['./src/**/*.svelte'],
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.svelte'],
+  },
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Overpass', ...defaultTheme.fontFamily.sans],
+        'work-sans': ['Work Sans']
+      },
     },
-    darkMode: false, // or 'media' or 'class'
-    theme: {
-      extend: {},
-    },
-    variants: {
-      extend: {},
-    },
-    plugins: [],
-  };
+    colors: {
+      orange: '#f4751c',
+      peach: '#f8a66b'
+    }
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};
