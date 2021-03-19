@@ -1,9 +1,13 @@
 <script>
     import { onMount } from 'svelte';
     import Image from '../shared/Image.svelte';
-    const src = '/mapping-impactful-media/img/home-artwork';
 </script>
 
-<div>Coming Soon</div>
-
-<Image img_id="home-artwork" />
+<div class="flex flex-row">
+    <h1 class="w-1/2 font-work-sans font-bold text-orange text-6xl">
+        Exploring Media literacy practices for just and equitable futures.
+    </h1>
+    <div>
+        <Image img_id="home-artwork" />
+    </div>
+</div>
