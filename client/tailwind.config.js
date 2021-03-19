@@ -1,17 +1,14 @@
+const purge = process.env.PURGE === 'true';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-module.exports = {
-  purge: {
-    enabled: true,
-    content: ['./src/**/*.svelte', './src/**/*.html'],
-  },
+let config = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
     },
     fontFamily: {
       overpass: ['Overpass', ...defaultTheme.fontFamily.sans],
-      'work-sans': ['Work Sans'],
+      'work-sans': ['Work Sans']
     },
     colors: {
       orange: '#f4751c',
@@ -23,3 +20,11 @@ module.exports = {
   },
   plugins: [],
 };
+
+if(purge) {
+  config.purge ={
+    content: ['./src/**/*.svelte', './src/**/*.html'],
+  };
+}
+
+module.exports = config;
