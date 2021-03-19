@@ -4,7 +4,7 @@ dotenv.config();
 import { Db, MongoClient } from 'mongodb';
 import { strict as assert } from 'assert';
 
-const DB = async function (): Promise<Db> {
+export const DB = async function (): Promise<Db> {
   const dbAddress = process.env.DB_URI;
 
   try {
@@ -18,4 +18,6 @@ const DB = async function (): Promise<Db> {
     return null;
   }
 };
-export default DB;
+
+export const COLLECTION_PREFIX =
+  process.env.NODE_ENV === 'production' ? process.env.COLLECTION_PREFIX : '';
