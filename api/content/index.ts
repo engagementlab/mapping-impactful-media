@@ -10,10 +10,21 @@ const httpTrigger: AzureFunction = async function (
   // Get the DB instance
   const dbInstance = await DB();
   // Find About data
-  const docs = await dbInstance
-    .collection(`${COLLECTION_PREFIX}abouts`)
-    .findOne({});
-  assert(null !== docs);
+  let docs = [];
+  try {
+    docs = await dbInstance
+      .collection(`${COLLECTION_PREFIX}abouts`)
+      .findOne({});
+    assert.notEqual(null, docs);
+  } catch (e) {
+    context.res.status(500).send(e);
+  }
+
+  // Fallback
+  if (!docs || docs.length < 1) {
+    context.res.status(204).send('No docs.');
+    return;
+  }
 
   context.res.status(200).json(docs);
 };
