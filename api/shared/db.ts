@@ -1,19 +1,18 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
-
+import { Context } from '@azure/functions';
 import { Db, MongoClient } from 'mongodb';
 import { strict as assert } from 'assert';
 
-export const DB = async function (): Promise<Db> {
+export const DB = async function (context: Context): Promise<Db> {
   const dbAddress = process.env.DB_URI;
 
   try {
     const client = await MongoClient.connect(dbAddress);
     assert(null !== client);
-    console.log('Connected successfully to DB.');
+    context.log('Connected successfully to DB on ' + process.env.NODE_ENV);
 
     return client.db();
   } catch (e) {
+    context.log(`DB error: ${e}`);
     throw new Error(e);
     return null;
   }

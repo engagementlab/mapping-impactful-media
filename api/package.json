@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@types/mongodb": "^3.6.9",
+    "applicationinsights": "^1.8.10",
     "dotenv": "^8.2.0",
     "mongodb": "^3.6.4"
   },
