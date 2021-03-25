@@ -21,12 +21,7 @@ const httpTrigger: AzureFunction = async function (
     docs = await dbInstance
       .collection(`${COLLECTION_PREFIX}abouts`)
       .findOne({});
-//     For debugging, send env and db string
-    context.res.status(200).json({
-      env:process.env.NODE_ENV,
-      db: process.env.DB_URI,
-      docs});
-//     assert.notEqual(null, docs);
+    assert.notEqual(null, docs);
   } catch (e) {
     context.res.status(500).send(e);
   }
