@@ -11,20 +11,17 @@
     import Transition from './Transition.svelte';
     export let url = '';
 
-    const routes = { '/': Home, '/about': About };
+    const routes = { '/': Home, '/about': About, '**': PageNotFound };
 </script>
 
 <svelte:head><meta http-equiv="Accept-CH" content="DPR, Width" /></svelte:head>
 <Tailwind />
-<Nav />
+<div class="flex flex-col h-screen">
+    <Nav />
 
-<main class="container mx-auto px-5 font-overpass">
-    <Router {routes} />
-    <!-- <Transition>
-            <Route path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="**" component={PageNotFound} />
-        </Transition> -->
-</main>
+    <main class="container mx-auto px-5 flex-grow font-overpass">
+        <Router {routes} />
+    </main>
 
-<Footer />
+    <Footer />
+</div>
