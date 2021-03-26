@@ -1,5 +1,5 @@
-<script>
-    import { link } from 'svelte-spa-router';
+<script lang="ts">
+    import { url, isActive } from '@roxi/routify';
 </script>
 
 <nav class="container mx-auto px-5 flex flex-row">
@@ -8,8 +8,8 @@
     </div>
     <div class="flex items-center w-full">
         <ul class="flex justify-around w-full font-work-sans">
-            <li><a href="/" use:link>Home</a></li>
-            <li><a href="/about" use:link>About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
         </ul>
     </div>
 </nav>
