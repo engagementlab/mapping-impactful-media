@@ -9,10 +9,12 @@
 
 <svelte:head><meta http-equiv="Accept-CH" content="DPR, Width" /></svelte:head>
 <Tailwind />
-<Nav />
+<div class="flex flex-col h-screen">
+    <Nav />
 
-<main class="container mx-auto px-5 font-overpass">
-    <Router {routes} />
-</main>
+    <main class="container mx-auto px-5 flex-grow font-overpass">
+        <Router {routes} />
+    </main>
 
-<Footer />
+    <Footer />
+</div>
