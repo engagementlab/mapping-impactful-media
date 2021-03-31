@@ -7,7 +7,7 @@
     "dev:ssr": "run-p routify rollup",
     "dev:tailwind": "cross-env PURGE=false postcss public/tailwind.css -o public/index.css -w",
     "dev:api": "source ~/.nvm/nvm.sh; cd ../api; nvm use; yarn dev",
-    "build": "run-s build:* && mv dist/__app.html dist/index.html",
+    "build": "run-s build:* && mv dist/__app.html dist/index.html && mv public/routes.json dist/routes.json",
     "build:app": "routify -b && rollup -c",
     "build:tailwind": "cross-env NODE_ENV=production PURGE=true postcss public/tailwind.css -o dist/index.css",
     "serve": "spassr",
