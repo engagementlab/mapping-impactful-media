@@ -53,10 +53,11 @@ export default {
         // 2 level deep object should be stringify
         process: JSON.stringify({
           env: {
-            isProd: production,
+            IS_PROD: production,
             SVELTE_APP_API: API,
           },
         }),
+        preventAssignment: true,
       }),
         svelte({
             dev: !production, // run-time checks      
