@@ -7,7 +7,7 @@
     "dev:ssr": "run-p routify rollup",
     "dev:tailwind": "cross-env PURGE=false postcss public/tailwind.css -o public/index.css -w",
     "dev:api": "source ~/.nvm/nvm.sh; cd ../api; nvm use; yarn dev",
-    "build": "run-s build:*; mv dist/__app.html dist/index.html; mv public/routes.json dist/routes.json",
+    "build": "run-s build:*; mv dist/__app.html dist/index.html; cp public/routes.json dist/routes.json",
     "build:app": "routify -b && rollup -c",
     "build:tailwind": "cross-env NODE_ENV=production PURGE=true postcss public/tailwind.css -o dist/index.css",
     "serve": "spassr",
@@ -52,6 +52,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
     "node-sass": "^5.0.0",
+    "sass": "^1.32.8",
     "svelte-markdown": "^0.1.5"
   },
   "routify": {
