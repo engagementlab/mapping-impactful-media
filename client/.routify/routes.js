@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.15.1
- * File generated Wed Mar 31 2021 18:10:15 GMT-0400 (Eastern Daylight Time)
+ * File generated Thu Apr 01 2021 15:21:05 GMT-0400 (Eastern Daylight Time)
  */
 
 export const __version = "2.15.1"
-export const __timestamp = "2021-03-31T22:10:15.942Z"
+export const __timestamp = "2021-04-01T19:21:05.433Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -18,23 +18,55 @@ export const options = {}
 
 //tree
 export const _tree = {
+  "name": "_layout",
+  "filepath": "/_layout.svelte",
   "root": true,
   "ownMeta": {
     "preload": "proximity"
   },
+  "absolutePath": "/Users/john_richardson/Documents/Projects/mapping-impactful-media/client/src/pages/_layout.svelte",
   "children": [
     {
+      "isFile": true,
+      "isDir": false,
+      "file": "_fallback.svelte",
+      "filepath": "/_fallback.svelte",
+      "name": "_fallback",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/Users/john_richardson/Documents/Projects/mapping-impactful-media/client/src/pages/_fallback.svelte",
+      "importPath": "../src/pages/_fallback.svelte",
+      "isLayout": false,
+      "isReset": false,
+      "isIndex": false,
       "isFallback": true,
+      "isPage": false,
+      "ownMeta": {},
       "meta": {
         "recursive": true,
         "preload": "proximity",
         "prerender": true
       },
       "path": "/_fallback",
+      "id": "__fallback",
       "component": () => import('../src/pages/_fallback.svelte').then(m => m.default)
     },
     {
+      "isFile": true,
+      "isDir": false,
+      "file": "about.svelte",
+      "filepath": "/about.svelte",
+      "name": "about",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/Users/john_richardson/Documents/Projects/mapping-impactful-media/client/src/pages/about.svelte",
+      "importPath": "../src/pages/about.svelte",
+      "isLayout": false,
+      "isReset": false,
+      "isIndex": false,
+      "isFallback": false,
       "isPage": true,
+      "ownMeta": {},
       "meta": {
         "recursive": true,
         "preload": "proximity",
@@ -45,8 +77,21 @@ export const _tree = {
       "component": () => import('../src/pages/about.svelte').then(m => m.default)
     },
     {
+      "isFile": true,
+      "isDir": false,
+      "file": "index.svelte",
+      "filepath": "/index.svelte",
+      "name": "index",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/Users/john_richardson/Documents/Projects/mapping-impactful-media/client/src/pages/index.svelte",
+      "importPath": "../src/pages/index.svelte",
+      "isLayout": false,
+      "isReset": false,
       "isIndex": true,
+      "isFallback": false,
       "isPage": true,
+      "ownMeta": {},
       "meta": {
         "recursive": true,
         "preload": "proximity",
@@ -58,6 +103,15 @@ export const _tree = {
     }
   ],
   "isLayout": true,
+  "isReset": false,
+  "isIndex": false,
+  "isFallback": false,
+  "isPage": false,
+  "isFile": true,
+  "file": "_layout.svelte",
+  "ext": "svelte",
+  "badExt": false,
+  "importPath": "../src/pages/_layout.svelte",
   "meta": {
     "preload": "proximity",
     "recursive": true,
