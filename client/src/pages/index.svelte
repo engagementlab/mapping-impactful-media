@@ -9,6 +9,6 @@
         Exploring Media literacy practices for just and equitable futures.
     </h1>
     <div>
-        <Image img_id="home-artwork" />
+        <Image imgId="home-artwork" />
     </div>
 </div>
