@@ -10,8 +10,8 @@
 </script>
 
 <div in:fade={{ duration: 500 }}>
+    <h2>About</h2>
     {#await getData() then content}
-        <h2>About</h2>
         <SvelteMarkdown source={content.body} />
     {/await}
 </div>
