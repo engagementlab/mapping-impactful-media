@@ -5,10 +5,16 @@
     import Nav from './shared/Nav.svelte';
     import Footer from './shared/Footer.svelte';
     import Tailwind from './Tailwind.svelte';
+
+    const NOT_PROD = !process.env.IS_PROD;
 </script>
 
 <svelte:head><meta http-equiv="Accept-CH" content="DPR, Width" /></svelte:head>
-<Tailwind />
+
+{#if NOT_PROD}
+    <Tailwind />
+{/if}
+
 <div class="flex flex-col h-screen">
     <Nav />
 
