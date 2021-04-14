@@ -11,7 +11,7 @@ import getConfig from '@roxi/routify/lib/utils/config'
 import sveltePreprocess from "svelte-preprocess";
 import { injectManifest } from 'rollup-plugin-workbox'
 
-const production = !process.env.ROLLUP_WATCH;
+const production = process.env.NODE_ENV === 'production';
 const qa = process.env.QA;
 const api = 'http://localhost:7071/api';
 const API = (process.env.API || (production && !qa) ? '/api' : api);
