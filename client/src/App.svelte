@@ -1,17 +1,20 @@
 <script lang="ts">
-    import Router from 'svelte-spa-router';
+    import { Router } from '@roxi/routify';
+    import { routes } from '../.routify/routes';
+
     import Nav from './shared/Nav.svelte';
     import Footer from './shared/Footer.svelte';
-    import Home from './home/Home.svelte';
-    import About from './about/About.svelte';
-    import PageNotFound from './shared/PageNotFound.svelte';
     import Tailwind from './Tailwind.svelte';
 
-    const routes = { '/': Home, '/about': About, '**': PageNotFound };
+    const NOT_PROD = !process.env.IS_PROD;
 </script>
 
 <svelte:head><meta http-equiv="Accept-CH" content="DPR, Width" /></svelte:head>
-<Tailwind />
+
+{#if NOT_PROD}
+    <Tailwind />
+{/if}
+
 <div class="flex flex-col h-screen">
     <Nav />
 

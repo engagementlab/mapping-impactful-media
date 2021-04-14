@@ -1,27 +1,27 @@
 <script>
     import { Cloudinary } from '@cloudinary/base';
-
     import { format, quality } from '@cloudinary/base/actions/delivery';
     import { auto as autoFormat } from '@cloudinary/base/qualifiers/format';
     import { auto as autoQuality } from '@cloudinary/base/qualifiers/quality';
-    export let img_id;
+    export let imgId;
+    export let width;
     export let alt;
 
-    // Create and configure your Cloudinary instance.
+    // Cloudinary instance.
     const cld = new Cloudinary({
         cloud: {
             cloudName: 'engagement-lab-home',
         },
     });
 
-    // Instantiate a CloudinaryImage object for the image with public ID, 'front_face'.
-    const myImage = cld.image('mapping-impactful-media/img/' + img_id);
+    // Instantiate a CloudinaryImage object for the image with public ID
+    const cloudImage = cld.image('mapping-impactful-media/img/' + imgId);
 
-    myImage.delivery(format(autoFormat())); // optimzie with automatic delivery format
-    myImage.delivery(quality(autoQuality())); // optimzie with automatic quality reduction
-    myImage.addTransformation('w_auto,dpr_auto');
+    // cloudImage.delivery(format(autoFormat())); // optimzie with automatic delivery format
+    // cloudImage.delivery(quality(autoQuality())); // optimzie with automatic quality reduction
+    cloudImage.addTransformation(`w_${width ? width : 'auto'},dpr_auto`);
 
-    const myURL = myImage.toURL();
+    const cloudUrl = cloudImage.toURL();
 </script>
 
-<img sizes="100vw" src={myURL} {alt} />
+<img sizes="100vw" src={cloudUrl} {alt} />
