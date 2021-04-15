@@ -6,8 +6,15 @@ import * as appInsights from 'applicationinsights';
 if (process.env.NODE_ENV === 'production') appInsights.setup();
 
 import { strict as assert } from 'assert';
+import { Collection } from 'mongodb';
 
 import { DB, COLLECTION_PREFIX } from '../shared/db';
+
+// Store pluralized keys for collection names
+const modelRef = {
+  about: 'abouts',
+  home: 'homes',
+};
 
 const httpTrigger: AzureFunction = async function (
   context: Context,
@@ -15,20 +22,30 @@ const httpTrigger: AzureFunction = async function (
 ): Promise<void> {
   // Get the DB instance
   const dbInstance = await DB(context);
-  // Find About data
+
+  // Find specified data
   let docs = [];
+  // Get pluralized key of collection
+  const collectionName = modelRef[context.bindingData.name];
   try {
-    docs = await dbInstance
-      .collection(`${COLLECTION_PREFIX}abouts`)
-      .findOne({});
+    const collection: Collection = dbInstance.collection(
+      `${COLLECTION_PREFIX}${collectionName}`
+    );
+
+    // Get one or all records depending on "mod"
+    docs =
+      context.bindingData.mod === 'all'
+        ? await collection.find({}).project({ _id: 0, __v: 0 }).toArray()
+        : await collection.findOne({}, { projection: { _id: 0, __v: 0 } });
     assert.notEqual(null, docs);
+    console.log(docs);
   } catch (e) {
     context.res.status(500).send(e);
   }
 
   // Fallback
   if (!docs || docs.length < 1) {
-    context.res.status(204).send('No docs.');
+    context.res.status(204).send('No data found.');
     return;
   }
 
