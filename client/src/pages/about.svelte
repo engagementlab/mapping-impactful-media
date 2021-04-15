@@ -1,17 +1,17 @@
 <script>
     import { fade } from 'svelte/transition';
     import SvelteMarkdown from 'svelte-markdown';
-    import { getDataAction } from '../data';
+    import { getContentAction } from '../data';
 
     async function getData() {
-        const res = await getDataAction();
+        const res = await getContentAction('about');
         return res;
     }
 </script>
 
-<div in:fade={{ duration: 500 }}>
-    <h2>About</h2>
-    {#await getData() then content}
+<h2>About</h2>
+{#await getData() then content}
+    <div in:fade={{ duration: 500 }}>
         <SvelteMarkdown source={content.body} />
-    {/await}
-</div>
+    </div>
+{/await}
