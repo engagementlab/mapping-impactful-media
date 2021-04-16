@@ -1,7 +1,9 @@
 <script>
     import { fade } from 'svelte/transition';
     import SvelteMarkdown from 'svelte-markdown';
+
     import { getContentAction } from '../data';
+    import Image from '../shared/Image.svelte';
 
     async function getData() {
         const res = await getContentAction('about');
@@ -15,3 +17,4 @@
         <SvelteMarkdown source={content.body} />
     </div>
 {/await}
+<Image imgId="boy-1" responsive={true} />
