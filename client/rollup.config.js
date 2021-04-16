@@ -1,8 +1,11 @@
 import svelte from 'rollup-plugin-svelte-hot';
 import Hmr from 'rollup-plugin-hot'
+
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
+import json from '@rollup/plugin-json';
+
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import { copySync, removeSync } from 'fs-extra'
@@ -11,7 +14,7 @@ import getConfig from '@roxi/routify/lib/utils/config'
 import sveltePreprocess from "svelte-preprocess";
 import { injectManifest } from 'rollup-plugin-workbox'
 
-const production = process.env.NODE_ENV === 'production';
+const production = !process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'production';
 const qa = process.env.QA;
 const api = 'http://localhost:7071/api';
 const API = (process.env.API || (production && !qa) ? '/api' : api);
@@ -75,7 +78,7 @@ export default {
             dedupe: importee => !!importee.match(/svelte(\/|$)/)
         }),
         commonjs(),
-
+        json(),
         production && terser(),
         !production && !isNollup && serve(),
         !production && !isNollup && livereload(distDir), // refresh entire window when code is updated

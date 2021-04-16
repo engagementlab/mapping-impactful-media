@@ -14,7 +14,7 @@ let config = {
     },
     colors: {
       orange: '#f4751c',
-      peach: '#f8a66b',
+      peach: '#fabb97',
       yellow: '#fabb97',
       pink: '#f2949'
     }
