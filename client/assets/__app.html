@@ -19,10 +19,16 @@
         <!-- <link rel="stylesheet" href="/index.css" /> -->
         <link rel="modulepreload" href="/build/main.js" />
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.11.3/cloudinary-core-shrinkwrap.min.js"></script>
         <script type="module" src="/build/main.js"></script>
     </head>
 
     <body>
         <noscript>Please enable Javascript for best experience.</noscript>
+        <script>
+            const cl = cloudinary.Cloudinary.new({
+                cloud_name: 'engagement-lab-home',
+            });
+        </script>
     </body>
 </html>
