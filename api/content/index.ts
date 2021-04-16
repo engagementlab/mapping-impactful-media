@@ -38,7 +38,6 @@ const httpTrigger: AzureFunction = async function (
         ? await collection.find({}).project({ _id: 0, __v: 0 }).toArray()
         : await collection.findOne({}, { projection: { _id: 0, __v: 0 } });
     assert.notEqual(null, docs);
-    console.log(docs);
   } catch (e) {
     context.res.status(500).send(e);
   }
