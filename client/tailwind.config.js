@@ -16,7 +16,7 @@ let config = {
       orange: '#f4751c',
       peach: '#fabb97',
       yellow: '#fabb97',
-      pink: '#f2949'
+      pink: '#f29497'
     }
   },
   variants: {
@@ -29,6 +29,9 @@ if(purge) {
   config.purge ={
     content: ['./src/**/*.svelte', './src/**/*.html'],
   };
+}
+else {
+  config.purge = false;
 }
 
 module.exports = config;
