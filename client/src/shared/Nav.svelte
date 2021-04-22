@@ -1,6 +1,10 @@
 <script lang="ts">
     import { url, isActive } from '@roxi/routify';
     import Image from './Image.svelte';
+    const links = [
+        ['', 'Home'],
+        ['./about', 'About'],
+    ];
 </script>
 
 <nav class="container mx-auto px-5 flex flex-row">
@@ -13,8 +17,13 @@
     </div>
     <div class="flex items-center w-full">
         <ul class="flex justify-around w-full font-work-sans">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
+            {#each links as [path, name]}
+                <li class:opacity-50={$isActive(path)}>
+                    <a href={$url(path)}>
+                        {name}
+                    </a>
+                </li>
+            {/each}
         </ul>
     </div>
 </nav>

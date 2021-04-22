@@ -1,5 +1,4 @@
 <script>
-    // import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
     import Image from '../shared/Image.svelte';
     import SvelteMarkdown from 'svelte-markdown';
