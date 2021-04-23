@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.15.1
- * File generated Thu Apr 22 2021 14:03:40 GMT-0400 (Eastern Daylight Time)
+ * File generated Fri Apr 23 2021 17:22:49 GMT-0400 (Eastern Daylight Time)
  */
 
 export const __version = "2.15.1"
-export const __timestamp = "2021-04-22T18:03:40.051Z"
+export const __timestamp = "2021-04-23T21:22:49.121Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -18,13 +18,13 @@ export const options = {}
 
 //tree
 export const _tree = {
-  "name": "_layout",
-  "filepath": "/_layout.svelte",
+  "name": "_reset",
+  "filepath": "/_reset.svelte",
   "root": true,
   "ownMeta": {
     "preload": "proximity"
   },
-  "absolutePath": "/Users/john_richardson/Documents/Projects/mapping-impactful-media/client/src/pages/_layout.svelte",
+  "absolutePath": "/Users/john_richardson/Documents/Projects/mapping-impactful-media/client/src/pages/_reset.svelte",
   "children": [
     {
       "isFile": true,
@@ -77,6 +77,80 @@ export const _tree = {
       "component": () => import('../src/pages/about.svelte').then(m => m.default)
     },
     {
+      "isFile": false,
+      "isDir": true,
+      "file": "blog",
+      "filepath": "/blog",
+      "name": "blog",
+      "ext": "",
+      "badExt": false,
+      "absolutePath": "/Users/john_richardson/Documents/Projects/mapping-impactful-media/client/src/pages/blog",
+      "children": [
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "[post].svelte",
+          "filepath": "/blog/[post].svelte",
+          "name": "[post]",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "/Users/john_richardson/Documents/Projects/mapping-impactful-media/client/src/pages/blog/[post].svelte",
+          "importPath": "../src/pages/blog/[post].svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": "proximity",
+            "prerender": true
+          },
+          "path": "/blog/:post",
+          "id": "_blog__post",
+          "component": () => import('../src/pages/blog/[post].svelte').then(m => m.default)
+        },
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "index.svelte",
+          "filepath": "/blog/index.svelte",
+          "name": "index",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "/Users/john_richardson/Documents/Projects/mapping-impactful-media/client/src/pages/blog/index.svelte",
+          "importPath": "../src/pages/blog/index.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": true,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": "proximity",
+            "prerender": true
+          },
+          "path": "/blog/index",
+          "id": "_blog_index",
+          "component": () => import('../src/pages/blog/index.svelte').then(m => m.default)
+        }
+      ],
+      "isLayout": false,
+      "isReset": false,
+      "isIndex": false,
+      "isFallback": false,
+      "isPage": false,
+      "ownMeta": {},
+      "meta": {
+        "recursive": true,
+        "preload": "proximity",
+        "prerender": true
+      },
+      "path": "/blog"
+    },
+    {
       "isFile": true,
       "isDir": false,
       "file": "index.svelte",
@@ -103,23 +177,23 @@ export const _tree = {
     }
   ],
   "isLayout": true,
-  "isReset": false,
+  "isReset": true,
   "isIndex": false,
   "isFallback": false,
   "isPage": false,
   "isFile": true,
-  "file": "_layout.svelte",
+  "file": "_reset.svelte",
   "ext": "svelte",
   "badExt": false,
-  "importPath": "../src/pages/_layout.svelte",
+  "importPath": "../src/pages/_reset.svelte",
   "meta": {
     "preload": "proximity",
     "recursive": true,
     "prerender": true
   },
   "path": "/",
-  "id": "__layout",
-  "component": () => import('../src/pages/_layout.svelte').then(m => m.default)
+  "id": "__reset",
+  "component": () => import('../src/pages/_reset.svelte').then(m => m.default)
 }
 
 

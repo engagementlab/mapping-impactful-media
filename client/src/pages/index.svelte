@@ -10,7 +10,7 @@
     }
 </script>
 
-<div class="flex flex-col-reverse md:flex-row" in:fade={{ duration: 500 }}>
+<div class="flex flex-col-reverse md:flex-row">
     <h1
         class="w-full md:w-1/2 font-work-sans font-bold text-orange text-3xl md:text-6xl"
     >
