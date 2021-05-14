@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@font-face {
-    font-family: 'Bourbon';
-    src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1617300924/mapping-impactful-media/font/BourbonGrotesque-Regular.otf')
-        format('opentype');
-}
-@tailwind utilities;
