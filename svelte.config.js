@@ -1,5 +1,3 @@
-import preprocess from "svelte-preprocess";
-// svelte.config.js
 import adapter from '@sveltejs/adapter-static';
 
 export default {
@@ -10,6 +8,13 @@ export default {
 			assets: 'build',
 			fallback: null
 		}),
-		ssr: false,
+		vite: {
+			ssr: {
+				external: ['@apollo/client', 'graphql', 'zen-observable']
+			},
+			optimizeDeps: {
+				include: ['@apollo/client', 'graphql', 'zen-observable']
+			}
+		}
 	}
 };

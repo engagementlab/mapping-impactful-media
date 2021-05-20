@@ -38,6 +38,9 @@
         },
         {
             "path": "../didactic-happiness"
+        },
+        {
+            "path": "../mml/mapping-impactful-media/api"
         }
     ]
 }
