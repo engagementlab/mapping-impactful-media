@@ -2,7 +2,7 @@ import { client } from '$lib/Client.js';
 // import {gql} from '@apollo/client' ;
 
 import pkg from '@apollo/client/core/core.cjs.js';
-const gql = pkg;
+const {gql} = pkg;
 
 export const get = async request => {
     try {
@@ -10,10 +10,11 @@ export const get = async request => {
         {
             allMimAboutPages 
             {
-              body
+                body
             }
-          }
+        }
         `;
+        console.log('ql: '+client)
         const result = await client.query({
             query,
         });
@@ -24,9 +25,10 @@ export const get = async request => {
             body: result.data
         }
     } catch (err) {
+        console.log(err)
         return {
             status: 500,
-            error: 'Error retrieving data' + err
+            statusText: 'Error retrieving data' + err
         }
     }
 }
