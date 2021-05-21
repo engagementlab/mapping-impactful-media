@@ -1,8 +1,6 @@
-import { client } from '$lib/Client.js';
-// import {gql} from '@apollo/client' ;
-
-import pkg from '@apollo/client/core/core.cjs.js';
-const {gql} = pkg;
+import { client } from '$lib/apolloClient';
+import { apollo } from '$lib/apollo';
+const gql = apollo.gql;
 
 export const get = async request => {
     try {
@@ -14,18 +12,16 @@ export const get = async request => {
             }
         }
         `;
-        console.log('ql: '+client)
+        
         const result = await client.query({
             query,
         });
-        console.log('ql: '+result)
 
         return {
             status: 200,
             body: result.data
         }
     } catch (err) {
-        console.log(err)
         return {
             status: 500,
             statusText: 'Error retrieving data' + err
