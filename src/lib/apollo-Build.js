@@ -1,6 +1,5 @@
-import {
-    pkg
-} from '@apollo/client/core/core.cjs';
+import pkg from '@apollo/client/core/core.cjs.js';
+
 const {
     ApolloClient,
     HttpLink,

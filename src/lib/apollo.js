@@ -1,5 +1,9 @@
-
-import { ApolloClient, HttpLink,InMemoryCache, gql } from '@apollo/client';
+import {
+    ApolloClient,
+    HttpLink,
+    InMemoryCache,
+    gql
+} from '@apollo/client';
 
 export const apollo = {
     ApolloClient,

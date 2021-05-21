@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
+    "build-ci": "mv ./src/lib/apollo.js ./src/lib/apollo-Dev.js && mv ./src/lib/apollo-Build.js ./src/lib/apollo.js; svelte-kit build;",
     "preview": "svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. ."
@@ -14,8 +15,10 @@
     "@tailwindcss/jit": "^0.1.18",
     "autoprefixer": "^10.2.5",
     "cssnano": "^5.0.1",
-    "eslint": "^7.22.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-svelte3": "^3.2.0",
     "graphql": "^15.5.0",
     "postcss": "^8.2.10",
