@@ -1,18 +1,19 @@
 <script context="module">
   import Image from '$lib/Image.svelte';
+  import { getContent } from '$lib/data';
 
   export async function load({ page, fetch, session, context }) {
     try {
-      const res = await fetch('api', {
-        method: 'GET',
-        headers: {
-          'content-type': 'application/json',
-        },
-      });
-      const data = await res.json();
+      const res = await getContent(
+        fetch,
+        `allMimAboutPages 
+          {
+              body
+          }`
+      );
       return {
         props: {
-          content: data['allMimAboutPages'][0],
+          content: res['allMimAboutPages'][0],
         },
       };
     } catch (e) {
@@ -28,8 +29,6 @@
 
 <h2>About</h2>
 <Image imgId="boy-1" responsive={true} />
-<!-- {#await getData() then content} -->
 <div>
   <SvelteMarkdown source={content.body} />
 </div>
-<!-- {/await} -->

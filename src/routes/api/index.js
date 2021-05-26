@@ -1,18 +1,18 @@
-import { client } from '$lib/apolloClient';
-import { apollo } from '$lib/apollo';
+import {
+    client
+} from '$lib/apolloClient';
+import {
+    apollo
+} from '$lib/apollo';
 const gql = apollo.gql;
-
-export const get = async request => {
+export const post = async request => {
     try {
-        const query = gql`
+        const query = gql `
         {
-            allMimAboutPages 
-            {
-                body
-            }
+            ${request.body}
         }
         `;
-        
+
         const result = await client.query({
             query,
         });
