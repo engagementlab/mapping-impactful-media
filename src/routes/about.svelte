@@ -1,7 +1,5 @@
 <script context="module">
-  import { enhance } from '$lib/form';
   import Image from '$lib/Image.svelte';
-  // import { queryData } from './query/query';
 
   export async function load({ page, fetch, session, context }) {
     try {
