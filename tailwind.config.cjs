@@ -1,4 +1,5 @@
 const { tailwindExtractor } = require("tailwindcss/lib/lib/purgeUnusedStyles");
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
 	mode: "aot",
@@ -17,7 +18,21 @@ module.exports = {
 		safelist: [/^svelte-[\d\w]+$/],
 	},
 	theme: {
-		extend: {},
+		extend: {
+		  fontFamily: {
+			accent: 'Bourbon', 
+			overpass: ['Overpass', ...defaultTheme.fontFamily.sans],
+			sans: ['Overpass', ...defaultTheme.fontFamily.sans],
+			'work-sans': ['Work Sans']
+		  },
+		},
+		colors: {
+		  orange: '#f4751c',
+		  peach: '#fabb97',
+		  yellow: '#ffd87f',
+		  geranium: '#ffe3a1',
+		  pink: '#f29497'
+		}
 	},
 	variants: {
 		extend: {},
