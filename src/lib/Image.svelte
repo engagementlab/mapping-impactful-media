@@ -24,7 +24,7 @@
   // Instantiate a CloudinaryImage object for the image with public ID
   const cloudImage = cld.image('mapping-impactful-media/img/' + imgId);
 
-  // cloudImage.delivery(format(autoFormat())); // optimzie with automatic delivery format
+  cloudImage.addTransformation('f_auto'); // optimzie with automatic delivery format
   // cloudImage.delivery(quality(autoQuality())); // optimzie with automatic quality reduction
   cloudImage.addTransformation(`w_${width ? width : 'auto'},dpr_auto`);
 
