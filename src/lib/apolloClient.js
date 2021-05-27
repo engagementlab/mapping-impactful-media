@@ -1,4 +1,3 @@
-
 import { apollo } from '$lib/apollo';
 const { ApolloClient, HttpLink,InMemoryCache } = apollo;
 
@@ -14,7 +13,7 @@ class Client {
 
     setupClient() {
         const link = new HttpLink({
-            uri: 'https://api.elab.emerson.edu/ql/?schema=mapping-impactful-media',
+            uri: import.meta.env.VITE_API_URL || 'https://api.elab.emerson.edu/ql/?schema=mapping-impactful-media',
             fetch
         });
 
