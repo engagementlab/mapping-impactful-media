@@ -1,29 +1,25 @@
 <script context="module">
+  import SvelteMarkdown from 'svelte-markdown';
   import Image from '$lib/Image.svelte';
   import { getContent } from '$lib/data';
 
   export async function load({ page, fetch, session, context }) {
-    try {
-      const res = await getContent(
-        fetch,
-        `allMimAboutPages 
+    const res = await getContent(
+      fetch,
+      `allMimAboutPages 
           {
               body
           }`
-      );
-      return {
-        props: {
-          content: res['allMimAboutPages'][0],
-        },
-      };
-    } catch (e) {
-      console.error('error: ' + e);
-    }
+    );
+    return {
+      props: {
+        content: res['allMimAboutPages'][0],
+      },
+    };
   }
 </script>
 
 <script>
-  import SvelteMarkdown from 'svelte-markdown';
   export let content;
 </script>
 

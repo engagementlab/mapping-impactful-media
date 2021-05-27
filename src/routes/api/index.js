@@ -16,7 +16,6 @@ export const post = async request => {
         const result = await client.query({
             query,
         });
-
         return {
             status: 200,
             body: result.data

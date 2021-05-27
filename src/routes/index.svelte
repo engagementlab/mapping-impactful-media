@@ -1,6 +1,32 @@
-<script>
+<script context="module">
   import SvelteMarkdown from 'svelte-markdown';
   import Image from '$lib/Image.svelte';
+  import { getContent } from '$lib/data';
+
+  export async function load({ page, fetch, session, context }) {
+    const res = await getContent(
+      fetch,
+      `
+     allMimHomePages
+      {
+        intro
+        about    
+        facebook
+        partners
+      }
+    `
+    );
+    console.log(res);
+    return {
+      props: {
+        content: res['allMimHomePages'][0],
+      },
+    };
+  }
+</script>
+
+<script>
+  export let content;
 </script>
 
 <div class="container mx-auto px-5 flex flex-col-reverse md:flex-row">
@@ -13,37 +39,31 @@
     <Image imgId="home-artwork" />
   </div>
 </div>
-<div class="container mx-auto p-5 bg-peach md:text-xl">
-  <p>
-    Despite the growing work in media literacy across all levels of education,
-    there remains the question of what makes media literacy practice impactful?
-    How can impactful media literacy practices support more just, equitable, and
-    inclusive futures?
-  </p>
-  <br />
 
-  <p>
-    The Mapping Impactful Media Literacy Project explores how impact in media
-    literacy interventions is understood, develops indicators for impactful
-    practice, and offers education across formal and informal learning
-    ecosystems the opportunity to align their work within a responsive guide
-    that facilitates alignment with indicators for impact.
-  </p>
+<!-- Intro -->
+<div class="container mx-auto p-5 bg-peach md:text-xl">
+  <SvelteMarkdown source={content.intro} />
 </div>
 
+<!-- About -->
+<div class="container mx-auto px-5 flex flex-col-reverse md:flex-row">
+  <h1 class="w-full md:w-1/2 leading-7">
+    <SvelteMarkdown source={content.about} />
+  </h1>
+  <div>
+    <Image imgId="boy-2" width={311} />
+  </div>
+</div>
+
+<!-- Partners -->
 <div
   class="relative w-full md:w-1/4 z-10 h-24 font-work-sans bg-yellow bg-opacity-75 text-3xl md:text-5xl"
 >
   <h2 class="relative -top-5">Partners</h2>
 </div>
-
 <div class="relative -top-5 md:w-3/4 p-5 bg-geranium">
   <p class="text-center">
-    Research like this would not be possible without the support of
-    institutions, universities, and private investors who have an interest in
-    improving media literacy education. We are grateful for their assistance and
-    want to highlight a few of the institutions responsible for this
-    opportunity.
+    <SvelteMarkdown source={content.partners} />
   </p>
   <h3
     class="font-bold p-4 text-2xl text-center
