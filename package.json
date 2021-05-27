@@ -1,8 +1,8 @@
 {
-  "name": "~TODO~",
+  "name": "mapping-impactful-media",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "svelte-kit dev -p 8080",
     "build": "svelte-kit build",
     "build-ci": "mv ./src/lib/apollo.js ./src/lib/apollo-Dev.js && mv ./src/lib/apollo-Build.js ./src/lib/apollo.js; svelte-kit build;",
     "preview": "svelte-kit preview",
