@@ -5,6 +5,7 @@ import {
     apollo
 } from '$lib/apollo';
 const gql = apollo.gql;
+
 export const post = async request => {
     try {
         const query = gql `
@@ -12,7 +13,6 @@ export const post = async request => {
             ${request.body}
         }
         `;
-
         const result = await client.query({
             query,
         });
