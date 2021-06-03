@@ -10,6 +10,7 @@
   export let imgId;
   export let width;
   export let alt;
+  export let transforms;
 
   // Cloudinary instance.
   const cld = new Cloudinary({
@@ -21,12 +22,18 @@
     },
   });
 
-  // Instantiate a CloudinaryImage object for the image with public ID
-  const cloudImage = cld.image('mapping-impactful-media/img/' + imgId);
+  // Instantiate a CloudinaryImage object for the image with public ID;
+  // append dir prefix if missing
+  const prefix =
+    imgId.indexOf('mapping-impactful-media/img/') > -1
+      ? ''
+      : 'mapping-impactful-media/img/';
+  const cloudImage = cld.image(`${prefix}${imgId}`);
 
-  cloudImage.addTransformation('f_auto'); // optimzie with automatic delivery format
-  // cloudImage.delivery(quality(autoQuality())); // optimzie with automatic quality reduction
-  cloudImage.addTransformation(`w_${width ? width : 'auto'},dpr_auto`);
+  // cloudImage.addTransformation();
+  cloudImage.addTransformation(
+    transforms || `w_${width ? width : 'auto'},f_auto,dpr_auto`
+  );
 
   const cloudUrl = cloudImage.toURL();
 
