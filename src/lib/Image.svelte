@@ -7,6 +7,7 @@
 
   // import { AdvancedImage, lazyload, placeholder, accessibility } from '@cloudinary/svelte/dist/';
   export let responsive = false;
+  export let className;
   export let imgId;
   export let width;
   export let alt;
@@ -30,7 +31,11 @@
       : 'mapping-impactful-media/img/';
   const cloudImage = cld.image(`${prefix}${imgId}`);
 
-  // cloudImage.addTransformation();
+  // Merge classes
+  let allClasses = className ? className : '';
+  if (responsive) allClasses = `${allClasses} cld-responsive`;
+
+  // Create image transforms
   cloudImage.addTransformation(
     transforms || `w_${width ? width : 'auto'},f_auto,dpr_auto`
   );
@@ -46,7 +51,7 @@
 
 <img
   sizes="100vw"
-  class={responsive ? 'cld-responsive' : ''}
+  class={allClasses}
   data-src={responsive ? cloudUrl : undefined}
   src={!responsive ? cloudUrl : undefined}
   {alt}
