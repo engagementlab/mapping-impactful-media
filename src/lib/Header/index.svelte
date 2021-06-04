@@ -7,7 +7,7 @@
   ];
 </script>
 
-<nav class="container md:mx-20 my-7 flex flex-row">
+<nav class="container xl:mx-20 my-7 flex flex-row">
   <div class="w-3/4">
     <Image
       imgId="logo.png"
@@ -18,7 +18,7 @@
   <div class="flex items-center w-full">
     <ul class="flex justify-around w-full font-work-sans">
       {#each links as [path, name]}
-        <li class:opacity-50={path}>
+        <li class="hover:text-peach transition-colors">
           <a href={path}>
             {name}
           </a>
