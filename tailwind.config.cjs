@@ -20,13 +20,14 @@ module.exports = {
 	theme: {
 		extend: {
 		  fontFamily: {
-			accent: 'Bourbon', 
+			bourbon: 'Bourbon', 
 			overpass: ['Overpass', ...defaultTheme.fontFamily.sans],
 			sans: ['Overpass', ...defaultTheme.fontFamily.sans],
 			'work-sans': ['Work Sans']
 		  },
 		},
 		colors: {
+		  sunny: '#f9a66c',
 		  orange: '#f4751c',
 		  peach: '#fabb97',
 		  yellow: '#ffd87f',
