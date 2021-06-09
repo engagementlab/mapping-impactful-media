@@ -1,4 +1,6 @@
-const { tailwindExtractor } = require("tailwindcss/lib/lib/purgeUnusedStyles");
+const {
+	tailwindExtractor
+} = require("tailwindcss/lib/lib/purgeUnusedStyles");
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -19,20 +21,22 @@ module.exports = {
 	},
 	theme: {
 		extend: {
-		  fontFamily: {
-			bourbon: 'Bourbon', 
-			overpass: ['Overpass', ...defaultTheme.fontFamily.sans],
-			sans: ['Overpass', ...defaultTheme.fontFamily.sans],
-			'work-sans': ['Work Sans']
-		  },
-		},
-		colors: {
-		  sunny: '#f9a66c',
-		  orange: '#f4751c',
-		  peach: '#fabb97',
-		  yellow: '#ffd87f',
-		  geranium: '#ffe3a1',
-		  pink: '#f29497'
+			fontFamily: {
+				bourbon: 'Bourbon',
+				overpass: ['Overpass', ...defaultTheme.fontFamily.sans],
+				sans: ['Overpass', ...defaultTheme.fontFamily.sans],
+				'work-sans': ['Work Sans']
+			},
+			colors: {
+				bee: '#ffc94b',
+				hibiscus: '#f2aaac',
+				sunny: '#f9a66c',
+				orange: '#f4751c',
+				peach: '#fabb97',
+				yellow: '#ffd87f',
+				geranium: '#ffe3a1',
+				pink: '#f29497'
+			},
 		}
 	},
 	variants: {

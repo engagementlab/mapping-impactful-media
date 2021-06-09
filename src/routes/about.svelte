@@ -23,7 +23,7 @@
   export let content;
 </script>
 
-<h2>About</h2>
+<h2>About - WORK IN PROGRESS</h2>
 <Image imgId="boy-1" responsive={true} />
 <div>
   <SvelteMarkdown source={content.body} />

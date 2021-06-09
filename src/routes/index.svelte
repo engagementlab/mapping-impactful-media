@@ -59,22 +59,55 @@
 
 <!-- About -->
 <div
-  class="container mx-auto p-5 xl:mt-48 xl:ml-96 flex flex-col-reverse md:flex-row"
+  class="container mx-auto p-5 xl:mt-48 xl:ml-90 flex flex-col-reverse md:flex-row"
 >
-  <h1 class="w-full md:w-3/4 xl:w-5/12 xl:pt-32 leading-9">
+  <h1 class="w-full md:w-3/4 xl:w-5/12 xl:pt-32 xl:ml-36 leading-9">
     <SvelteMarkdown source={homeContent.about} />
   </h1>
-  <div class="xl:ml-20">
+  <div class="xl:ml-48">
     <Image imgId="boy-2" width={311} />
   </div>
 </div>
 
+<!-- Word Cloud -->
+<div class="container mx-auto p-5 xl:w-1/2 font-bourbon text-2xl text-center">
+  <span class="bg-peach px-3">Care</span>
+
+  <span class="bg-bee text-white px-10">Equity</span>
+  <div class="my-4">
+    <span class="bg-bee text-white px-3">Civic Agency</span>
+    <span class="bg-hibiscus">Critical Consciousness</span>
+  </div>
+  <div class="my-4">
+    <span class="bg-hibiscus">Anti-Racism</span>
+    <span class="bg-peach px-2">Imagination</span>
+  </div>
+  <div class="my-4">
+    <span class="bg-bee text-white px-1">Anti-Oppression</span>
+    <span class="bg-peach px-1">Community</span>
+  </div>
+  <div class="my-4">
+    <span class="bg-hibiscus px-2">Movement Building</span>
+    <span class="bg-bee text-white px-2">Emancipation</span>
+  </div>
+  <div class="my-4">
+    <span class="bg-peach px-2">Creative Initiatives</span>
+  </div>
+</div>
+
 <!-- Team -->
-<div
-  class="my-20 pb-10 w-full xl:w-3/4 xl:ml-96 xl:w-1/2 bg-pink font-work-sans"
->
-  <h2 class="relative -top-8 text-3xl md:text-5xl">Meet the Team</h2>
-  <div class="flex flex-col md:flex-row">
+<div class="my-20 pb-10 w-full xl:ml-96 xl:w-5/12 bg-hibiscus">
+  <h2 class="relative -top-8 text-3xl md:text-5xl font-work-sans">
+    Meet the Team
+  </h2>
+  <p class="p-5 leading-9">
+    Mapping impactful media literacy practices involve the dedicated efforts of
+    critical media literacy scholars, practitioners and activists from across
+    the United States. The lead research team is made up of four scholars and
+    supported by our advisory group, design team, and research partners in
+    Australia.
+  </p>
+  <div class="flex flex-col md:flex-row font-work-sans">
     {#each people as person}
       <div
         class="w-full md:w-1/2 mt-10 flex flex-col justify-center text-center"
@@ -82,8 +115,8 @@
         <Image
           className="self-center"
           imgId={person.image.publicId}
-          width={216}
-          transforms={'c_fill,g_face,w_216,h_217,r_150'}
+          width={159}
+          transforms={'c_fill,g_face,w_159,h_159,r_150'}
           alt={`Headshot image for ${person.name}`}
         />
         <h3 class="font-bourbon">
@@ -91,7 +124,7 @@
         </h3>
         <!-- <p class="w-4/5 self-center">
           <SvelteMarkdown source={person.bio} />
-        </p> -->
+        </span> -->
       </div>
     {/each}
   </div>
