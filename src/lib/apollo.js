@@ -3,7 +3,7 @@ import {
     HttpLink,
     InMemoryCache,
     gql
-} from '@apollo/client';
+} from '@apollo/client/core';
 
 export const apollo = {
     ApolloClient,
