@@ -1,6 +1,5 @@
 import cookie from 'cookie';
 import { v4 as uuid } from '@lukeed/uuid';
-
 export const handle = async ({ request, resolve }) => {
 	const cookies = cookie.parse(request.headers.cookie || '');
 	request.locals.userid = cookies.userid || uuid();
@@ -10,7 +9,6 @@ export const handle = async ({ request, resolve }) => {
 		request.method = request.query.get('_method').toUpperCase();
 	}
 
-	console.trace()
 	const response = await resolve(request);
 
 	if (!cookies.userid) {

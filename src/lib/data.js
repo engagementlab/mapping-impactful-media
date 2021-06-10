@@ -28,9 +28,9 @@ export async function getContent(fetch, query) {
 
         return {
             status: res.status,
-            error: new Error(`Could not load ${url}`)
+            error: new Error(`API error: ${res.json()}`)
         };
     } catch (e) {
-        console.error('error: ' + e);
+        console.error(`API error: ${e}`);
     }
 }
