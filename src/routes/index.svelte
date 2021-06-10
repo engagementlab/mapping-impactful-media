@@ -1,6 +1,7 @@
 <script context="module">
   import SvelteMarkdown from 'svelte-markdown';
   import Image from '$lib/Image.svelte';
+  import Button from '$lib/Button/index.svelte';
   import { getContent } from '$lib/data';
 
   export async function load({ page, fetch, session, context }) {
@@ -63,6 +64,7 @@
 >
   <h1 class="w-full md:w-3/4 xl:w-5/12 xl:pt-32 xl:ml-36 leading-9">
     <SvelteMarkdown source={homeContent.about} />
+    <Button label={'Learn More'} link="/about" />
   </h1>
   <div class="xl:ml-48">
     <Image imgId="boy-2" width={311} />
@@ -128,6 +130,7 @@
       </div>
     {/each}
   </div>
+  <Button label="See the full team" link="/team" className="mx-10" />
 </div>
 
 <!-- Partners -->
@@ -139,11 +142,10 @@
 <div
   class="relative -top-5 w-full lg:w-10/12 xl:w-11/12 lg:ml-20 p-5 bg-geranium"
 >
-  <p class="text-center">
-    <SvelteMarkdown source={homeContent.partners} />
-  </p>
-
   <div class="flex flex-col items-center">
+    <p class="xl:w-1/3 leading-9 text-center">
+      <SvelteMarkdown source={homeContent.partners} />
+    </p>
     <h3
       class="font-bold font-work-sans pt-20 text-2xl
   "
@@ -151,21 +153,21 @@
       Lead Partner
     </h3>
     <Image className="self-center pt-16" imgId="namle" width="425" />
-  </div>
 
-  <h3
-    class="font-bold font-work-sans pt-20 text-2xl text-center
+    <h3
+      class="font-bold font-work-sans pt-20 text-2xl
   "
-  >
-    Research Partners
-  </h3>
-  <div
-    class="flex flex-col lg:flex-row items-center justify-around h-96 lg:h-60"
-  >
-    <Image imgId="emerson" width="243" />
-    <Image imgId="texas-am" width="243" />
-    <Image imgId="iowa" width="136" />
-    <Image imgId="amla" width="177" />
+    >
+      Research Partners
+    </h3>
+    <div
+      class="flex flex-col lg:flex-row items-center justify-around w-full h-96 lg:h-60"
+    >
+      <Image imgId="emerson" width="243" />
+      <Image imgId="texas-am" width="243" />
+      <Image imgId="iowa" width="136" />
+      <Image imgId="amla" width="177" />
+    </div>
   </div>
 
   <p class="md:mx-20 text-center italic text-sm leading-6">

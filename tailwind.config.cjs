@@ -29,13 +29,14 @@ module.exports = {
 			},
 			colors: {
 				bee: '#ffc94b',
+				geranium: '#ffe3a1',
 				hibiscus: '#f2aaac',
-				sunny: '#f9a66c',
 				orange: '#f4751c',
 				peach: '#fabb97',
+				pink: '#f29497',
+				strawberry: '#f17e90',
+				sunny: '#f9a66c',
 				yellow: '#ffd87f',
-				geranium: '#ffe3a1',
-				pink: '#f29497'
 			},
 		}
 	},
