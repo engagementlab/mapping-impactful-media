@@ -10,10 +10,10 @@ export default {
 		}),
 		vite: {
 			ssr: {
-				external: ['@apollo/client', 'graphql', 'zen-observable']
+				external: [ 'graphql', 'zen-observable', 'react']
 			},
 			optimizeDeps: {
-				include: ['@apollo/client', 'graphql', 'zen-observable']
+				include: [ 'graphql', 'zen-observable']
 			}
 		}
 	}
