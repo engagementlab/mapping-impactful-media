@@ -1,6 +1,6 @@
 {
   "name": "mapping-impactful-media",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "svelte-kit dev -p 3001",
     "build": "svelte-kit build",
