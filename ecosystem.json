@@ -4,7 +4,7 @@
       "name": "mim-client",
       "script": "npm",
       "args": "start",
-      "exec_interpreter": "/home/node/.nvm/versions/node/v15.11.0/bin/node"
+      "exec_interpreter": "/home/node/.nvm/versions/node/v14.13.1/bin/node"
     }
   ],
   "deploy": {
