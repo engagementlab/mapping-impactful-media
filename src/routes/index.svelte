@@ -62,10 +62,10 @@
 <div
   class="container mx-auto p-5 xl:mt-48 xl:ml-90 flex flex-col-reverse md:flex-row"
 >
-  <h1 class="w-full md:w-3/4 xl:w-5/12 xl:pt-32 xl:ml-36 leading-9">
+  <div class="w-full md:w-3/4 xl:w-5/12 xl:pt-32 xl:ml-36 leading-9">
     <SvelteMarkdown source={homeContent.about} />
     <Button label={'Learn More'} link="/about" />
-  </h1>
+  </div>
   <div class="xl:ml-48">
     <Image imgId="boy-2" width={311} />
   </div>
