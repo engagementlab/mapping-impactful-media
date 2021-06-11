@@ -23,6 +23,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				bourbon: 'Bourbon',
+				geotica: 'GeoticaW01-FourOpen',
 				overpass: ['Overpass', ...defaultTheme.fontFamily.sans],
 				sans: ['Overpass', ...defaultTheme.fontFamily.sans],
 				'work-sans': ['Work Sans']
@@ -40,8 +41,8 @@ module.exports = {
 			},
 		}
 	},
-	variants: {
-		extend: {},
-	},
-	plugins: [],
+	corePlugins: {
+		listStyleType: false,
+		listStylePosition: false,
+	}
 };

@@ -1,5 +1,9 @@
 import adapter from '@sveltejs/adapter-static';
 
+import preprocess from 'svelte-preprocess';
+import scss from 'svelte-preprocess';
+import autoprefixer from 'autoprefixer';
+
 export default {
 	kit: {
 		adapter: adapter({
@@ -16,5 +20,12 @@ export default {
 				include: [ 'graphql', 'zen-observable']
 			}
 		}
-	}
+	},
+	preprocess: preprocess({ scss: {
+
+		includePaths: ['src'],
+	},
+		postcss: {
+		  plugins: autoprefixer,
+		}, })
 };
