@@ -51,6 +51,7 @@
 
 <img
   sizes="100vw"
+  aria-roledescription="image"
   class={allClasses}
   data-src={responsive ? cloudUrl : undefined}
   src={!responsive ? cloudUrl : undefined}

@@ -11,6 +11,8 @@
               intro
               assumptions
               phase1
+              phase2
+              phase3
           }`
     );
     return {
@@ -33,29 +35,67 @@
     <div
       class="w-full md:w-3/4 xl:w-5/12 xl:pt-32 xl:ml-36 leading-9 list-inside"
     >
-      <SvelteMarkdown class="" source={content.intro} />
+      <SvelteMarkdown source={content.intro} />
     </div>
     <div class="xl:ml-48">
-      <Image imgId="boy-1" width={420} />
+      <Image
+        imgId="boy-1"
+        width={420}
+        alt="A cartoonish drawing of a boy tending a garden"
+      />
     </div>
   </div>
 
   <!-- Assumptions -->
   <div class="flex justify-center">
-    <div class="lg:w-1/3 px-24 py-16 bg-pink">
+    <div class="lg:w-1/3 px-6 lg:px-24 py-16 bg-pink">
       <SvelteMarkdown source={content.assumptions} />
     </div>
   </div>
 
   <!-- Phases -->
-  <h4 class="mt-28 lg:ml-80 font-work-sans text-2xl lg:w-1/3 text-center">
+  <h4 class="mb-28 mt-28 lg:ml-80 font-work-sans text-2xl lg:w-1/3 text-center">
     To address these assumptions, this project advances an “ecosystem approach”
     to research that is comprised of the following three phases:
   </h4>
-  <Image imgId="girl-1" width={234} />
+  <Image className="relative z-10" imgId="girl-1" width={234} />
+  <div class="relative h-40 -mt-64 w-full bg-sunny" />
 
-  <div class="font-geotica text-9xl">1</div>
-  <SvelteMarkdown source={content.phase1} />
+  <div
+    class="relative z-10 font-geotica text-9xl text-right lg:text-left -mt-12"
+  >
+    1
+  </div>
+  {content.phase1}
+  <p class="p-4">
+    <SvelteMarkdown
+      source={content.phase1.replace(/(\r\n|\n|\r)/gm, ' <br />')}
+    />
+  </p>
+
+  <Image className="relative z-10" imgId="professor" width={480} />
+  <div class="relative h-40 -mt-64 w-full bg-strawberry" />
+
+  <div
+    class="relative z-10 font-geotica text-9xl text-right lg:text-left -mt-12"
+  >
+    2
+  </div>
+  <p class="p-4">
+    <SvelteMarkdown source={content.phase2} />
+  </p>
+
+  <Image className="relative z-10" imgId="girl-2" width={541} />
+  <div class="relative h-40 -mt-64 w-full bg-bee" />
+
+  <div
+    class="relative z-10 font-geotica text-9xl text-right lg:text-left -mt-12"
+  >
+    3
+  </div>
+  <p class="p-4">
+    <SvelteMarkdown source={content.phase3} />
+  </p>
 </div>
 
 <style lang="scss">
