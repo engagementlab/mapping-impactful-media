@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass&family=Work+Sans:wght@400;700&display=swap');
 @tailwind base;
+@layer base {
+    p {
+      @apply my-4;
+    }
+}
 @tailwind components;
 
 @font-face {

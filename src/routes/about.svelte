@@ -66,11 +66,8 @@
   >
     1
   </div>
-  {content.phase1}
   <p class="p-4">
-    <SvelteMarkdown
-      source={content.phase1.replace(/(\r\n|\n|\r)/gm, ' <br />')}
-    />
+    {@html content.phase1}
   </p>
 
   <Image className="relative z-10" imgId="professor" width={480} />
