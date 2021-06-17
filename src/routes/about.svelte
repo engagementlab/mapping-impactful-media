@@ -15,9 +15,19 @@
               phase3Html
           }`
     );
+    // We have to split phase 2/3 strings for layout purposes
+    const phase2Html = res['allMimAboutPages'][0]['phase2Html'];
+    const phase2SplitAt = phase2Html.indexOf('</h2>');
+    const phase3Html = res['allMimAboutPages'][0]['phase3Html'];
+    const phase3SplitAt = phase3Html.indexOf('</h2>');
+
     return {
       props: {
         content: res['allMimAboutPages'][0],
+        phase2Heading: phase2Html.substring(0, phase2SplitAt),
+        phase2Content: phase2Html.substring(phase2SplitAt + 5),
+        phase3Heading: phase3Html.substring(0, phase3SplitAt),
+        phase3Content: phase3Html.substring(phase3SplitAt + 5),
       },
     };
   }
@@ -25,6 +35,10 @@
 
 <script>
   export let content;
+  export let phase2Heading;
+  export let phase2Content;
+  export let phase3Heading;
+  export let phase3Content;
 </script>
 
 <!-- Intro -->
@@ -54,45 +68,75 @@
   </div>
 
   <!-- Phases -->
-  <h4 class="mb-28 mt-28 lg:ml-80 font-work-sans text-2xl lg:w-1/3 text-center">
+  <h4 class="mb-28 mt-28 lg:ml-80 font-work-sans text-2xl lg:w-2/5 text-center">
     To address these assumptions, this project advances an “ecosystem approach”
     to research that is comprised of the following three phases:
   </h4>
-  <Image className="relative z-10" imgId="girl-1" width={234} />
-  <div class="relative h-40 -mt-64 w-full md:w-1/2 bg-sunny" />
 
-  <div
-    class="relative z-10 font-geotica text-9xl text-right md:text-left md:ml-64 -mt-12"
-  >
-    1
-  </div>
-  <p class="p-4 md:ml-64">
-    {@html content.phase1Html}
-  </p>
+  <div class="relative xl:w-3/4 xl:left-64">
+    <Image
+      className="relative z-10"
+      imgId="girl-1"
+      width={234}
+      alt={'A cartoonish drawing of a young woman carrying a bag full of carrots and bread. The bag has the words "Save the Earth" on it.'}
+    />
+    <div class="relative h-40 -mt-64 w-full md:w-1/2 xl:w-2/5 bg-peach" />
 
-  <Image className="relative z-10" imgId="professor" width={480} />
-  <div class="relative h-40 -mt-64 md:w-1/2 md:left-1/2 bg-coral">
     <div
-      class="font-geotica text-9xl text-right md:text-center md:w-9/12 pt-20"
+      class="relative z-10 font-geotica text-9xl text-right md:text-left md:ml-64 xl:ml-80 -mt-20"
     >
-      2
+      1
     </div>
+    <p class="p-4 xl:p-0 mt-14 md:ml-64 xl:ml-80 xl:w-2/5 leading-9">
+      {@html content.phase1Html}
+    </p>
   </div>
-  <p class="p-4 mt-10">
-    {@html content.phase2Html}
-  </p>
 
-  <Image className="relative z-10" imgId="girl-2" width={541} />
-  <div class="relative h-40 -mt-64 w-full bg-bee" />
-
-  <div
-    class="relative z-10 font-geotica text-9xl text-right lg:text-left -mt-12"
-  >
-    3
+  <div class="relative xl:w-3/4 xl:left-64">
+    <Image
+      className="relative z-10"
+      imgId="professor"
+      width={480}
+      alt={'A cartoonish drawing of a professorial-looking person in front of a chalkboard. They are holding a red book with the title "Civic Media", and the chalkboard has the words "How can media literacy be used to empower diverse voices?" on it.'}
+    />
+    <div class="relative h-40 -mt-64 md:w-1/2 md:left-1/2 bg-coral">
+      <h1
+        class="font-geotica text-9xl text-right md:text-center md:w-9/12 pt-20"
+      >
+        2
+      </h1>
+    </div>
+    <p class="relative mt-14 md:left-1/2 md:w-1/3 lg:w-1/4">
+      {@html phase2Heading}
+    </p>
+    <p class="p-4 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 leading-9">
+      {@html phase2Content}
+    </p>
   </div>
-  <p class="p-4">
-    {@html content.phase3Html}
-  </p>
+
+  <div class="relative xl:w-3/4 xl:left-64">
+    <Image
+      className="relative z-10 md:left-1/3 lg:left-1/2 xl:top-36"
+      imgId="girl-2"
+      width={541}
+      alt={'A cartoonish drawing of the side-view of the bottom three-quarters of a woman\'s head. On the other top quarter above her head are drawings of a wifi signal symbol, flowers and plants, and circles, as well as a red thought bubble that has the words "How does this make me feel?" in it.'}
+    />
+    <div class="relative h-40 -mt-64 md:w-1/3 bg-bee">
+      <div
+        class="relative z-10 font-geotica text-9xl text-right lg:text-left pt-20 pr-5 lg:pl-40"
+      >
+        3
+      </div>
+    </div>
+    <p
+      class="relative p-4 xl:p-0 mt-14 md:ml-64 xl:p-0 xl:ml-80 md:w-1/2 lg:w-1/3"
+    >
+      {@html phase3Heading}
+    </p>
+    <p class="p-4 mt-0 xl:mt-14 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 leading-9">
+      {@html phase3Content}
+    </p>
+  </div>
 </div>
 
 <style lang="scss">
