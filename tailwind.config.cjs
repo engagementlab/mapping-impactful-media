@@ -30,6 +30,7 @@ module.exports = {
 			},
 			colors: {
 				bee: '#ffc94b',
+				coral: '#f17a7e',
 				geranium: '#ffe3a1',
 				hibiscus: '#f2aaac',
 				orange: '#f4751c',

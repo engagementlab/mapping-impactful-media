@@ -10,9 +10,9 @@
           {
               intro
               assumptions
-              phase1
-              phase2
-              phase3
+              phase1Html
+              phase2Html
+              phase3Html
           }`
     );
     return {
@@ -48,7 +48,7 @@
 
   <!-- Assumptions -->
   <div class="flex justify-center">
-    <div class="lg:w-1/3 px-6 lg:px-24 py-16 bg-pink">
+    <div class="lg:w-3/4 xl:w-1/3 px-6 lg:px-24 py-16 bg-pink">
       <SvelteMarkdown source={content.assumptions} />
     </div>
   </div>
@@ -59,27 +59,27 @@
     to research that is comprised of the following three phases:
   </h4>
   <Image className="relative z-10" imgId="girl-1" width={234} />
-  <div class="relative h-40 -mt-64 w-full bg-sunny" />
+  <div class="relative h-40 -mt-64 w-full md:w-1/2 bg-sunny" />
 
   <div
-    class="relative z-10 font-geotica text-9xl text-right lg:text-left -mt-12"
+    class="relative z-10 font-geotica text-9xl text-right md:text-left md:ml-64 -mt-12"
   >
     1
   </div>
-  <p class="p-4">
-    {@html content.phase1}
+  <p class="p-4 md:ml-64">
+    {@html content.phase1Html}
   </p>
 
   <Image className="relative z-10" imgId="professor" width={480} />
-  <div class="relative h-40 -mt-64 w-full bg-strawberry" />
-
-  <div
-    class="relative z-10 font-geotica text-9xl text-right lg:text-left -mt-12"
-  >
-    2
+  <div class="relative h-40 -mt-64 md:w-1/2 md:left-1/2 bg-coral">
+    <div
+      class="font-geotica text-9xl text-right md:text-center md:w-9/12 pt-20"
+    >
+      2
+    </div>
   </div>
-  <p class="p-4">
-    <SvelteMarkdown source={content.phase2} />
+  <p class="p-4 mt-10">
+    {@html content.phase2Html}
   </p>
 
   <Image className="relative z-10" imgId="girl-2" width={541} />
@@ -91,7 +91,7 @@
     3
   </div>
   <p class="p-4">
-    <SvelteMarkdown source={content.phase3} />
+    {@html content.phase3Html}
   </p>
 </div>
 
