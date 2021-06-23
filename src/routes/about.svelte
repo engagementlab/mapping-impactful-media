@@ -44,8 +44,13 @@
 <!-- Intro -->
 <div id="about">
   <div
-    class="container mx-auto p-5 xl:mt-48 xl:ml-90 flex flex-col-reverse md:flex-row"
+    class="container mx-auto flex justify-center mt-14 mb-14 xl:mt-48 xl:ml-90 text-2xl md:text-4xl text-sunny"
   >
+    <h1 class="font-bourbon text-center w-full md:w-8/12 lg:w-4/12">
+      Mapping Impactful Media Literacy Practices
+    </h1>
+  </div>
+  <div class="container mx-auto p-5 flex flex-col-reverse md:flex-row">
     <div
       class="w-full md:w-3/4 xl:w-5/12 xl:pt-32 xl:ml-36 leading-9 list-inside"
     >

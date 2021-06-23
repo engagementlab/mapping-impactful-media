@@ -1,7 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 
 import preprocess from 'svelte-preprocess';
-import scss from 'svelte-preprocess';
 import autoprefixer from 'autoprefixer';
 
 export default {
@@ -13,19 +12,24 @@ export default {
 			fallback: null
 		}),
 		vite: {
+			// server: {
+			// 	hmr: false,
+			// },
 			ssr: {
-				external: [ 'graphql', 'zen-observable', 'react']
+				external: ['graphql', 'zen-observable', 'react']
 			},
 			optimizeDeps: {
-				include: [ 'graphql', 'zen-observable']
+				include: ['graphql', 'zen-observable']
 			}
 		}
 	},
-	preprocess: preprocess({ scss: {
+	preprocess: preprocess({
+		scss: {
 
-		includePaths: ['src'],
-	},
+			includePaths: ['src'],
+		},
 		postcss: {
-		  plugins: autoprefixer,
-		}, })
+			plugins: autoprefixer,
+		},
+	})
 };
