@@ -26,8 +26,6 @@
 </script>
 
 <script>
-  import { person } from '@cloudinary/base/qualifiers/focusOn';
-
   export let peopleResearch;
 </script>
 
@@ -72,11 +70,17 @@
             alt={`Headshot image for ${person.name}`}
           />
           <p>
-            <a href={person.website} class="flex font-bourbon">
-              <h3 class=" border-b-2 border-black">
+            {#if person.website}
+              <a href={person.website} class="flex">
+                <h3 class="font-bourbon border-b-2 border-black">
+                  {person.name} - {person.title}
+                </h3>
+              </a>
+            {:else}
+              <h3 class="font-bourbon">
                 {person.name} - {person.title}
               </h3>
-            </a>
+            {/if}
             <SvelteMarkdown source={person.bio} />
           </p>
         </div>
@@ -110,11 +114,17 @@
             alt={`Headshot image for ${person.name}`}
           />
           <p>
-            <a href={person.website} class="flex font-bourbon">
-              <h3 class=" border-b-2 border-black">
+            {#if person.website}
+              <a href={person.website} class="flex">
+                <h3 class="font-bourbon border-b-2 border-black">
+                  {person.name} - {person.title}
+                </h3>
+              </a>
+            {:else}
+              <h3 class="font-bourbon">
                 {person.name} - {person.title}
               </h3>
-            </a>
+            {/if}
             <SvelteMarkdown source={person.bio} />
           </p>
         </div>
@@ -148,11 +158,17 @@
             alt={`Headshot image for ${person.name}`}
           />
           <p>
-            <a href={person.website} class="flex font-bourbon">
-              <h3 class=" border-b-2 border-black">
+            {#if person.website}
+              <a href={person.website} class="flex">
+                <h3 class="font-bourbon border-b-2 border-black">
+                  {person.name} - {person.title}
+                </h3>
+              </a>
+            {:else}
+              <h3 class="font-bourbon">
                 {person.name} - {person.title}
               </h3>
-            </a>
+            {/if}
             <SvelteMarkdown source={person.bio} />
           </p>
         </div>
@@ -190,11 +206,17 @@
           alt={`Headshot image for ${person.name}`}
         />
         <p>
-          <a href={person.website} class="flex font-bourbon">
-            <h3 class=" border-b-2 border-black">
+          {#if person.website}
+            <a href={person.website} class="flex">
+              <h3 class="font-bourbon border-b-2 border-black">
+                {person.name} - {person.title}
+              </h3>
+            </a>
+          {:else}
+            <h3 class="font-bourbon">
               {person.name} - {person.title}
             </h3>
-          </a>
+          {/if}
           <SvelteMarkdown source={person.bio} />
         </p>
       </div>
