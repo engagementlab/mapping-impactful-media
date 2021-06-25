@@ -3,6 +3,32 @@
   import Image from '$lib/Image.svelte';
   import { getContent } from '$lib/data';
 
+  /*!
+   * Group items from an array together by some criteria or value.
+   * (c) 2019 Tom Bremmer (https://tbremer.com/) and Chris Ferdinandi (https://gomakethings.com), MIT License,
+   * @param  {Array}           arr      The array to group items from
+   * @param  {String|Function} criteria The criteria to group by
+   * @return {Object}                   The grouped object
+   */
+  var groupBy = function (arr, criteria) {
+    return arr.reduce(function (obj, item) {
+      // Check if the criteria is a function to run on the item or a property of it
+      var key =
+        typeof criteria === 'function' ? criteria(item) : item[criteria];
+
+      // If the key doesn't exist yet, create it
+      if (!obj.hasOwnProperty(key)) {
+        obj[key] = [];
+      }
+
+      // Push the value to the object
+      obj[key].push(item);
+
+      // Return the object to the next item in the loop
+      return obj;
+    }, {});
+  };
+
   export async function load({ page, fetch, session, context }) {
     const res = await getContent(
       fetch,
@@ -11,15 +37,29 @@
         title
         bio
         website
+        category
         image {
           publicId
         }
       }`
     );
 
+    // let allPeople = ;
+
     return {
       props: {
-        peopleResearch: res['allMimPeople'],
+        peopleResearch: res['allMimPeople'].filter((p) => {
+          return p.category === 'research';
+        }),
+        peopleNamle: res['allMimPeople'].filter((p) => {
+          return p.category === 'namle';
+        }),
+        peopleBoard: res['allMimPeople'].filter((p) => {
+          return p.category === 'board';
+        }),
+        peopleDesign: res['allMimPeople'].filter((p) => {
+          return p.category === 'design';
+        }),
       },
     };
   }
@@ -27,6 +67,9 @@
 
 <script>
   export let peopleResearch;
+  export let peopleNamle;
+  export let peopleBoard;
+  export let peopleDesign;
 </script>
 
 <!-- Intro -->
@@ -104,7 +147,7 @@
       Education, whose leaders help coordinate our process.
     </p>
     <div class="mx-auto w-11/12 xl:w-1/2 mt-10">
-      {#each peopleResearch as person}
+      {#each peopleNamle as person}
         <div class="flex flex-col md:flex-row gap-4 mb-5">
           <Image
             className="self-center"
@@ -148,7 +191,7 @@
       to guide the researchers and assembly of the final project.
     </p>
     <div class="mx-auto w-11/12 xl:w-1/2 mt-10">
-      {#each peopleResearch as person}
+      {#each peopleBoard as person}
         <div class="flex flex-col md:flex-row gap-4 mb-5">
           <Image
             className="self-center"
@@ -196,7 +239,7 @@
     initiatives within their respective fields
   </p>
   <div class="mx-auto w-11/12 xl:w-1/2 mt-10">
-    {#each peopleResearch as person}
+    {#each peopleDesign as person}
       <div class="flex flex-col md:flex-row gap-4 mb-5">
         <Image
           className="self-center"
