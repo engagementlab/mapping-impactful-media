@@ -5,7 +5,7 @@
     // ['/', 'Home'],
     ['/about', 'About'],
     ['/team', 'Team'],
-    ['/guide', 'Field Guide'],
+    // ['/guide', 'Field Guide'],
   ];
 </script>
 

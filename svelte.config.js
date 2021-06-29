@@ -12,9 +12,12 @@ export default {
 			fallback: null
 		}),
 		vite: {
-			// server: {
-			// 	hmr: false,
-			// },
+			mode: 'production',
+			server: {
+				port: 3000,
+				https: true,
+				hmr: false
+			},
 			ssr: {
 				external: ['graphql', 'zen-observable', 'react']
 			},
