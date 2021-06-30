@@ -6,27 +6,13 @@ import autoprefixer from 'autoprefixer';
 export default {
   kit: {
 
-    target: '#svelte',
     adapter: adapter({
       // default options are shown
       pages: 'build',
       assets: 'build',
-      fallback: 'index.html',
+      fallback: null,
     }),
-    // ssr: false,
-    prerender: {
-      enabled: true,
-      crawl: true,
-	  force: true,
-    },
-    // hydrate: false,
     vite: {
-      mode: 'production',
-      server: {
-        port: 3000,
-        https: true,
-        hmr: false,
-      },
       ssr: {
         external: ['graphql', 'zen-observable', 'react'],
       },
@@ -44,4 +30,5 @@ export default {
       plugins: autoprefixer,
     },
   }),
+  //   }),
 };

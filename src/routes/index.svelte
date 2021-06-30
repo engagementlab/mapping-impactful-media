@@ -1,4 +1,5 @@
 <script context="module">
+  export const prerender = true;
   import SvelteMarkdown from 'svelte-markdown';
   import Image from '$lib/Image.svelte';
   import Button from '$lib/Button/index.svelte';

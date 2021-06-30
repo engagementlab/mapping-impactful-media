@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "svelte-kit dev -p 3001",
     "build": "svelte-kit build",
-    "build-ci": "mv ./src/lib/apollo.js ./src/lib/apollo-Dev.js && mv ./src/lib/apollo-Build.js ./src/lib/apollo.js; svelte-kit build --verbose;",
+    "build-ci": "mv ./src/lib/apollo.js ./src/lib/apollo-Dev.js && mv ./src/lib/apollo-Build.js ./src/lib/apollo.js; svelte-kit build --verbose; rm ./src/lib/apollo-Dev.js && mv ./src/lib/apollo.js ./src/lib/apollo-Build.js;",
     "preview": "svelte-kit preview -p 8080",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. ."
