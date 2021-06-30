@@ -22,7 +22,8 @@
           publicId
         }
       }
-    `
+    `,
+      'home'
     );
     return {
       props: {

@@ -13,7 +13,8 @@
               phase1Html
               phase2Html
               phase3Html
-          }`
+          }`,
+      'about'
     );
     // We have to split phase 2/3 strings for layout purposes
     const phase2Html = res['allMimAboutPages'][0]['phase2Html'];

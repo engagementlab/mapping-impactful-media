@@ -15,7 +15,8 @@
         image {
           publicId
         }
-      }`
+      }`,
+      'team'
     );
     return {
       props: {
