@@ -12,14 +12,16 @@ export default {
       assets: 'build',
       fallback: null,
     }),
-    vite: {
-      ssr: {
-        external: ['graphql', 'zen-observable', 'react'],
-      },
-      optimizeDeps: {
-        include: ['graphql', 'zen-observable'],
-      },
-    },
+    hydrate: false,
+    router: false,
+    // vite: {
+    //   ssr: {
+    //     external: ['graphql', 'zen-observable', 'react'],
+    //   },
+    //   optimizeDeps: {
+    //     include: ['graphql', 'zen-observable'],
+    //   },
+    // },
   },
   preprocess: preprocess({
     scss: {

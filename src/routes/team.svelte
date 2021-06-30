@@ -84,20 +84,15 @@
             transforms={'c_fill,g_face,w_159,h_159,r_150'}
             alt={`Headshot image for ${person.name}`}
           />
-          <p>
-            {#if person.website}
-              <a href={person.website} class="flex">
-                <h3 class="font-bourbon border-b-2 border-black">
-                  {person.name} - {person.title}
-                </h3>
-              </a>
-            {:else}
-              <h3 class="font-bourbon">
-                {person.name} - {person.title}
-              </h3>
-            {/if}
+          <div>
+            <!-- {#if person.website} -->
+            <!-- <a href={person.website} class="flex"> -->
+            <h3 class="font-bourbon">
+              {person.name} - {person.title}
+            </h3>
+            <!-- </a> -->
             <SvelteMarkdown source={person.bio} />
-          </p>
+          </div>
         </div>
       {/each}
     </div>
@@ -128,20 +123,15 @@
             transforms={'c_fill,g_face,w_159,h_159,r_150'}
             alt={`Headshot image for ${person.name}`}
           />
-          <p>
-            {#if person.website}
-              <a href={person.website} class="flex">
-                <h3 class="font-bourbon border-b-2 border-black">
-                  {person.name} - {person.title}
-                </h3>
-              </a>
-            {:else}
-              <h3 class="font-bourbon">
-                {person.name} - {person.title}
-              </h3>
-            {/if}
+          <div>
+            <!-- {#if person.website} -->
+            <!-- <a href={person.website} class="flex"> -->
+            <h3 class="font-bourbon">
+              {person.name} - {person.title}
+            </h3>
+            <!-- </a> -->
             <SvelteMarkdown source={person.bio} />
-          </p>
+          </div>
         </div>
       {/each}
     </div>
@@ -172,20 +162,15 @@
             transforms={'c_fill,g_face,w_159,h_159,r_150'}
             alt={`Headshot image for ${person.name}`}
           />
-          <p>
-            {#if person.website}
-              <a href={person.website} class="flex">
-                <h3 class="font-bourbon border-b-2 border-black">
-                  {person.name} - {person.title}
-                </h3>
-              </a>
-            {:else}
-              <h3 class="font-bourbon">
-                {person.name} - {person.title}
-              </h3>
-            {/if}
+          <div>
+            <!-- {#if person.website} -->
+            <!-- <a href={person.website} class="flex"> -->
+            <h3 class="font-bourbon">
+              {person.name} - {person.title}
+            </h3>
+            <!-- </a> -->
             <SvelteMarkdown source={person.bio} />
-          </p>
+          </div>
         </div>
       {/each}
     </div>
@@ -220,20 +205,15 @@
           transforms={'c_fill,g_face,w_159,h_159,r_150'}
           alt={`Headshot image for ${person.name}`}
         />
-        <p>
-          {#if person.website}
-            <a href={person.website} class="flex">
-              <h3 class="font-bourbon border-b-2 border-black">
-                {person.name} - {person.title}
-              </h3>
-            </a>
-          {:else}
-            <h3 class="font-bourbon">
-              {person.name} - {person.title}
-            </h3>
-          {/if}
+        <div>
+          <!-- {#if person.website} -->
+          <!-- <a href={person.website} class="flex"> -->
+          <h3 class="font-bourbon">
+            {person.name} - {person.title}
+          </h3>
+          <!-- </a> -->
           <SvelteMarkdown source={person.bio} />
-        </p>
+        </div>
       </div>
     {/each}
   </div>
