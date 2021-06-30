@@ -4,13 +4,13 @@
   "scripts": {
     "dev": "svelte-kit dev -p 3001",
     "build": "svelte-kit build",
-    "build-ci": "mv ./src/lib/apollo.js ./src/lib/apollo-Dev.js && mv ./src/lib/apollo-Build.js ./src/lib/apollo.js; svelte-kit build;",
+    "build-ci": "mv ./src/lib/apollo.js ./src/lib/apollo-Dev.js && mv ./src/lib/apollo-Build.js ./src/lib/apollo.js; svelte-kit build --verbose;",
     "preview": "svelte-kit preview -p 8080",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.9",
+    "@sveltejs/adapter-static": "^1.0.0-next.13",
     "@sveltejs/kit": "next",
     "@tailwindcss/jit": "^0.1.18",
     "autoprefixer": "^10.2.5",
