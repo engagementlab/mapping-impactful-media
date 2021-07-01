@@ -20,7 +20,7 @@
     </a>
   </div>
   <div class="flex items-center w-full">
-    <ul class="flex justify-around w-full font-work-sans">
+    <ul class="flex justify-evenly w-full font-work-sans">
       {#each links as [path, name]}
         <li class="hover:text-peach transition-colors">
           <a href={path}>
