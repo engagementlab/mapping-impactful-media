@@ -18,16 +18,16 @@
     );
     // We have to split phase 2/3 strings for layout purposes
     const phase2Html = res['allMimAboutPages'][0]['phase2Html'];
-    const phase2SplitAt = phase2Html.indexOf('</h2>');
+    const phase2SplitAt = phase2Html.indexOf('</h2>') + 1;
     const phase3Html = res['allMimAboutPages'][0]['phase3Html'];
-    const phase3SplitAt = phase3Html.indexOf('</h2>');
+    const phase3SplitAt = phase3Html.indexOf('</h2>') + 1;
 
     return {
       props: {
         content: res['allMimAboutPages'][0],
-        phase2Heading: phase2Html.substring(0, phase2SplitAt),
+        phase2Heading: phase2Html.substring(0, phase2SplitAt + 5),
         phase2Content: phase2Html.substring(phase2SplitAt + 5),
-        phase3Heading: phase3Html.substring(0, phase3SplitAt),
+        phase3Heading: phase3Html.substring(0, phase3SplitAt + 5),
         phase3Content: phase3Html.substring(phase3SplitAt + 5),
       },
     };
@@ -93,9 +93,9 @@
     >
       1
     </div>
-    <p class="p-4 xl:p-0 mt-14 md:ml-64 xl:ml-80 xl:w-2/5 leading-9">
+    <div class="p-4 xl:p-0 mt-14 md:ml-64 xl:ml-80 xl:w-2/5 leading-9">
       {@html content.phase1Html}
-    </p>
+    </div>
   </div>
 
   <div class="relative xl:w-3/4 xl:left-64">
@@ -112,12 +112,12 @@
         2
       </h1>
     </div>
-    <p class="relative mt-14 md:left-1/2 md:w-1/3 lg:w-1/4">
+    <div class="relative mt-14 md:left-1/2 md:w-1/3 lg:w-1/4">
       {@html phase2Heading}
-    </p>
-    <p class="p-4 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 leading-9">
+    </div>
+    <div class="p-4 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 leading-9">
       {@html phase2Content}
-    </p>
+    </div>
   </div>
 
   <div class="relative xl:w-3/4 xl:left-64">
@@ -134,14 +134,14 @@
         3
       </div>
     </div>
-    <p
+    <div
       class="relative p-4 xl:p-0 mt-14 md:ml-64 xl:p-0 xl:ml-80 md:w-1/2 lg:w-1/3"
     >
       {@html phase3Heading}
-    </p>
-    <p class="p-4 mt-0 xl:mt-14 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 leading-9">
+    </div>
+    <div class="p-4 mt-0 xl:mt-14 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 leading-9">
       {@html phase3Content}
-    </p>
+    </div>
   </div>
 </div>
 

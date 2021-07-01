@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { page } from '$app/stores';
   import Image from '$lib/Image.svelte';
 
   const links = [
@@ -22,10 +23,16 @@
   <div class="flex items-center w-full">
     <ul class="flex justify-evenly w-full font-work-sans">
       {#each links as [path, name]}
-        <li class="hover:text-peach transition-colors">
-          <a href={path}>
-            {name}
-          </a>
+        <li>
+          {#if $page.path !== path}
+            <a href={path} class="hover:text-peach transition-colors">
+              {name}
+            </a>
+          {:else}
+            <span class="underline">
+              {name}
+            </span>
+          {/if}
         </li>
       {/each}
     </ul>

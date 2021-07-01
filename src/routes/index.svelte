@@ -126,9 +126,6 @@
         <h3 class="font-bourbon">
           {person.name} - {person.title}
         </h3>
-        <!-- <p class="w-4/5 self-center">
-          <SvelteMarkdown source={person.bio} />
-        </span> -->
       </div>
     {/each}
   </div>
