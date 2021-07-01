@@ -2,7 +2,9 @@ import adapter from '@sveltejs/adapter-static';
 
 import preprocess from 'svelte-preprocess';
 import autoprefixer from 'autoprefixer';
+// import { readFileSync } from 'fs';
 
+// const pkg = JSON.parse(readFileSync(new URL('package.json', import.meta.url), 'utf8'));
 export default {
   kit: {
 
@@ -14,14 +16,6 @@ export default {
     }),
     hydrate: false,
     router: false,
-    // vite: {
-    //   ssr: {
-    //     external: ['graphql', 'zen-observable', 'react'],
-    //   },
-    //   optimizeDeps: {
-    //     include: ['graphql', 'zen-observable'],
-    //   },
-    // },
   },
   preprocess: preprocess({
     scss: {
