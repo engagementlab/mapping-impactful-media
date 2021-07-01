@@ -1,0 +1,57 @@
+name: build-tests-export
+on: [push, pull_request]
+env:
+  AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+  CI: true
+  DB_URI: ${{ secrets.DB_URI }}
+  NODE_ENV: staging
+  ACTIONS_RUNNER_DEBUG: true
+jobs:
+  build-tests:
+    name: "Make production build, run a11y tests"
+    # Do not run on automated commits (interpretation of TravisCI feature)
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14]
+    steps:
+      - name: Set DNS for later mongo cmd
+        run: |
+            sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+      - name: Checkout code on HEAD
+        uses: actions/checkout@v2
+        if: ${{ github.event_name != 'pull_request' }}
+
+      # Do this only for PR to production, since we need to work on master during later commit, and PR's work off of merge ref
+      - name: Checkout code of PR HEAD
+        uses: actions/checkout@v2
+        if: ${{ github.event_name == 'pull_request' }}
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      
+      - name: Setup node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install global packages
+        run : npm install -g pa11y-ci @lhci/cli@0.6.x
+    
+      - name: Build static build of client
+        working-directory: ./client
+        run: chmod 777 ./scripts/build.sh && ./scripts/build.sh
+
+      # Deploy static build to Azure storage if succeeded and commit DB export and build, if on prod PR
+      - name: Deploy static build, backup QA database
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GHA_RUNNUM: ${{ github.run_number }}
+        # Install azure-cli, run Bash scripts
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+          chmod 777 ./scripts/db.sh && ./scripts/db.sh
+          chmod 777 ./scripts/upload.sh && ./scripts/upload.sh
+          chmod 777 ./scripts/commit.sh && ./scripts/commit.sh
