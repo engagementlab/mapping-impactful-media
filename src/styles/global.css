@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&family=Work+Sans:wght@400;700&display=swap');
+@tailwind base;
+@layer base {
+  p {
+    @apply my-4;
+  }
+}
+@tailwind components;
+
+@font-face {
+  font-family: 'Bourbon';
+  src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1617300924/mapping-impactful-media/font/BourbonGrotesque-Regular.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'GeoticaW01-FourOpen';
+  src: url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.eot');
+  src: url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.svg#GeoticaW01-FourOpen')
+      format('svg');
+}
+
+@tailwind utilities;
