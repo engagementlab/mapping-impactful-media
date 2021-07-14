@@ -1,16 +1,15 @@
 import React, {
-  useEffect
-} from "react"
-import { graphql, useStaticQuery } from "gatsby"
+  useEffect,
+} from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown';
 
-import Image from '../components/Image'
-import Button from '../components/Button'
-import Layout from "../components/Layout"
+import Image from '../components/Image';
+import Button from '../components/Button';
+import Layout from '../components/Layout';
 
 function IndexPage() {
-
   const homeContent = useStaticQuery(graphql`
     query HomeQuery {
       elApi { 
@@ -33,9 +32,9 @@ function IndexPage() {
   `);
 
   useEffect(() => {
-        document.onkeydown = (evt) => {
-          console.log(evt.code);
-        };
+    document.onkeydown = (evt) => {
+      console.log(evt.code);
+    };
   });
 
   return (
@@ -61,7 +60,7 @@ function IndexPage() {
           <ReactMarkdown>
             {homeContent.elApi.allMimHomePages[0].about}
           </ReactMarkdown>
-          <Button label={"Learn More"} link="/about" />
+          <Button label={'Learn More'} link="/about" />
         </div>
         <div className="xl:ml-48">
           <Image imgId="boy-2" width={311} />
@@ -171,4 +170,4 @@ function IndexPage() {
   );
 }
 
-export default IndexPage
+export default IndexPage;
