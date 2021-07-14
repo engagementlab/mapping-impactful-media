@@ -1,0 +1,64 @@
+import React, {
+    Component
+} from "react"
+import { Location } from '@reach/router'
+import { Link } from "gatsby"
+import Image from './Image'
+
+const links = [
+    // ['/', 'Home'],
+    ['/about', 'About'],
+    ['/team', 'Team'],
+    // ['/guide', 'Field Guide'],
+];
+
+class Header extends Component {
+
+    
+    render() {
+        return (
+            <nav className="container xl:mx-20 my-7 flex flex-row">
+                <div className="w-3/4">
+                <a href="/">
+                    <Image
+                    imgId="logo.png"
+                    alt="Logo with text 'Mapping Impactful Media Literacy Practices'"
+                    width="305"
+                    />
+                </a>
+                </div>
+                <div className="flex items-center w-full">
+                    <ul className="flex justify-evenly w-full font-work-sans">
+                    <Location>
+                        {({ location }) => {
+                            return (
+                                links.map((link, i) => {
+                                    if(location.pathname === link[0]+'/') {
+                                        return (
+                                        <li key={link[0]} className="underline">
+                                            {link[1]}
+                                        </li>
+                                        )
+                                    }
+                                    return (
+                                        <li key={link[0]}>
+                                            <Link
+                                            to={link[0]}
+                                            className="hover:text-peach transition-colors"
+                                            >
+                                                {link[1]}
+                                            </Link>
+                                        </li>
+                                    )
+                                })
+                            )
+                        }}
+                    </Location>
+                </ul>
+                </div>
+            </nav>
+        ); 
+    }
+}
+
+export default Header;
