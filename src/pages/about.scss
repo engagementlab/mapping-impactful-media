@@ -1,0 +1,24 @@
+#about {
+  /* 
+    These have to be global for the markdown renderer, since the HTML is processed post-runtime;
+    otherwise, compiler strips out selectors
+  */
+  :global(ul) {
+    list-style: disc !important;
+    padding: 2rem;
+  }
+
+  :global(ol) {
+    list-style: decimal;
+    padding: 2rem;
+  }
+  h2 {
+    font-family: 'Work Sans';
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-family: 'Bourbon';
+    margin-top: 1rem;
+  }
+}
