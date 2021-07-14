@@ -43,9 +43,7 @@ class Image extends Component {
     );
 
     return (
-            <div className={allClasses}>
-                <AdvancedImage cldImg={cloudImage} plugins={[lazyload()]} />
-            </div>
+        <AdvancedImage className={allClasses} cldImg={cloudImage} plugins={[lazyload()]} />
     );
   }
 }
