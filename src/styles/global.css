@@ -15,16 +15,16 @@
 
 @font-face {
   font-family: 'GeoticaW01-FourOpen';
-  src: url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.eot');
-  src: url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.eot?#iefix')
+  src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/mapping-impactful-media/font/Geotica-W01-Four-Open.eot');
+  src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/mapping-impactful-media/font/Geotica-W01-Four-Open?#iefix')
       format('embedded-opentype'),
-    url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.woff2')
+    url('https://res.cloudinary.com/engagement-lab-home/raw/upload/mapping-impactful-media/font/Geotica-W01-Four-Open.woff2')
       format('woff2'),
-    url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.woff')
+    url('https://res.cloudinary.com/engagement-lab-home/raw/upload/mapping-impactful-media/font/Geotica-W01-Four-Open.woff')
       format('woff'),
-    url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.ttf')
+    url('https://res.cloudinary.com/engagement-lab-home/raw/upload/mapping-impactful-media/font/Geotica-W01-Four-Open.ttf')
       format('truetype'),
-    url('//db.onlinewebfonts.com/t/f50deaf3f2e2c69311cebdafbf7561d2.svg#GeoticaW01-FourOpen')
+    url('https://res.cloudinary.com/engagement-lab-home/raw/upload/mapping-impactful-media/font/Geotica-W01-Four-Open.svg#GeoticaW01-FourOpen')
       format('svg');
 }
 
