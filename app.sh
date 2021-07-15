@@ -4,6 +4,8 @@
 export NVM_DIR=~/.nvm;
 source ~/.nvm/nvm.sh;
 
-cd client;
+npm i -g apollo-codegen;
+apollo-codegen introspect-schema http://localhost:3000/ql/?schema=mapping-impactful-media --output schema.json;
+
 nvm use;
-yarn dev; 
+yarn develop; 

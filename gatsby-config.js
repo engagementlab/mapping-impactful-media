@@ -4,8 +4,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
-    title: 'Mapping Impactful Media',
+    siteUrl: 'https://mappingimpactfulml.org/',
+    title: 'Mapping Impactful Media Literacy Practices',
   },
   plugins: ['gatsby-plugin-sass', 'gatsby-plugin-postcss',
     {
