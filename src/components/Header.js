@@ -9,10 +9,11 @@ const links = [
   // ['/', 'Home'],
   ['/about', 'About'],
   ['/team', 'Team'],
-  // ['/guide', 'Field Guide'],
+  ['/guide', 'Field Guide'],
 ];
 
 class Header extends Component {
+  // eslint-disable-next-line class-methods-use-this
   render() {
     return (
             <nav className="container xl:mx-20 my-7 flex flex-row">
@@ -21,7 +22,7 @@ class Header extends Component {
                     <Image
                     imgId="logo.png"
                     alt="Logo with text 'Mapping Impactful Media Literacy Practices'"
-                    width="305"
+                    width={305}
                     />
                 </a>
                 </div>

@@ -1,6 +1,8 @@
 import React, {
   Component,
 } from 'react';
+import PropTypes from 'prop-types';
+
 import {
   Cloudinary,
 } from '@cloudinary/base';
@@ -21,10 +23,6 @@ const cld = new Cloudinary({
   },
 });
 class Image extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     // Instantiate a CloudinaryImage object for the image with public ID;
     // append dir prefix if missing
@@ -43,9 +41,18 @@ class Image extends Component {
     );
 
     return (
-        <AdvancedImage className={allClasses} cldImg={cloudImage} plugins={[lazyload()]} />
+        <AdvancedImage className={allClasses} cldImg={cloudImage}
+            alt={this.props.alt} plugins={[lazyload()]} />
     );
   }
 }
+
+Image.propTypes = {
+  alt: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  imgId: PropTypes.string.isRequired,
+  transforms: PropTypes.string,
+  width: PropTypes.number,
+};
 
 export default Image;
