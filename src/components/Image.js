@@ -41,7 +41,7 @@ class Image extends Component {
     );
 
     return (
-        <AdvancedImage className={allClasses} cldImg={cloudImage}
+        <AdvancedImage id={this.props.id} className={allClasses} cldImg={cloudImage}
             alt={this.props.alt} plugins={[lazyload()]} />
     );
   }
@@ -50,6 +50,7 @@ class Image extends Component {
 Image.propTypes = {
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
+  id: PropTypes.string,
   imgId: PropTypes.string.isRequired,
   transforms: PropTypes.string,
   width: PropTypes.number,

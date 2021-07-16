@@ -9,14 +9,16 @@ function GuideMapPage() {
         <div className="container mx-auto mt-14 mb-14 xl:mt-48">
 
             <div className="absolute">
-                <Map />
-            </div>
-            <div className="absolute">
 
             <Image
-              imgId="map"
-              width={922}
+                id="map-bg"
+                imgId="map"
+                alt="A cartoonish drawing of a small town"
+                width={922}
             />
+            </div>
+            <div className="absolute">
+                <Map />
             </div>
         </div>
     </Layout>
