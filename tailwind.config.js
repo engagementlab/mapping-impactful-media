@@ -11,6 +11,9 @@ module.exports = {
     ],
   },
   theme: {
+    borderRadius: {
+      55: '55px',
+    },
     extend: {
       fontFamily: {
         bourbon: 'Bourbon',
