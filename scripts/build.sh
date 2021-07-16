@@ -5,5 +5,6 @@ echo "Running static build."
 # Source/load nvm
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh;
 
-nvm use;
+nvm install;
+npm i;
 npm run build-ci;
