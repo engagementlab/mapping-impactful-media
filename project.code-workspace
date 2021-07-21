@@ -1,25 +1,12 @@
 {
     "settings": {
-        "eslint.validate": [
-            "javascript",
-            {
-                "language": "typescript"
-            }
-        ],
         "editor.formatOnSave": true,
         "eslint.packageManager": "yarn",
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": true
         },
-        "[javascript]": {
+        "[javascriptreact]": {
             "editor.formatOnSave": false
-        },
-        "[typescript]": {
-            "editor.formatOnSave": true
-        },  
-        "[svelte]": {
-            "editor.formatOnSave": true,
-            "editor.defaultFormatter": "svelte.svelte-vscode"
         },
         "debug.internalConsoleOptions": "neverOpen",
     },
@@ -27,20 +14,6 @@
         {
             "name": "./",
             "path": "."
-        },
-        {
-            "path": "./api",
-            "name": "API"
-        },
-        {
-            "path": "./client",
-            "name": "Client"
-        },
-        {
-            "path": "../didactic-happiness"
-        },
-        {
-            "path": "../mml/mapping-impactful-media/api"
         }
     ]
 }
