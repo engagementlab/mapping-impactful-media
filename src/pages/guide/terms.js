@@ -1,42 +1,108 @@
-import React, { useRef, useState } from 'react';
-import Image from '../../components/Image';
+import { graphql, useStaticQuery } from 'gatsby';
+import React, { Component, useState } from 'react';
+import ReactDOM from 'react-dom';
 
 import Layout from '../../components/Layout';
 
-function GuideTermsPage() {
-  const [active, setActive] = useState(false);
-  const [height, setHeight] = useState('0px');
-  const [rotate, setRotate] = useState('transform duration-700 ease');
+class Term extends Component {
+  constructor(props) {
+    super(props);
 
-  const contentSpace = useRef(null);
-
-  function toggleAccordion() {
-    setActive(active === false);
-    // @ts-ignore
-    setHeight(active ? '0px' : `${contentSpace.current.scrollHeight}px`);
-    setRotate(active ? 'transform duration-700 ease' : 'transform duration-700 ease rotate-180');
+    this.state = {
+      height: 0,
+    };
   }
+
+  componentDidMount() {
+    window.setTimeout(() => {
+      const el = ReactDOM.findDOMNode(this);
+      const height = el.querySelector('.panel_content').scrollHeight;
+      this.setState({
+        height,
+      });
+    }, 333);
+  }
+
+  render() {
+    const { activeTab, activateTab, bgColor, index, term } = this.props;
+    const { height } = this.state;
+    const isActive = activeTab === index;
+    const innerStyle = {
+      height: `${isActive ? height + 40 : 0}px`,
+    };
+    return (
+      <div
+        className={`mt-9 rounded-55 bg-${bgColor} bg-opacity-50`}
+        role="tabpanel"
+        aria-expanded={isActive}
+      >
+        <button
+          className="p-6 box-border appearance-none cursor-pointer focus:outline-none text-center w-full"
+          onClick={activateTab}
+        >
+          <p className="inline-block text-footnote font-bourbon text-3xl uppercase">
+            {term.name}
+          </p>
+        </button>
+        <div
+          className="panel_content overflow-x-auto overflow-y-hidden transition-max-height duration-300 ease-in-out font-work-sans text-3xl px-16"
+          style={innerStyle}
+          aria-hidden={!isActive}
+        >
+          <div className="overflow-hidden">{term.answer}</div>
+        </div>
+      </div>
+    );
+  }
+}
+
+// Term.propTypes = {
+//   alt: PropTypes.string.isRequired,
+// };
+
+function GuideTermsPage() {
+  const [activeTab, setActiveTab] = useState();
+  const bgColors = ['orange', 'peach', 'pink', 'hibiscus', 'bee'];
+  let bgColorI = -1;
+
+  function activateTab(index) {
+    setActiveTab(activeTab === index ? -1 : index);
+  }
+
+  const termsContent = useStaticQuery(graphql`
+    query TermsPageQuery {
+      elApi {
+        allGuideTermsPage {
+          terms {
+            name
+            answer
+          }
+        }
+      }
+    }
+  `);
   return (
     <Layout>
-
- <div className="container mx-auto mt-14 mb-14 xl:mt-48 flex flex-col max-w-5xl">
-     <div className="bg-peach rounded-55">
-
-      <button
-        className="py-6 box-border appearance-none cursor-pointer focus:outline-none text-center w-full"
-        onClick={toggleAccordion}
-        >
-        <p className="inline-block text-footnote font-bourbon text-3xl uppercase">what does equity mean to us?</p>
-      </button>
-      <div
-        ref={contentSpace}
-        style={{ maxHeight: `${height}` }}
-        className="overflow-x-auto overflow-y-hidden transition-max-height duration-700 ease-in-out font-work-sans text-3xl px-16"
-        >
-        <div className="pb-10 overflow-hidden">Equity is the quality or value of being impartial, just, and fair. For this field guide, we see equity as a way to frame systemic and structural challenges to creating an impartial, just, and fair experience or environment.  In this guide, the word equity is frequently to refer to processes and goals that align with fairness and justice.</div>
-          </div>
+      <div className="container mx-auto mt-14 mb-14 xl:mt-48 flex flex-col max-w-5xl">
+        <h1 className="font-work-sans text-center text-4xl mb-7">
+          Click the questions or terms below to learn how each is defined and
+          used in this field guide.
+        </h1>
+        {termsContent.elApi.allGuideTermsPage[0].terms.map((term, i) => {
+          bgColorI++;
+          if (bgColorI > bgColors.length) bgColorI = 0;
+          return (
+            <Term
+              key={i}
+              activeTab={activeTab}
+              activateTab={activateTab.bind(null, i)}
+              bgColor={bgColors[bgColorI]}
+              index={i}
+              term={term}
+            />
+          );
+        })}
       </div>
-    </div>
     </Layout>
   );
 }
