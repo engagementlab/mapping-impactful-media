@@ -16,7 +16,7 @@ class Term extends Component {
   componentDidMount() {
     window.setTimeout(() => {
       const el = ReactDOM.findDOMNode(this);
-      const height = el.querySelector('.panel_content').scrollHeight;
+      const height = el.querySelector(`.panel_content`).scrollHeight;
       this.setState({
         height,
       });
@@ -62,7 +62,7 @@ class Term extends Component {
 
 function GuideTermsPage() {
   const [activeTab, setActiveTab] = useState();
-  const bgColors = ['orange', 'peach', 'pink', 'hibiscus', 'bee'];
+  const bgColors = [`orange`, `peach`, `pink`, `hibiscus`, `bee`];
   let bgColorI = -1;
 
   function activateTab(index) {
@@ -102,6 +102,7 @@ function GuideTermsPage() {
             />
           );
         })}
+        {/* <Button label="Get Started" link="/guide/start" /> */}
       </div>
     </Layout>
   );

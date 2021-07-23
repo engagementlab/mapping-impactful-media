@@ -1,14 +1,10 @@
 #about {
-  /* 
-    These have to be global for the markdown renderer, since the HTML is processed post-runtime;
-    otherwise, compiler strips out selectors
-  */
-  :global(ul) {
+  ul {
     list-style: disc !important;
     padding: 2rem;
   }
 
-  :global(ol) {
+  ol {
     list-style: decimal;
     padding: 2rem;
   }
