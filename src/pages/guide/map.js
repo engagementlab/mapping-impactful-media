@@ -9,24 +9,25 @@ function GuideMapPage() {
   const [mapWidth, setMapWidth] = useState(false);
   const [mapHeight, setMapHeight] = useState(false);
   useEffect(() => {
-    window.setTimeout(() => {
-      const width = document.querySelector('#map-container').clientWidth;
-      const height = document.querySelector('#map-container').clientHeight;
+    const timeout = window.setTimeout(() => {
+      const width = document.querySelector(`#map-container`).clientWidth;
+      const height = document.querySelector(`#map-container`).clientHeight;
       setMapWidth(width);
       setMapHeight(height);
       setMapActive(true);
-    }, 100);
+      clearTimeout(timeout);
+    }, 500);
   });
 
   return (
     <Layout>
-      <div className="container mx-auto mt-14 mb-14 xl:mt-48">
-        <div className="flex">
-          <div className="font-work-sans text-5xl w-1/2">
-            In the map, you have five places to visit. (blurb or directions on
-            interacting with map?)
+      <div className="container mx-auto mt-14 mb-14 xl:mt-48 md:w-11/12">
+        <div className="flex flex-col md:flex-row">
+          <div className="font-work-sans text-5xl w-full md:w-1/2">
+            In the map, you have&nbsp;
+            <span className="text-orange">five places</span> to visit.
           </div>
-          <div id="map-container" className="w-1/2">
+          <div id="map-container" className="w-full md:w-1/2">
             {mapActive && <Map width={mapWidth} height={mapHeight} />}
           </div>
         </div>

@@ -49,7 +49,10 @@ const Map = (props) => {
         });
 
         const txt = new Paper.PointText({
-          point: new Point(loc.center[0] - 12, loc.center[1] + 20),
+          point: new Point(
+            loc.center[0] - 12 * (w / 600),
+            loc.center[1] + 20 * (w / 600)
+          ),
           content: i + 1,
           fillColor: `black`,
           fontSize: 40 * (w / 600),
@@ -93,7 +96,7 @@ const Map = (props) => {
           `/v1626969494/mapping-impactful-media/img/map`
         }
       />
-      <canvas ref={canvasRef} id="map-canvas" resize="true" />
+      <canvas ref={canvasRef} id="map-canvas" />
     </div>
   );
 };
