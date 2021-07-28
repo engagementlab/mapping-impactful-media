@@ -1,14 +1,9 @@
 import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from 'react-html-parser';
+import ReactHtmlParser from 'react-html-parser';
 import ReactMarkdown from 'react-markdown';
 import Image from '../components/Image';
-import Button from '../components/Button';
 import Layout from '../components/Layout';
 
 import './about.scss';
