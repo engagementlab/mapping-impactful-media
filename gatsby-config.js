@@ -1,19 +1,24 @@
-require('dotenv').config({
-  path: '.env',
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://mappingimpactfulml.org/',
-    title: 'Mapping Impactful Media Literacy Practices',
+    siteUrl: `https://mappingimpactfulml.org/`,
+    title: `Mapping Impactful Media Literacy Practices`,
   },
-  plugins: ['gatsby-plugin-sass', 'gatsby-plugin-postcss',
+  plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
     {
-      resolve: 'gatsby-source-graphql',
+      resolve: `gatsby-source-graphql`,
       options: {
-        typeName: 'ELAPI',
-        fieldName: 'elApi',
-        url: process.env.API_URL ? process.env.API_URL : 'http://localhost:3000/ql/?schema=mapping-impactful-media',
+        typeName: `ELAPI`,
+        fieldName: `elApi`,
+        url: process.env.API_URL
+          ? process.env.API_URL
+          : `http://localhost:3000/ql/?schema=mapping-impactful-media`,
       },
-    }],
+    },
+  ],
 };
