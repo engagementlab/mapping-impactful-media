@@ -7,7 +7,7 @@ import Layout from '../../components/Layout';
 function GuideIndexPage() {
   return (
     <Layout>
-      <div className="container mx-auto flex justify-center mt-14 mb-14 xl:mt-48">
+      <div className="container mx-auto flex justify-center mb-14">
         <h1 className="font-bourbon text-center w-full md:w-8/12 lg:w-3/4 text-2xl md:text-4xl text-sunny">
           Field Guide To <br />
           Equitable Media Literacy Practice
@@ -20,7 +20,7 @@ function GuideIndexPage() {
             width={606}
             alt="A cartoon-like drawing of a map, containing imagery of trees, a river, mountains, and a drawn path over a trail."
           />
-          <Button label="Get Started" link="/guide/welcome" />
+          <Button label="Enter" link="/guide/welcome" />
         </div>
       </div>
     </Layout>
