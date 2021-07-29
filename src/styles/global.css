@@ -31,8 +31,13 @@
 
 @tailwind utilities;
 
-/* Catch-all for links in markdown */
+/* Catch-all for links, h3 in markdown */
 p a {
     color: #f9a66c;
     text-decoration: underline;
+}
+
+h3 {
+  font-family: 'Bourbon';
+  margin-top: 1rem;
 }
