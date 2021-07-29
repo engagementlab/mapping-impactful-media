@@ -30,7 +30,7 @@ class Header extends Component {
               {({ location }) =>
                 links.map((link) => {
                   if (
-                    location.pathname === `${link[0]}/` ||
+                    location.pathname.indexOf(`${link[0]}/`) > -1 ||
                     location.pathname === `${link[0]}`
                   ) {
                     return (
