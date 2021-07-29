@@ -1,8 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { Component, useState } from 'react';
 import ReactDOM from 'react-dom';
+import Button from '../../../components/Button';
 
-import Layout from '../../components/Layout';
+import Layout from '../../../components/Layout';
 
 class Term extends Component {
   constructor(props) {
@@ -102,7 +103,9 @@ function GuideTermsPage() {
             />
           );
         })}
-        {/* <Button label="Get Started" link="/guide/start" /> */}
+        <div className="text-center">
+          <Button label="Back" link="/guide/context" />
+        </div>
       </div>
     </Layout>
   );
