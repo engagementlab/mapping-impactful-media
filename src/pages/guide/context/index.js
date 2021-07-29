@@ -49,14 +49,14 @@ function GuideContextPage() {
           />
           <Button
             label="Standing on the Shoulders Of Media Literacy's Giants"
-            link="/guide/context/terms"
+            link="/guide/context/standing"
             color="bg-peach"
             margin={4}
             className=" max-w-xl"
           />
           <Button
             label="What Else You Need To Know"
-            link="/guide/context/terms"
+            link="/guide/context/what-else"
             color="bg-peach"
             margin={4}
           />
