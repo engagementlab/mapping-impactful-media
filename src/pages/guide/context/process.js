@@ -4,29 +4,39 @@ import ReactMarkdown from 'react-markdown';
 
 import Layout from '../../../components/Layout';
 import Button from '../../../components/Button';
-import Image from '../../../components/Image';
 import SubHeader from '../../../components/SubHeader';
 
-function GuideStandingPage() {
-  //   const query = useStaticQuery(graphql`
-  //     query GuideStandingQuery {
-  //       elApi {
-  //         allGuideText {
-  //           who
-  //         }
-  //       }
-  //     }
-  //   `);
-  //   const content = query.elApi.allGuideText[0];
+function GuideProcessPage() {
+  const query = useStaticQuery(graphql`
+    query GuideProcessQuery {
+      elApi {
+        allGuideText {
+          process1
+          process2
+        }
+      }
+    }
+  `);
+  const content = query.elApi.allGuideText[0];
   return (
     <Layout>
       <div
         className="mb-28 flex flex-col lg:flex-row
       "
       >
-        <div className="lg:w-2/5 flex-shrink-0">
+        <div className="lg:w-1/2 flex-shrink-0">
           <SubHeader text="Process v. Outcomes: A Note" color="bg-pink" />
-          Coming soon.
+          <ReactMarkdown className="px-5 lg:ml-12 lg:mt-12 font-work-sans text-xl">
+            {content.process1}
+          </ReactMarkdown>
+        </div>
+        <div
+          className="lg:mt-32 text-xl md:text-4xl"
+          style={{ lineHeight: `50px` }}
+        >
+          <ReactMarkdown className="px-5 lg:ml-12 lg:mt-12 font-work-sans text-center">
+            {content.process2}
+          </ReactMarkdown>
         </div>
       </div>
       <div className="text-center">
@@ -36,4 +46,4 @@ function GuideStandingPage() {
   );
 }
 
-export default GuideStandingPage;
+export default GuideProcessPage;

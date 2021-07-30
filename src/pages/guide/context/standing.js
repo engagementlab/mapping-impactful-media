@@ -27,7 +27,7 @@ function GuideStandingPage() {
         <div className="lg:w-2/5 flex-shrink-0">
           <SubHeader
             text="Standing On The Shoulders Of Media Literacy'S Giants"
-            color="bg-peach"
+            color="bg-hibiscus"
           />
           Coming soon.
         </div>
