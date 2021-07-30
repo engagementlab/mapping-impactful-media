@@ -62,6 +62,42 @@ function GuideContextPage() {
           />
         </div>
       </div>
+      <div className="container mx-auto flex flex-col lg:flex-row justify-center">
+        <a href="/guide/intentions/" className="group flex content-center">
+          <svg
+            viewBox="0 0 20 35"
+            width="20"
+            height="35"
+            className="inline-block transform transition-transform ease-in-out group-hover:-translate-x-2"
+          >
+            <path
+              d="M 25.235 4.466 L 34.534 29.434 L 8.57 35.356 L 25.235 4.466 Z"
+              fill="#F19757"
+              transform="matrix(-0.880713, 0.473651, -0.473651, -0.880713, 44.35582, 27.079313)"
+            />
+          </svg>
+          <span className="inline-block px-6 text-4xl text-pewter group-hover:text-sunny">
+            back
+          </span>
+        </a>
+        <a href="/guide/map/" className="group flex content-center">
+          <span className="inline-block px-6 text-4xl text-pewter group-hover:text-sunny">
+            forward
+          </span>
+          <svg
+            viewBox="0 0 20 35"
+            width="20"
+            height="35"
+            className="inline-block transform transition-transform ease-in-out rotate-180 group-hover:translate-x-2"
+          >
+            <path
+              d="M 25.235 4.466 L 34.534 29.434 L 8.57 35.356 L 25.235 4.466 Z"
+              fill="#F19757"
+              transform="matrix(-0.880713, 0.473651, -0.473651, -0.880713, 44.35582, 27.079313)"
+            />
+          </svg>
+        </a>
+      </div>
     </Layout>
   );
 }
