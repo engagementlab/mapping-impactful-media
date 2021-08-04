@@ -20,6 +20,7 @@ module.exports = {
       },
       colors: {
         bee: `#ffc94b`,
+        blush: `#f2bcbe`,
         coral: `#f17a7e`,
         geranium: `#ffe3a1`,
         hibiscus: `#f2aaac`,

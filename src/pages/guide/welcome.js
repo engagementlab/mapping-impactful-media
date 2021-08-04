@@ -6,15 +6,15 @@ import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 
 function GuideWelcomePage() {
-  const welcomeContent = useStaticQuery(graphql`
-    query GuideWelcomeQuery {
-      elApi {
-        allGuideText {
-          welcome
-        }
-      }
-    }
-  `);
+  //   const welcomeContent = useStaticQuery(graphql`
+  //     query GuideWelcomeQuery {
+  //       elApi {
+  //         allGuideText {
+  //           welcome
+  //         }
+  //       }
+  //     }
+  //   `);
   return (
     <Layout>
       <div
@@ -53,7 +53,7 @@ function GuideWelcomePage() {
           </svg>
         </div>
         <ReactMarkdown>
-          {welcomeContent.elApi.allGuideText[0].welcome}
+          {/* {welcomeContent.elApi.allGuideText[0].welcome} */}
         </ReactMarkdown>
       </div>
       <div
