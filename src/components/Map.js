@@ -23,6 +23,7 @@ const Map = (props) => {
       {
         color: `#f4751c`,
         center: [w * 0.17, h - h * 0.6],
+        page: `who-cares`,
       },
       {
         color: `#f29497`,

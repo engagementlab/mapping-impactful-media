@@ -29,12 +29,6 @@ function IndexPage() {
     }
   `);
 
-  useEffect(() => {
-    document.onkeydown = (evt) => {
-      console.log(evt.code);
-    };
-  });
-
   return (
     <Layout>
       <div>
@@ -63,7 +57,11 @@ function IndexPage() {
             <Button label={`Learn More`} link="/about" small={true} />
           </div>
           <div className="xl:ml-48">
-            <Image imgId="boy-2" width={311} />
+            <Image
+              imgId="boy-2"
+              width={311}
+              alt={`A young person with brown skin and pink hair is holding up a white sign with orange letters that spell out "No Justice, No Peace!"`}
+            />
           </div>
         </div>
 
