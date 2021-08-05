@@ -28,6 +28,7 @@ module.exports = {
         peach: `#fabb97`,
         pewter: `#716A62`,
         pink: `#f29497`,
+        rose: `#ffc4c5`,
         strawberry: `#f17e90`,
         sunny: `#f9a66c`,
         yellow: `#ffd87f`,

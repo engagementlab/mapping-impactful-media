@@ -18,6 +18,7 @@ const Map = (props) => {
       {
         color: `#ffc94b`,
         center: [w * 0.27, h - h * 0.05],
+        page: `where-do-i-stand`,
       },
       {
         color: `#f4751c`,
@@ -73,6 +74,9 @@ const Map = (props) => {
         overlay.onMouseLeave = (event) => {
           canvas.style.setProperty(`cursor`, null);
           dot.tween({ scaling: 1.5 }, { scaling: 1 }, 250);
+        };
+        overlay.onMouseDown = () => {
+          window.location = `/guide/${loc.page}`;
         };
       });
       bgImg.position = new Paper.Point(

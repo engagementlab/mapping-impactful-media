@@ -41,3 +41,7 @@ h3 {
   font-family: 'Bourbon';
   margin-top: 1rem;
 }
+
+.list ul {
+  list-style: inside;
+}

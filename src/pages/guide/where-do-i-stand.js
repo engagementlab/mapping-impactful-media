@@ -22,6 +22,35 @@ function GuidePage() {
     }
   `);
   const content = query.elApi.allGuideSection1[0];
+  const squares = [
+    {
+      color: `orange`,
+      text: `What is this media representing?`,
+    },
+    {
+      color: `peach`,
+      text: `What 
+      Assumptions
+      Is This Media
+      Making About
+      The World?`,
+    },
+    {
+      color: `pink`,
+      text: `What Is 
+      This Media Marginalizing? Exploiting? Stereotyping?
+      `,
+    },
+    {
+      color: `rose`,
+      text: `What ideas, communities, 
+      or groups are
+       most affected 
+      by this 
+      messaging, 
+      and how?`,
+    },
+  ];
   return (
     <Layout>
       <div className="container mx-auto mt-14 mb-14 xl:mt-48 flex flex-col items-center">
@@ -30,13 +59,18 @@ function GuidePage() {
           color="bg-bee"
           className="text-center"
         />
-        <div className="flex justify-between mt-28 mb-24">
-          <div className="w-1/2 p-4 flex-shrink-0">
+        <div className="flex flex-col lg:flex-row justify-between mt-28 mb-24">
+          <div className="w-full lg:w-1/2 p-4 flex-shrink-0">
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.intro}
             </ReactMarkdown>
+
+            <div className="px-6 py-4 bg-bee font-bourbon text-2xl">
+              Goal: To build more equity in media literacy education through the
+              use of Standpoint
+            </div>
           </div>
-          <div className="relative rounded-55 bg-bee bg-opacity-25 p-16 lg:ml-16">
+          <div className="relative rounded-55 bg-bee bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
             <svg
               viewBox="0 0 53 74"
               width="53"
@@ -106,8 +140,53 @@ function GuidePage() {
                 </g>
               </g>
             </svg>
-            <ReactMarkdown className="font-work-sans text-2xl">
+            <ReactMarkdown className="font-work-sans text-2xl list">
               {content.standpoint}
+            </ReactMarkdown>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row justify-between mb-24">
+          <div className="w-full lg:w-1/2 p-4 flex-shrink-0 leading-7 tracking-wider">
+            <ReactMarkdown className="font-work-sans text-2xl list">
+              {content.resources}
+            </ReactMarkdown>
+          </div>
+          <div className="relative rounded-55 bg-bee bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
+            <h3 className="text-2xl">PROMPT:</h3>
+            <ReactMarkdown className="font-work-sans text-2xl">
+              {content.resourcesPrompt}
+            </ReactMarkdown>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row justify-between mb-24">
+          <div className="w-full lg:w-1/2 xl:w-5/12 flex-shrink-0 p-4 leading-7 tracking-wider">
+            <ReactMarkdown className="font-work-sans text-2xl">
+              {content.atStake}
+            </ReactMarkdown>
+          </div>
+          <div className="flex flex-wrap overflow-hidden mt-9 lg:mt-0">
+            {squares.map((square, i) => (
+              <div
+                key={`square` + i}
+                className={
+                  `bg-` +
+                  square.color +
+                  ` w-full md:w-1/2 overflow-hidden font-bourbon text-2xl md:text-4xl lg:text-2xl xl:text-4xl`
+                }
+              >
+                <span className="block px-5 py-16 xl:px-10 xl:py-32">
+                  {square.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row justify-between mb-24">
+          <div className="w-full lg:w-1/2 p-4 flex-shrink-0 leading-7 tracking-wider">
+            <ReactMarkdown className="font-work-sans text-2xl">
+              {content.story}
             </ReactMarkdown>
           </div>
         </div>

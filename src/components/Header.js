@@ -25,7 +25,7 @@ class Header extends Component {
           </a>
         </div>
         <div className="flex items-center w-full">
-          <ul className="flex justify-evenly w-full font-work-sans">
+          <ul className="flex justify-evenly w-full font-work-sans list-none">
             <Location>
               {({ location }) =>
                 links.map((link) => {
