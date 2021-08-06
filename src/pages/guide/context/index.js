@@ -24,19 +24,19 @@ function GuideContextPage() {
           <Button
             label="Who Is This Guide For?"
             link="/guide/context/who"
-            color="bg-peach"
+            hoverColor="hover:bg-peach"
             margin={5}
           />
           <Button
             label="How To Use This Guide"
             link="/guide/context/how"
-            color="bg-peach"
+            hoverColor="hover:bg-peach"
             margin={5}
           />
           <Button
             label="How Do We Define Our Terms?"
             link="/guide/context/terms"
-            color="bg-peach"
+            hoverColor="hover:bg-peach"
             margin={5}
           />
         </div>
@@ -44,21 +44,21 @@ function GuideContextPage() {
           <Button
             label="Process v. Outcomes: A Note"
             link="/guide/context/process"
-            color="bg-peach"
-            margin={4}
+            hoverColor="hover:bg-peach"
+            margin="my-4"
           />
           <Button
             label="Standing on the Shoulders Of Media Literacy's Giants"
             link="/guide/context/standing"
-            color="bg-peach"
-            margin={4}
+            hoverColor="hover:bg-peach"
+            margin="my-4"
             className=" max-w-xl"
           />
           <Button
             label="What Else You Need To Know"
             link="/guide/context/what-else"
-            color="bg-peach"
-            margin={4}
+            hoverColor="hover:bg-peach"
+            margin="my-4"
           />
         </div>
       </div>

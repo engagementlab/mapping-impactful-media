@@ -24,11 +24,11 @@ function GuidePage() {
   const content = query.elApi.allGuideSection1[0];
   const squares = [
     {
-      color: `orange`,
+      color: `bg-orange`,
       text: `What is this media representing?`,
     },
     {
-      color: `peach`,
+      color: `bg-peach`,
       text: `What 
       Assumptions
       Is This Media
@@ -36,13 +36,13 @@ function GuidePage() {
       The World?`,
     },
     {
-      color: `pink`,
+      color: `bg-pink`,
       text: `What Is 
       This Media Marginalizing? Exploiting? Stereotyping?
       `,
     },
     {
-      color: `rose`,
+      color: `bg-rose`,
       text: `What ideas, communities, 
       or groups are
        most affected 
@@ -171,7 +171,6 @@ function GuidePage() {
               <div
                 key={`square` + i}
                 className={
-                  `bg-` +
                   square.color +
                   ` w-full md:w-1/2 overflow-hidden font-bourbon text-2xl md:text-4xl lg:text-2xl xl:text-4xl`
                 }
