@@ -70,21 +70,21 @@ function GuidePage() {
           {content.media}
         </ReactMarkdown>
 
-        <div className="w-11/12 lg:w-full flex flex-col xl:flex-row mx-4">
-          <div className="lg:w-1/2 rounded-55 bg-peach bg-opacity-25 p-5">
+        <div className="w-11/12 lg:w-full flex flex-col justify-evenly lg:flex-row mx-4">
+          <div className="lg:w-5/12 rounded-55 bg-peach bg-opacity-25 p-5 flex-shrink-0">
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.mediaPrompt1}
             </ReactMarkdown>
           </div>
-          <div className="rounded-55 bg-peach bg-opacity-75 mt-8 lg:ml-2 p-5">
+          <div className="lg:w-5/12 rounded-55 bg-peach bg-opacity-75 lg:ml-8 p-5">
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.mediaPrompt2}
             </ReactMarkdown>
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row justify-between mt-8 mb-24">
-          <div className="w-full xl:w-1/2 p-4">
+        <div className="flex flex-col xl:flex-row justify-between my-24">
+          <div className="w-full xl:w-1/2 p-4 flex-shrink-0">
             <ReactMarkdown className="font-work-sans text-2xl px-4">
               {content.withNotFor}
             </ReactMarkdown>
