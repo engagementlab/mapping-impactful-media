@@ -28,8 +28,13 @@ const Map = (props) => {
       {
         color: `#f29497`,
         center: [w * 0.45, h - h * 0.92],
+        page: `imagining-inclusive-futures`,
       },
-      { color: `#f2aaac`, center: [w * 0.79, h - h * 0.56] },
+      {
+        color: `#f2aaac`,
+        center: [w * 0.79, h - h * 0.56],
+        page: `with-communities`,
+      },
       { color: `#fabb97`, center: [w * 0.75, h - h * 0.17] },
     ];
     const bgImg = new Paper.Raster(`map-bg`);
