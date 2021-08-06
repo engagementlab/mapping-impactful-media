@@ -35,7 +35,11 @@ const Map = (props) => {
         center: [w * 0.79, h - h * 0.56],
         page: `with-communities`,
       },
-      { color: `#fabb97`, center: [w * 0.75, h - h * 0.17] },
+      {
+        color: `#fabb97`,
+        center: [w * 0.75, h - h * 0.17],
+        page: `where-do-we-stand`,
+      },
     ];
     const bgImg = new Paper.Raster(`map-bg`);
     bgImg.smoothing = `off`;
@@ -57,12 +61,12 @@ const Map = (props) => {
 
         const txt = new Paper.PointText({
           point: new Point(
-            loc.center[0] - 12 * (w / 600),
-            loc.center[1] + 20 * (w / 600)
+            loc.center[0] - 10 * (w / 600),
+            loc.center[1] + 13 * (w / 600)
           ),
           content: i + 1,
           fillColor: `black`,
-          fontSize: 40 * (w / 600),
+          fontSize: 35 * (w / 600),
         });
         txt.fontFamily = `Bourbon`;
         txt.fontWeight = `bold`;
