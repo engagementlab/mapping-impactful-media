@@ -8,6 +8,7 @@ module.exports = {
     title: `Mapping Impactful Media Literacy Practices`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-postcss`,
     {
