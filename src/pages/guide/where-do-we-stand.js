@@ -2,10 +2,12 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 
+import BackToMap from '../../components/BackToMap';
+import Button from '../../components/Button';
+import Image from '../../components/Image';
 import Layout from '../../components/Layout';
 import SubHeader from '../../components/SubHeader';
-import BackToMap from '../../components/BackToMap';
-import Image from '../../components/Image';
+import GuideFooter from '../../components/GuideFooter';
 
 function GuidePage() {
   const query = useStaticQuery(graphql`
@@ -101,9 +103,7 @@ function GuidePage() {
             </ReactMarkdown>
           </div>
         </div>
-        <div className="text-left w-full">
-          <BackToMap />
-        </div>
+        <GuideFooter link="/guide/complete" />
       </div>
     </Layout>
   );

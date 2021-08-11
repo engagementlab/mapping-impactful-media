@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import React, { Component, useState } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import Button from '../../../components/Button';
 
