@@ -29,9 +29,24 @@ class Header extends Component {
             <Location>
               {({ location }) =>
                 links.map((link) => {
+                  // Field guide condition works differently
                   if (
-                    location.pathname.indexOf(`${link[0]}/`) > -1 ||
-                    location.pathname === `${link[0]}`
+                    link[0] === `/guide` &&
+                    location.pathname.indexOf(`guide`) > -1
+                  ) {
+                    return (
+                      <li key={link[0]}>
+                        <Link
+                          to={link[0]}
+                          className="hover:text-peach transition-colors underline"
+                        >
+                          {link[1]}
+                        </Link>
+                      </li>
+                    );
+                  } else if (
+                    location.pathname === `${link[0]}` ||
+                    location.pathname === `${link[0]}/`
                   ) {
                     return (
                       <li key={link[0]} className="underline">

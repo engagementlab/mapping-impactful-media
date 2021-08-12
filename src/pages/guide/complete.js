@@ -84,7 +84,6 @@ function GuideEndPage() {
           </div>
         </div>
         <Image
-          //   className="mt-11"
           imgId="girl-2"
           width={753}
           alt={`A cartoonish drawing of the side-view of the bottom three-quarters of a woman's head. On the other top quarter above her head are drawings of a wifi signal symbol, flowers and plants, and circles, as well as a red thought bubble that has the words "How does this make me feel?" in it.`}
@@ -106,14 +105,16 @@ function GuideEndPage() {
           {content.readMore}
         </ReactMarkdown>
       </div>
+
       <div className="w-full flex flex-col text-center items-center">
-        <ReactMarkdown className="font-work-sans text-3xl leading-10">
+        <ReactMarkdown className="md:w-2/5 font-work-sans text-3xl leading-10">
           {content.share}
         </ReactMarkdown>
         <Image
           imgId="boy-1"
           width={597}
           alt="A cartoonish drawing of a boy tending a garden"
+          className="mt-9"
         />
       </div>
     </Layout>

@@ -6,6 +6,7 @@ import Layout from '../../components/Layout';
 import SubHeader from '../../components/SubHeader';
 import BackToMap from '../../components/BackToMap';
 import Image from '../../components/Image';
+import GuideFooter from '../../components/GuideFooter';
 
 function GuidePage() {
   const query = useStaticQuery(graphql`
@@ -116,9 +117,7 @@ function GuidePage() {
             </div>
           </div>
         </div>
-        <div className="text-left w-full">
-          <BackToMap />
-        </div>
+        <GuideFooter link="/guide/imagining-inclusive-futures" />
       </div>
     </Layout>
   );

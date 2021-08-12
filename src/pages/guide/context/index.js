@@ -25,19 +25,19 @@ function GuideContextPage() {
             label="Who Is This Guide For?"
             link="/guide/context/who"
             hoverColor="hover:bg-peach"
-            margin={5}
+            margin="my-4"
           />
           <Button
             label="How To Use This Guide"
             link="/guide/context/how"
             hoverColor="hover:bg-peach"
-            margin={5}
+            margin="my-4"
           />
           <Button
             label="How Do We Define Our Terms?"
             link="/guide/context/terms"
             hoverColor="hover:bg-peach"
-            margin={5}
+            margin="my-4"
           />
         </div>
         <div className="text-center lg:ml-5 lg:w-2/6">
@@ -52,7 +52,7 @@ function GuideContextPage() {
             link="/guide/context/standing"
             hoverColor="hover:bg-peach"
             margin="my-4"
-            className=" max-w-xl"
+            className="max-w-xl"
           />
           <Button
             label="What Else You Need To Know"

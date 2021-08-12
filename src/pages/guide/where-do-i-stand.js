@@ -2,9 +2,9 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 
+import GuideFooter from '../../components/GuideFooter';
 import Layout from '../../components/Layout';
 import SubHeader from '../../components/SubHeader';
-import BackToMap from '../../components/BackToMap';
 
 function GuidePage() {
   const query = useStaticQuery(graphql`
@@ -189,9 +189,7 @@ function GuidePage() {
             </ReactMarkdown>
           </div>
         </div>
-        <div className="text-left w-full">
-          <BackToMap />
-        </div>
+        <GuideFooter link="/guide/who-cares" />
       </div>
     </Layout>
   );
