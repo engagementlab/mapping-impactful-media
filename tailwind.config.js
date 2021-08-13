@@ -8,9 +8,12 @@ module.exports = {
   },
   theme: {
     borderRadius: {
-      55: `55px`,
+      50: `50px`,
     },
     extend: {
+      lineHeight: {
+        64: `4rem`,
+      },
       fontFamily: {
         bourbon: `Bourbon`,
         geotica: `GeoticaW01-FourOpen`,
