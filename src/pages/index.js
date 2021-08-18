@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import ReactMarkdown from 'react-markdown';
@@ -37,7 +37,10 @@ function IndexPage() {
             Exploring Media literacy practices for just and equitable futures.
           </h1>
           <div>
-            <Image imgId="home-artwork" />
+            <Image
+              imgId="home-artwork"
+              alt="A cartoonish drawing of an aerial map of a town, showing a library, parks, a city hall, several signs, and people doing various activities."
+            />
           </div>
         </div>
 
@@ -132,7 +135,12 @@ function IndexPage() {
             >
               Lead Partner
             </h3>
-            <Image className="self-center pt-16" imgId="namle" width="425" />
+            <Image
+              className="self-center pt-16"
+              imgId="namle"
+              width="425"
+              alt="Logo for National Association for Media Literacy Education (NAMLE)"
+            />
 
             <h3
               className="font-bold font-work-sans pt-20 text-2xl
@@ -141,25 +149,28 @@ function IndexPage() {
               Research Partners
             </h3>
             <div className="flex flex-col lg:flex-row items-center justify-around w-full h-96 lg:h-60">
-              <Image imgId="emerson" width="243" />
-              <Image imgId="texas-am" width="243" />
-              <Image imgId="iowa" width="136" />
-              <Image imgId="amla" width="177" />
+              <Image
+                imgId="emerson"
+                width="243"
+                alt="Logo for Emerson College"
+              />
+              <Image
+                imgId="texas-am"
+                width="243"
+                alt="Logo for Texas A&M University"
+              />
+              <Image
+                imgId="iowa"
+                width="136"
+                alt="Logo for University of Iowa"
+              />
+              <Image
+                imgId="amla"
+                width="177"
+                alt="Logo for The Australian Media Literacy Alliance"
+              />
             </div>
           </div>
-
-          <p className="md:mx-20 text-center italic text-sm leading-6">
-            Initial support for the research project is made possible through a
-            grant from Facebook. To ensure the independence and integrity of
-            this research effort, NAMLE will maintain full authority regarding
-            project strategy, budget, personnel decisions, or research
-            activities. Facebook will not have direct control over the research
-            design, methodology, analysis, or findings. NAMLE and any research
-            authors will maintain exclusive copyright over all products and
-            freely disseminate those products to advance the media literacy
-            field.Initial support for the research project is made possible
-            through a grant from Facebook.
-          </p>
         </div>
       </div>
     </Layout>
