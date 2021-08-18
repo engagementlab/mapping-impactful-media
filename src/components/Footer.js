@@ -28,7 +28,7 @@ class Footer extends Component {
           <Image
             className="self-center pt-16"
             imgId="namle"
-            width="425"
+            width={425}
             alt="Logo for National Association for Media Literacy Education (NAMLE)"
           />
         </div>

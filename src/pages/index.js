@@ -38,8 +38,9 @@ function IndexPage() {
           </h1>
           <div>
             <Image
-              imgId="home-artwork"
+              imgId="map"
               alt="A cartoonish drawing of an aerial map of a town, showing a library, parks, a city hall, several signs, and people doing various activities."
+              width={600}
             />
           </div>
         </div>
@@ -138,7 +139,7 @@ function IndexPage() {
             <Image
               className="self-center pt-16"
               imgId="namle"
-              width="425"
+              width={425}
               alt="Logo for National Association for Media Literacy Education (NAMLE)"
             />
 
@@ -151,22 +152,22 @@ function IndexPage() {
             <div className="flex flex-col lg:flex-row items-center justify-around w-full h-96 lg:h-60">
               <Image
                 imgId="emerson"
-                width="243"
+                width={243}
                 alt="Logo for Emerson College"
               />
               <Image
                 imgId="texas-am"
-                width="243"
+                width={243}
                 alt="Logo for Texas A&M University"
               />
               <Image
                 imgId="iowa"
-                width="136"
+                width={136}
                 alt="Logo for University of Iowa"
               />
               <Image
                 imgId="amla"
-                width="177"
+                width={177}
                 alt="Logo for The Australian Media Literacy Alliance"
               />
             </div>

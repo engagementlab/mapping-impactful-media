@@ -29,23 +29,23 @@ class Image extends Component {
     const cloudImage = cld.image(`${prefix}${this.props.imgId}`);
 
     // Merge classes
-    let allClasses = this.props.className ? this.props.className : ``;
-    if (responsive) allClasses = `${allClasses} cld-responsive`;
+    const allClasses = this.props.className ? this.props.className : ``;
+    // if (responsive)
+    // allClasses = `${allClasses} cld-responsive`;
 
     // Create image transforms
-    cloudImage.addTransformation(
-      this.props.transforms ||
-        `w_${this.props.width ? this.props.width : `auto`},f_auto,dpr_auto`
-    );
+    cloudImage.addTransformation(this.props.transforms || `f_auto,dpr_auto`);
 
     return (
-      <AdvancedImage
-        id={this.props.id}
-        className={allClasses}
-        cldImg={cloudImage}
-        alt={this.props.alt}
-        plugins={[lazyload()]}
-      />
+      <div style={{ maxWidth: this.props.width + `px` }}>
+        <AdvancedImage
+          id={this.props.id}
+          className={allClasses}
+          cldImg={cloudImage}
+          alt={this.props.alt}
+          plugins={[lazyload(), responsive([800, 1000, 1400])]}
+        />
+      </div>
     );
   }
 }
