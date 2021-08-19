@@ -4,13 +4,13 @@ import Image from './Image';
 class Footer extends Component {
   render() {
     return (
-      <footer className="flex justify-center w-full p-10 mt-16 bg-sunny">
-        <div className="w-3/4">
-          <h3 className="md:mx-20 font-bourbon">
+      <footer className="flex flex-col-reverse lg:flex-row justify-center w-full p-10 mt-16 bg-sunny">
+        <div className="w-full md:w-3/4">
+          <h3 className="lg:mx-20 font-bourbon">
             Mapping Impactful Media Literacy Practices
           </h3>
 
-          <p className="md:mx-20 italic text-sm leading-6">
+          <p className="lg:mx-20 italic text-sm leading-6">
             Initial support for the research project is made possible through a
             grant from Facebook. To ensure the independence and integrity of
             this research effort, NAMLE will maintain full authority regarding
