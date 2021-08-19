@@ -7,4 +7,4 @@ echo "Running static build."
 
 nvm install;
 npm i;
-npm run build-ci;
+npm run build;
