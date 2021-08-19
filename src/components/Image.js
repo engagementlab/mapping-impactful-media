@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { Cloudinary } from '@cloudinary/base';
-import {
-  AdvancedImage,
-  accessibility,
-  responsive,
-  lazyload,
-} from '@cloudinary/react';
+import { AdvancedImage, responsive, lazyload } from '@cloudinary/react';
 
 // Cloudinary instance
 const cld = new Cloudinary({
@@ -28,24 +23,20 @@ class Image extends Component {
         : `mapping-impactful-media/img/`;
     const cloudImage = cld.image(`${prefix}${this.props.imgId}`);
 
-    // Merge classes
-    const allClasses = this.props.className ? this.props.className : ``;
-    // if (responsive)
-    // allClasses = `${allClasses} cld-responsive`;
-
     // Create image transforms
     cloudImage.addTransformation(this.props.transforms || `f_auto,dpr_auto`);
 
     return (
-      <div style={{ maxWidth: this.props.width + `px` }}>
-        <AdvancedImage
-          id={this.props.id}
-          className={allClasses}
-          cldImg={cloudImage}
-          alt={this.props.alt}
-          plugins={[lazyload(), responsive([800, 1000, 1400])]}
-        />
-      </div>
+      // <div>
+      <AdvancedImage
+        id={this.props.id}
+        className={this.props.className}
+        cldImg={cloudImage}
+        alt={this.props.alt}
+        plugins={[lazyload(), responsive([800, 1000, 1400])]}
+        style={{ maxWidth: this.props.width + `px` }}
+      />
+      // </div>
     );
   }
 }
