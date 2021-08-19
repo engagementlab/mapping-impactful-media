@@ -62,7 +62,7 @@ function GuideContextPage() {
           />
         </div>
       </div>
-      <div className="container mx-auto flex flex-col lg:flex-row justify-center">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
         <a href="/guide/intentions/" className="group flex content-center">
           <svg
             viewBox="0 0 20 35"

@@ -6,8 +6,8 @@ import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 import Image from '../../components/Image';
 
-import './start.scss';
 import SubHeader from '../../components/SubHeader';
+import './start.scss';
 
 function GuideIndexPage() {
   const introContent = useStaticQuery(graphql`
