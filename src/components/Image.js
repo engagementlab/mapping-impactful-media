@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { Cloudinary } from '@cloudinary/base';
-import { AdvancedImage, responsive, lazyload } from '@cloudinary/react';
+import {
+  AdvancedImage,
+  lazyload,
+  placeholder,
+  responsive,
+} from '@cloudinary/react';
 
 // Cloudinary instance
 const cld = new Cloudinary({
@@ -27,16 +32,18 @@ class Image extends Component {
     cloudImage.addTransformation(this.props.transforms || `f_auto,dpr_auto`);
 
     return (
-      // <div>
       <AdvancedImage
         id={this.props.id}
         className={this.props.className}
         cldImg={cloudImage}
         alt={this.props.alt}
-        plugins={[lazyload(), responsive([800, 1000, 1400])]}
+        plugins={[
+          lazyload(),
+          responsive([800, 1000, 1400]),
+          placeholder(`blur`),
+        ]}
         style={{ maxWidth: this.props.width + `px` }}
       />
-      // </div>
     );
   }
 }
