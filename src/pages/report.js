@@ -7,19 +7,21 @@ import Image from '../components/Image';
 import Layout from '../components/Layout';
 
 function ReportPage() {
-  //   const aboutContent = useStaticQuery(graphql`
-  //     query ReportQuery {
-  //       elApi {
-  //         allMimAboutPages {
-  //           intro
-  //           assumptions
-  //           phase1Html
-  //           phase2Html
-  //           phase3Html
-  //         }
-  //       }
-  //     }
-  //   `);
+  const content = useStaticQuery(graphql`
+    query ReportQuery {
+      elApi {
+        allMimReportPages {
+          blurb
+          image {
+            publicId
+          }
+          reportFile {
+            publicUrl
+          }
+        }
+      }
+    }
+  `);
 
   return (
     <Layout>

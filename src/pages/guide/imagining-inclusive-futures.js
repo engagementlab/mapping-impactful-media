@@ -17,6 +17,8 @@ function GuidePage() {
           imagination
           exercise
           alternatives
+          where1Blurb
+          where2Blurb
           voice
           voicePrompt
           practicing
@@ -123,28 +125,37 @@ function GuidePage() {
           </div>
         </div>
 
-        <div className="mb-24">
-          <div className="flex w-full p-4 leading-7 tracking-wider justify-center">
-            <ReactMarkdown className="container w-11/12 lg:w-8/12 font-work-sans text-2xl">
-              {content.alternatives}
+        <div className="flex flex-col xl:flex-row mt-28 mb-24">
+          <div className="w-full xl:w-1/2 p-4 flex-shrink-0 items-center">
+            <ReactMarkdown className="font-work-sans text-2xl px-4">
+              {content.exercise}
             </ReactMarkdown>
           </div>
-          <div className="flex flex-col lg:flex-row w-full p-4 leading-7 text-2xl justify-center">
-            <div className="flex flex-col text-center items-center lg:border-r-4 border-pink">
-              <h4 className="bg-pink w-full py-4 px-4 font-bourbon">
-                Where Do We Learn About This?
-              </h4>
-              {/* <ReactMarkdown className="container mt-9 lg:w-9/12 leading-9 tracking-wide font-work-sans">
-                {content.caringBlurb}
-              </ReactMarkdown> */}
+          <div className="flex flex-col w-full xl:w-5/6 p-4 font-work-sans">
+            <div className="flex w-full p-4 leading-7 tracking-wider justify-center">
+              <ReactMarkdown className="text-2xl">
+                {content.alternatives}
+              </ReactMarkdown>
             </div>
-            <div className="flex flex-col text-center items-center">
-              <h4 className="bg-pink bg-opacity-80 w-full py-4 px-4 font-bourbon">
-                Where Could We Start To Learn About This?
-              </h4>
-              {/* <ReactMarkdown className="container mt-9 lg:w-9/12 leading-9 tracking-wide font-work-sans">
-                {content.caringForBlurb}
-              </ReactMarkdown> */}
+            <div className="flex flex-col lg:flex-row w-full p-4 leading-7 text-2xl justify-center">
+              <div className="flex flex-col text-center items-center lg:border-r-4 border-pink">
+                <h4 className="bg-pink w-full py-4 px-4 font-bourbon">
+                  Where Do We Learn About This?
+                  <br />
+                  &nbsp;
+                </h4>
+                <ReactMarkdown className="container mt-9 lg:w-9/12 leading-9 tracking-wide">
+                  {content.where1Blurb}
+                </ReactMarkdown>
+              </div>
+              <div className="flex flex-col text-center items-center">
+                <h4 className="bg-pink bg-opacity-80 w-full py-4 px-4 font-bourbon">
+                  Where Could We Start To Learn About This?
+                </h4>
+                <ReactMarkdown className="container mt-9 lg:w-9/12 leading-9 tracking-wide">
+                  {content.where2Blurb}
+                </ReactMarkdown>
+              </div>
             </div>
           </div>
         </div>
