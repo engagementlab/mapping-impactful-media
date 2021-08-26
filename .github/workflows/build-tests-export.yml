@@ -4,6 +4,7 @@ env:
   AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
   CI: true
   DB_URI: ${{ secrets.DB_URI }}
+  API_URL: ${{ secrets.API_URL }}
   NODE_ENV: staging
   ACTIONS_RUNNER_DEBUG: true
 jobs:
