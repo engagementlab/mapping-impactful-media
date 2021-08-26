@@ -2,8 +2,6 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 
-import BackToMap from '../../components/BackToMap';
-import Button from '../../components/Button';
 import Image from '../../components/Image';
 import Layout from '../../components/Layout';
 import SubHeader from '../../components/SubHeader';

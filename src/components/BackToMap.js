@@ -10,6 +10,7 @@ class BackToMap extends Component {
         </span>
         <img
           src={mapIcon}
+          alt="'Back to map' icon"
           className="inline-block transform transition-transform ease-in-out group-hover:scale-110"
         />
       </a>

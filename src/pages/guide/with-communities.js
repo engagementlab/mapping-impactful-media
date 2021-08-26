@@ -4,8 +4,6 @@ import ReactMarkdown from 'react-markdown';
 
 import Layout from '../../components/Layout';
 import SubHeader from '../../components/SubHeader';
-import BackToMap from '../../components/BackToMap';
-import Image from '../../components/Image';
 import GuideFooter from '../../components/GuideFooter';
 
 function GuidePage() {

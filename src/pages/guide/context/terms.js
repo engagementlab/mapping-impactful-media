@@ -16,6 +16,7 @@ class Term extends Component {
 
   componentDidMount() {
     window.setTimeout(() => {
+      // eslint-disable-next-line react/no-find-dom-node
       const el = ReactDOM.findDOMNode(this);
       const height = el.querySelector(`.panel_content`).scrollHeight;
       this.setState({
@@ -35,7 +36,6 @@ class Term extends Component {
       <div
         className={`mt-9 rounded-55 bg-${bgColor} bg-opacity-50`}
         role="tabpanel"
-        aria-expanded={isActive}
       >
         <button
           className="p-6 box-border appearance-none cursor-pointer focus:outline-none text-center w-full"
@@ -56,10 +56,6 @@ class Term extends Component {
     );
   }
 }
-
-// Term.propTypes = {
-//   alt: PropTypes.string.isRequired,
-// };
 
 function GuideTermsPage() {
   const [activeTab, setActiveTab] = useState();

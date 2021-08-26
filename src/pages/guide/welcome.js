@@ -1,20 +1,10 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 
 function GuideWelcomePage() {
-  //   const welcomeContent = useStaticQuery(graphql`
-  //     query GuideWelcomeQuery {
-  //       elApi {
-  //         allGuideText {
-  //           welcome
-  //         }
-  //       }
-  //     }
-  //   `);
   return (
     <Layout>
       <div

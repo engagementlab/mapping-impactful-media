@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import Paper from 'paper';
 import { Point } from 'paper/dist/paper-core';
+import { propTypes } from 'react-markdown';
 
 const Map = (props) => {
   const canvasRef = useRef(null);
@@ -136,10 +139,13 @@ const Map = (props) => {
           Math.round(props.width) +
           `/v1626969494/mapping-impactful-media/img/map`
         }
+        alt=""
       />
       <canvas ref={canvasRef} id="map-canvas" />
     </div>
   );
 };
+
+Map.propTypes = { width: PropTypes.number.isRequired };
 
 export default Map;
