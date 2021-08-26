@@ -1,4 +1,3 @@
-const { tailwindExtractor } = require(`tailwindcss/lib/lib/purgeUnusedStyles`);
 const defaultTheme = require(`tailwindcss/defaultTheme`);
 
 module.exports = {
@@ -8,7 +7,7 @@ module.exports = {
   },
   theme: {
     borderRadius: {
-      50: `50px`,
+      55: `50px`,
     },
     extend: {
       lineHeight: {
