@@ -88,11 +88,10 @@ function GuidePage() {
           </div>
           <div className="flex flex-col xl:flex-row p-4">
             <div className="w-full lg:w-1/2 p-4 flex-shrink-0 items-center">
-              <h4>Placeholder:</h4>
               <Image
-                imgId="boy-2"
-                width={298}
-                alt={`A young person with brown skin and pink hair is holding up a white sign with orange letters that spell out "No Justice, No Peace!"`}
+                imgId="who-cares-2"
+                width={500}
+                alt={`A drawing of two hhands clasped together.`}
               />
             </div>
             <div className="rounded-55 bg-orange bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
@@ -108,14 +107,13 @@ function GuidePage() {
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.careful}
             </ReactMarkdown>
-          </div>
-          <div className="flex flex-col w-full xl:w-1/2 p-4 flex-shrink-0 items-center">
-            <div className="rounded-55 bg-orange bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
+            <div className="rounded-55 bg-orange bg-opacity-25 p-5 lg:p-16 mx-4 my-9 lg:mt-0">
               <ReactMarkdown className="font-work-sans md:text-2xl">
                 {content.carefulPrompt}
               </ReactMarkdown>
             </div>
           </div>
+          <div className="flex flex-col w-full xl:w-1/2 p-4 flex-shrink-0 items-center"></div>
         </div>
         <GuideFooter link="/guide/imagining-inclusive-futures" />
       </div>

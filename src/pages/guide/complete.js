@@ -62,12 +62,10 @@ function GuideEndPage() {
       </div>
       <div className="container mx-auto max-w-5xl mb-28 px-4 flex flex-col items-center text-center">
         <div className="md:w-5/12">
-          (Placeholder)
           <Image
-            id="girl-img"
-            imgId="girl-2"
-            width={541}
-            alt={`A cartoonish drawing of the side-view of the bottom three-quarters of a woman's head. On the other top quarter above her head are drawings of a wifi signal symbol, flowers and plants, and circles, as well as a red thought bubble that has the words "How does this make me feel?" in it.`}
+            imgId="journey-complete"
+            width={651}
+            alt="A cartoonish drawing young boy with a backpack holding a map and standing in front of a mountaineous region. Two arrow icons and a dotted line representing a path float above him."
           />
         </div>
         <ReactMarkdown className="text-4xl">{content.intro}</ReactMarkdown>
