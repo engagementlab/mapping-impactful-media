@@ -173,18 +173,23 @@ function GuidePage() {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row">
-          <div className="w-full lg:w-1/2 p-4 flex-shrink-0">
+        <div className="flex flex-col xl:flex-row mb-7">
+          <div className="flex flex-col w-full xl:w-1/2 p-4 flex-shrink-0 items-center">
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.practicing}
             </ReactMarkdown>
-          </div>
-          <div className="flex flex-col w-full xl:w-1/2 p-4 flex-shrink-0 items-center">
             <div className="relative rounded-55 bg-pink bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
               <ReactMarkdown className="font-work-sans text-2xl">
                 {content.practicingPrompt}
               </ReactMarkdown>
             </div>
+          </div>
+          <div className="flex w-full lg:w-1/2 justify-center items-center">
+            <Image
+              imgId="imagining-inclusive-futures"
+              width={300}
+              alt={`A cartoonish drawing of Planet Earth`}
+            />
           </div>
         </div>
         <GuideFooter link="/guide/with-communities" />

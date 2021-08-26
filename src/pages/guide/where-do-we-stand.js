@@ -66,11 +66,10 @@ function GuidePage() {
             </ReactMarkdown>
           </div>
           <div className="mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
-            <h4>Placeholder:</h4>
             <Image
-              imgId="boy-2"
-              width={298}
-              alt={`A young person with brown skin and pink hair is holding up a white sign with orange letters that spell out "No Justice, No Peace!"`}
+              imgId="where-do-we-stand-1"
+              width={371}
+              alt="A cartoonish drawing of a man and woman looking at a map in front of two buildings."
             />
           </div>
         </div>

@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import GuideFooter from '../../components/GuideFooter';
 import Layout from '../../components/Layout';
 import SubHeader from '../../components/SubHeader';
+import Image from '../../components/Image';
 
 function GuidePage() {
   const query = useStaticQuery(graphql`
@@ -187,6 +188,13 @@ function GuidePage() {
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.story}
             </ReactMarkdown>
+          </div>
+          <div className="flex justify-center items-center">
+            <Image
+              imgId="where-do-i-stand-3"
+              width={500}
+              alt="A cartoonish drawing of an orange question mark."
+            />
           </div>
         </div>
         <GuideFooter link="/guide/who-cares" />
