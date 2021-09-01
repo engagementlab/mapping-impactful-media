@@ -79,25 +79,23 @@ function GuidePage() {
           </div>
         </div>
 
-        <div>
-          <div className="w-full lg:w-1/2 p-4 flex-shrink-0">
-            <ReactMarkdown className="font-work-sans text-2xl">
-              {content.caringWith}
-            </ReactMarkdown>
+        <div className="w-full lg:w-1/2 p-4 flex-shrink-0">
+          <ReactMarkdown className="font-work-sans text-2xl">
+            {content.caringWith}
+          </ReactMarkdown>
+        </div>
+        <div className="flex flex-col xl:flex-row p-4">
+          <div className="w-full lg:w-1/2 md:p-4 flex-shrink-0 items-center">
+            <Image
+              imgId="who-cares-2"
+              width={500}
+              alt={`A drawing of two hands clasped together.`}
+            />
           </div>
-          <div className="flex flex-col xl:flex-row p-4">
-            <div className="w-full lg:w-1/2 p-4 flex-shrink-0 items-center">
-              <Image
-                imgId="who-cares-2"
-                width={500}
-                alt={`A drawing of two hhands clasped together.`}
-              />
-            </div>
-            <div className="rounded-55 bg-orange bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
-              <ReactMarkdown className="font-work-sans md:text-2xl">
-                {content.caringWithPrompt}
-              </ReactMarkdown>
-            </div>
+          <div className="rounded-55 bg-orange bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
+            <ReactMarkdown className="font-work-sans md:text-2xl">
+              {content.caringWithPrompt}
+            </ReactMarkdown>
           </div>
         </div>
 
@@ -112,7 +110,13 @@ function GuidePage() {
               </ReactMarkdown>
             </div>
           </div>
-          <div className="flex flex-col w-full xl:w-1/2 p-4 flex-shrink-0 items-center"></div>
+          <div className="flex flex-col w-full md:p-4 lg:mt-24 xl:w-1/2 flex-shrink-0 justify-center items-center">
+            <Image
+              imgId="who-cares-3"
+              width={650}
+              alt={`A drawing of two people climbing a ladder. The person near the top is lending their hand to the lower person.`}
+            />
+          </div>
         </div>
         <GuideFooter link="/guide/imagining-inclusive-futures" />
       </div>

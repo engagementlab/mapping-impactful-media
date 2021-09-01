@@ -183,7 +183,7 @@ function GuidePage() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between mb-24">
+        <div className="flex flex-col lg:flex-row justify-evenly mb-24">
           <div className="w-full lg:w-1/2 p-4 flex-shrink-0 leading-7 tracking-wider">
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.story}

@@ -66,19 +66,18 @@ function GuidePage() {
           <div className="mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
             <Image
               imgId="where-do-we-stand-1"
-              width={371}
+              width={650}
               alt="A cartoonish drawing of a man and woman looking at a map in front of two buildings."
             />
           </div>
         </div>
 
         <div className="flex flex-col xl:flex-row p-4">
-          <div className="w-full lg:w-1/2 flex-shrink-0 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
-            <h4>Placeholder:</h4>
+          <div className="w-full lg:w-1/2 flex-shrink-0 mr-4 lg:p-8 lg:ml-16 mt-9 lg:mt-0">
             <Image
-              imgId="boy-2"
-              width={298}
-              alt={`A young person with brown skin and pink hair is holding up a white sign with orange letters that spell out "No Justice, No Peace!"`}
+              imgId="where-do-we-stand-2"
+              width={700}
+              alt={`A drawing of three rectangular cards, each with the face of one of three young people followed by the words "Name", "Age", and "Title", each of which have blank areas under them.`}
             />
           </div>
           <div className="p-4 items-center">

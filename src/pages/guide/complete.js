@@ -71,7 +71,7 @@ function GuideEndPage() {
         <ReactMarkdown className="text-4xl">{content.intro}</ReactMarkdown>
       </div>
       <div
-        className="container mx-auto mb-28 flex flex-col lg:flex-row
+        className="container mx-auto px-4 mb-28 flex flex-col-reverse lg:flex-row
       "
       >
         <div className="lg:w-1/2 flex-shrink-0">
@@ -88,7 +88,7 @@ function GuideEndPage() {
         />
       </div>
       <div
-        className="container mx-auto mb-28 flex flex-col lg:flex-row
+        className="container mx-auto px-4 mb-28 flex flex-col lg:flex-row
       "
       >
         <div className="lg:w-1/2 flex-shrink-0">
@@ -105,7 +105,7 @@ function GuideEndPage() {
       </div>
 
       <div className="w-full flex flex-col text-center items-center">
-        <ReactMarkdown className="md:w-2/5 font-work-sans text-3xl leading-10">
+        <ReactMarkdown className="md:w-3/4 lg:w-2/5 font-work-sans text-3xl leading-10">
           {content.share}
         </ReactMarkdown>
         <Image
