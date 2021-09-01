@@ -1,0 +1,15 @@
+.path {
+    transition-property: all;
+    transform-box: fill-box;
+    transform-origin: center;
+    transition-duration: .2s;
+}
+
+a:hover .path:not(#arrow) {
+    transform: scale(0.93);
+    fill: #f9a66c !important;
+}
+
+a:hover #arrow {
+    transform: scale(1.53) translate(0%, -35%);
+}
