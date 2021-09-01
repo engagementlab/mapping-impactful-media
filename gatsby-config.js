@@ -12,6 +12,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-postcss`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: './src/images/map-icon.svg',
+      },
+    },
+    {
       resolve: `gatsby-source-graphql`,
       options: {
         typeName: `ELAPI`,
