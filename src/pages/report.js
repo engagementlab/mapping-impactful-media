@@ -39,9 +39,13 @@ function ReportPage() {
             alt={`A cartoonish drawing of the side-view of the bottom three-quarters of a woman's head. On the other top quarter above her head are drawings of a wifi signal symbol, flowers and plants, and circles, as well as a red thought bubble that has the words "How does this make me feel?" in it. All of this is on top of a peach-colored circle.`}
           />
         </div>
-        <div className="flex flex-col justify-center mx-12 text-center">
+        <div className="flex flex-col justify-center items-center text-center mx-12">
           <h2 className="w-full font-bourbon text-3xl">
-            Mapping Impactful Media Literacy Practices: The Report
+            Mapping Impactful
+            <br />
+            Media Literacy Practices:
+            <br />
+            The Report
           </h2>
 
           {/* Mobile only */}
@@ -57,12 +61,13 @@ function ReportPage() {
               alt={`A cartoonish drawing of the side-view of the bottom three-quarters of a woman's head. On the other top quarter above her head are drawings of a wifi signal symbol, flowers and plants, and circles, as well as a red thought bubble that has the words "How does this make me feel?" in it. All of this is on top of a peach-colored circle.`}
             />
           </div>
-          <ReactMarkdown className="text-center xl:mx-10">
+          <ReactMarkdown className="text-center leading-10 xl:mx-20">
             {content.elApi.allMimReportPages[0].blurb}
           </ReactMarkdown>
           <Button
             label="Download Full Report"
             link={content.elApi.allMimReportPages[0].reportFile.publicUrl}
+            className="xl:w-1/2"
           />
         </div>
         <div className="w-1/2 hidden xl:block">
