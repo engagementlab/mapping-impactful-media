@@ -19,35 +19,35 @@ const Map = (props) => {
     const locations = [
       {
         color: `#ffc94b`,
-        center: [w * 0.32, h - h * 0.17],
+        center: [w * 0.3, h - h * 0.3],
         page: `where-do-i-stand`,
         label: `Where do\ni stand?`,
         labelPos: [-w * 0.1, -h * 0.12],
       },
       {
         color: `#f4751c`,
-        center: [w * 0.18, h - h * 0.51],
+        center: [w * 0.18, h - h * 0.69],
         page: `who-cares`,
         label: `Who\ncares?`,
         labelPos: [-70, 70],
       },
       {
         color: `#f29497`,
-        center: [w * 0.45, h - h * 0.82],
+        center: [w * 0.45, h - h * 0.92],
         page: `imagining-inclusive-futures`,
         label: `Imagining more\ninclusive futures`,
         labelPos: [-w * 0.25, -h * 0.01],
       },
       {
         color: `#f2aaac`,
-        center: [w * 0.79, h - h * 0.52],
+        center: [w * 0.79, h - h * 0.63],
         page: `with-communities`,
         label: `With\n(not for)\ncommunities`,
         labelPos: [w * 0.05, h * 0.1],
       },
       {
         color: `#fabb97`,
-        center: [w * 0.75, h - h * 0.17],
+        center: [w * 0.75, h - h * 0.35],
         page: `where-do-we-stand`,
         label: `Where do\nwe stand?`,
         labelPos: [w * 0.1, h * 0.11],
@@ -121,7 +121,7 @@ const Map = (props) => {
       });
       bgImg.position = new Paper.Point(
         Paper.view.center.x,
-        Paper.view.center.y
+        Paper.view.center.y - 120
       );
 
       Paper.view.draw();
