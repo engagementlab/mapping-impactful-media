@@ -93,3 +93,4 @@ appsettings.json
 local.settings.json
 
 build/*
+.lighthouseci
