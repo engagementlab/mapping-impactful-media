@@ -79,36 +79,43 @@ function GuidePage() {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 p-4 flex-shrink-0">
-          <ReactMarkdown className="font-work-sans text-2xl">
-            {content.caringWith}
-          </ReactMarkdown>
-        </div>
-        <div className="flex flex-col xl:flex-row p-4">
-          <div className="w-full lg:w-1/2 md:p-4 flex-shrink-0 items-center">
-            <Image
-              imgId="who-cares-2"
-              width={500}
-              alt={`A drawing of two hands clasped together.`}
-            />
-          </div>
-          <div className="rounded-55 bg-orange bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
-            <ReactMarkdown className="font-work-sans md:text-2xl">
-              {content.caringWithPrompt}
+        <div className="mb-24">
+          <div className="flex w-full p-4 leading-7 tracking-wider justify-center">
+            <ReactMarkdown className="container w-11/12 lg:w-8/12 font-work-sans text-2xl ">
+              {content.caringWith}
             </ReactMarkdown>
+          </div>
+          {/* <div className="w-full lg:w-8/12 p-4 flex-shrink-0">
+            <ReactMarkdown className="font-work-sans text-2xl">
+              {content.caringWith}
+            </ReactMarkdown>
+          </div> */}
+          <div className="flex flex-col xl:flex-row p-4">
+            <div className="w-full lg:w-1/2 md:p-4 flex-shrink-0 items-center">
+              <Image
+                imgId="who-cares-2"
+                width={500}
+                alt={`A drawing of two hands clasped together.`}
+              />
+            </div>
+            <div className="rounded-55 bg-orange bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
+              <ReactMarkdown className="font-work-sans md:text-2xl">
+                {content.caringWithPrompt}
+              </ReactMarkdown>
+            </div>
           </div>
         </div>
 
+        <div className="flex w-full p-4 leading-7 tracking-wider justify-center">
+          <ReactMarkdown className="container w-11/12 lg:w-8/12 font-work-sans text-2xl ">
+            {content.careful}
+          </ReactMarkdown>
+        </div>
         <div className="flex flex-col xl:flex-row">
-          <div className="w-full lg:w-1/2 p-4 flex-shrink-0">
-            <ReactMarkdown className="font-work-sans text-2xl">
-              {content.careful}
+          <div className="rounded-55 bg-orange bg-opacity-25 p-5 lg:p-16 mx-4 my-9 lg:mt-0">
+            <ReactMarkdown className="font-work-sans md:text-2xl">
+              {content.carefulPrompt}
             </ReactMarkdown>
-            <div className="rounded-55 bg-orange bg-opacity-25 p-5 lg:p-16 mx-4 my-9 lg:mt-0">
-              <ReactMarkdown className="font-work-sans md:text-2xl">
-                {content.carefulPrompt}
-              </ReactMarkdown>
-            </div>
           </div>
           <div className="flex flex-col w-full md:p-4 lg:mt-24 xl:w-1/2 flex-shrink-0 justify-center items-center">
             <Image
@@ -118,8 +125,8 @@ function GuidePage() {
             />
           </div>
         </div>
-        <GuideFooter link="/guide/imagining-inclusive-futures" />
       </div>
+      <GuideFooter link="/guide/imagining-inclusive-futures" />
     </Layout>
   );
 }
