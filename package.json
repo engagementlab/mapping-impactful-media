@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve -p 8000",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lhci": "lhci collect --start-server-command='npm run serve' --startServerReadyPattern='You can now view'"
   },
   "dependencies": {
     "@cloudinary/base": "^1.0.0-beta.3",
