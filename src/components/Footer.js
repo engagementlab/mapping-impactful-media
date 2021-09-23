@@ -19,7 +19,7 @@ class Footer extends Component {
             design, methodology, analysis, or findings. NAMLE and any research
             authors will maintain exclusive copyright over all products and
             freely disseminate those products to advance the media literacy
-            field.Initial support for the research project is made possible
+            field. Initial support for the research project is made possible
             through a grant from Facebook.
           </p>
           <ul className="pt-5 font-work-sans"></ul>
