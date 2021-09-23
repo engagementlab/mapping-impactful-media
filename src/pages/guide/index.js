@@ -30,7 +30,7 @@ function GuideIndexPage() {
             alt="A cartoon-like drawing of a map, containing imagery of trees, a river, mountains, and a drawn path over a trail."
           />
         </div>
-        <div className="flex flex-col mb-14 font-work-sans text-2xl md:text-4xl lg:ml-16 text-center items-center">
+        <div className="flex flex-col mb-14 font-work-sans text-2xl md:text-3xl lg:ml-16 text-center items-center">
           <svg
             viewBox="0 0 97 171"
             width="97.284px"

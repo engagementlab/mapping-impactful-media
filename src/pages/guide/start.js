@@ -74,7 +74,7 @@ function GuideIndexPage() {
         </div>
       </div>
       <div className="text-center mt-16">
-        <Button label="Continue" link="/guide/context" />
+        <Button label="Continue" link="/guide/faq" />
       </div>
     </Layout>
   );
