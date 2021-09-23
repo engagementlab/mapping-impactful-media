@@ -24,7 +24,7 @@ function ReportPage() {
     <Layout>
       <div
         id="report"
-        className="container mx-auto mt-14 mb-14 xl:mt-48 flex flex-col md:flex-row items-center font-work-sans text-xl md:text-2xl"
+        className="container mx-auto mt-14 mb-14 xl:mt-16 flex flex-col md:flex-row items-center font-work-sans text-xl md:text-2xl"
       >
         {/* Desktop+ */}
         <div className="w-1/2 hidden xl:block">

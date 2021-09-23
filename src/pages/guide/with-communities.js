@@ -27,7 +27,7 @@ function GuidePage() {
   const content = query.elApi.allGuideSection4[0];
   return (
     <Layout>
-      <div className="container mx-auto mt-14 mb-14 xl:mt-48 flex flex-col items-center">
+      <div className="container mx-auto mt-14 mb-14 xl:mt-16 flex flex-col items-center">
         <SubHeader
           text="4. With (And Not For) 
           Communities"

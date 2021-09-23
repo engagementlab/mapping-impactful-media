@@ -37,7 +37,7 @@ function AboutPage() {
   return (
     <Layout>
       <div id="about">
-        <div className="container mx-auto flex justify-center mt-14 mb-14 xl:mt-48 xl:ml-90 text-2xl md:text-4xl text-sunny">
+        <div className="container mx-auto flex justify-center mt-14 mb-14 xl:mt-16 xl:ml-90 text-2xl md:text-4xl text-sunny">
           <h1 className="font-bourbon text-center w-full md:w-8/12 lg:w-4/12">
             Mapping Impactful Media Literacy Practices
           </h1>

@@ -7,10 +7,13 @@ function GuideMapPage() {
   const [mapActive, setMapActive] = useState(false);
   const [mapWidth, setMapWidth] = useState(false);
   const [mapHeight, setMapHeight] = useState(false);
+
+  // Wait for layout render to get w/h
   useEffect(() => {
     const timeout = window.setTimeout(() => {
       const width = document.querySelector(`#map-container`).clientWidth;
       const height = document.querySelector(`#map-container`).clientHeight;
+
       setMapWidth(width);
       setMapHeight(height);
       setMapActive(true);
@@ -20,7 +23,7 @@ function GuideMapPage() {
 
   return (
     <Layout>
-      <div className="container mx-auto mt-14 mb-14 xl:mt-48 xl:w-11/12">
+      <div className="container mx-auto mt-14 mb-14 xl:w-11/12">
         <div className="flex flex-col xl:flex-row">
           <div className="px-5 xl:px-0 font-work-sans text-3xl xl:text-5xl w-full xl:w-5/12 leading-10 xl:leading-64">
             <p>

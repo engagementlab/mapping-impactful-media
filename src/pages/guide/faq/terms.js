@@ -80,7 +80,7 @@ function GuideTermsPage() {
   `);
   return (
     <Layout>
-      <div className="container mx-auto mt-14 mb-14 xl:mt-48 flex flex-col max-w-5xl">
+      <div className="container mx-auto mt-14 mb-14 xl:mt-16 flex flex-col max-w-5xl">
         <h1 className="font-work-sans text-center text-4xl mb-7">
           Click the questions or terms below to learn how each is defined and
           used in this field guide.

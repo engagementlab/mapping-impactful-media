@@ -29,7 +29,7 @@ function GuidePage() {
   const content = query.elApi.allGuideSection3[0];
   return (
     <Layout>
-      <div className="container mx-auto mt-14 mb-14 xl:mt-48 flex flex-col items-center">
+      <div className="container mx-auto mt-14 mb-14 xl:mt-16 flex flex-col items-center">
         <SubHeader
           text="3. Imagining (More) Inclusive Futures"
           color="bg-pink"
