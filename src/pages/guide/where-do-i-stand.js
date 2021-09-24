@@ -173,18 +173,16 @@ function GuidePage() {
                 key={`square` + i}
                 className={
                   square.color +
-                  ` w-full md:w-1/2 overflow-hidden font-bourbon text-2xl md:text-4xl lg:text-2xl xl:text-4xl`
+                  ` flex justify-center items-center w-full md:w-1/2 overflow-hidden font-bourbon text-1xl md:text-2xl`
                 }
               >
-                <span className="block px-5 py-16 xl:px-10 xl:py-32">
-                  {square.text}
-                </span>
+                <span className="block py-8 w-3/4">{square.text}</span>
               </div>
             ))}
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-evenly mb-24">
-          <div className="w-full lg:w-1/2 p-4 flex-shrink-0 leading-7 tracking-wider">
+        <div className="flex flex-col lg:flex-row mb-24">
+          <div className="w-full lg:w-5/12 p-4 flex-shrink-0 leading-7 tracking-wider">
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.story}
             </ReactMarkdown>

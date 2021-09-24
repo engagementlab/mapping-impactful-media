@@ -26,19 +26,19 @@ function GuideWhatElsePage() {
       >
         <div className="lg:w-1/2 flex-shrink-0">
           <SubHeader text="What Else You Need To Know" color="bg-peach" />
-          <div className="w-full flex justify-center">
-            <Image
-              className="mt-11"
-              imgId="girl-1"
-              width={346}
-              alt={`A cartoonish drawing of a young woman carrying a bag full of carrots and bread. The bag has the words "Save the Earth" on it.`}
-            />
+          <div className="lg:mt-32 text-xl md:text-3xl">
+            <ReactMarkdown className="px-5 lg:ml-12 lg:mt-12 font-work-sans">
+              {content.whatElse}
+            </ReactMarkdown>
           </div>
         </div>
-        <div className="lg:mt-32 text-xl md:text-3xl">
-          <ReactMarkdown className="px-5 lg:ml-12 lg:mt-12 font-work-sans">
-            {content.whatElse}
-          </ReactMarkdown>
+        <div className="w-full flex justify-center">
+          <Image
+            className="mt-11"
+            imgId="girl-1"
+            width={346}
+            alt={`A cartoonish drawing of a young woman carrying a bag full of carrots and bread. The bag has the words "Save the Earth" on it.`}
+          />
         </div>
       </div>
       <div className="text-center">
