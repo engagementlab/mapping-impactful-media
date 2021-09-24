@@ -36,13 +36,13 @@ function GuidePage() {
           color="bg-pink"
           className="text-center w-full md:w-8/12"
         />
-        <div className="flex flex-col xl:flex-row justify-between mt-28 mb-24">
-          <div className="w-full xl:w-1/2 p-4 flex-shrink-0 itemsz-center">
+        <div className="flex flex-col items-center mt-28 mb-24">
+          <div className="w-full p-4 flex-shrink-0 itemsz-center">
             <ReactMarkdown className="font-work-sans text-2xl px-4">
               {content.intro}
             </ReactMarkdown>
           </div>
-          <div className="rounded-55 bg-pink bg-opacity-25 p-5 mx-4 mt-10 xl:mt-0 lg:p-16">
+          <div className="rounded-55 bg-pink bg-opacity-25 p-5 mx-4 mt-10 xl:mt-20 lg:p-16">
             <div className="relative mt-9 lg:mt-0">
               <svg
                 viewBox="0 0 53 74"
@@ -125,18 +125,15 @@ function GuidePage() {
           Media And Our World.
         </div>
 
-        <div className="flex flex-col xl:flex-row mt-28 mb-24">
-          <div className="w-full xl:w-1/2 p-4 flex-shrink-0 items-center">
-            <ReactMarkdown className="font-work-sans text-2xl px-4">
-              {content.exercise}
-            </ReactMarkdown>
-          </div>
-          <div className="flex flex-col w-full xl:w-5/6 p-4 font-work-sans">
-            <div className="flex w-full p-4 leading-7 tracking-wider justify-center">
-              <ReactMarkdown className="text-2xl">
-                {content.alternatives}
-              </ReactMarkdown>
-            </div>
+        <div className="flex flex-col items-center w-full mt-28 p-4">
+          <ReactMarkdown className="font-work-sans text-2xl">
+            {content.exercise}
+          </ReactMarkdown>
+          <ReactMarkdown className="text-2xl mt-10">
+            {content.alternatives}
+          </ReactMarkdown>
+
+          <div className="flex flex-col w-full font-work-sans">
             <div className="flex flex-col lg:flex-row w-full p-4 leading-7 text-2xl justify-center">
               <div className="flex flex-col text-center items-center lg:border-r-4 border-pink">
                 <h4 className="bg-pink w-full py-4 px-4 font-bourbon">
@@ -158,8 +155,8 @@ function GuidePage() {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row p-4">
-          <div className="w-full lg:w-1/2 p-4 flex-shrink-0 items-center">
+        <div className="flex flex-col p-4">
+          <div className="w-full p-4 items-center">
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.voice}
             </ReactMarkdown>
@@ -171,23 +168,23 @@ function GuidePage() {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row mb-7">
-          <div className="flex flex-col w-full xl:w-1/2 p-4 flex-shrink-0 items-center">
+        <div className="flex flex-col my-7 p-4">
+          <div className="flex flex-col p-4">
             <ReactMarkdown className="font-work-sans text-2xl">
               {content.practicing}
             </ReactMarkdown>
+            <div className="flex w-full justify-center items-center">
+              <Image
+                imgId="imagining-inclusive-futures"
+                width={300}
+                alt={`A cartoonish drawing of Planet Earth`}
+              />
+            </div>
             <div className="relative rounded-55 bg-pink bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
               <ReactMarkdown className="font-work-sans text-2xl">
                 {content.practicingPrompt}
               </ReactMarkdown>
             </div>
-          </div>
-          <div className="flex w-full lg:w-1/2 justify-center items-center">
-            <Image
-              imgId="imagining-inclusive-futures"
-              width={300}
-              alt={`A cartoonish drawing of Planet Earth`}
-            />
           </div>
         </div>
         <GuideFooter link="/guide/with-communities" />
