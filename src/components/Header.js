@@ -22,6 +22,7 @@ class Header extends Component {
                 imgId="logo.png"
                 alt="Logo with text 'Mapping Impactful Media Literacy Practices'"
                 width={305}
+                lazy={false}
               />
             </a>
           </div>
