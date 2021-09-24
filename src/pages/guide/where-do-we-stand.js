@@ -41,7 +41,8 @@ function GuidePage() {
             </div>
 
             <div className="px-6 py-4 mt-28 bg-hibiscus font-bourbon text-2xl">
-              Goal: ???????????
+              Goal: To evaluate if your practice includes avenues for building a
+              collaborative space with the community you serve.
             </div>
           </div>
           <div className="flex flex-col items-center">
