@@ -21,19 +21,15 @@ function GuideProcessPage() {
   return (
     <Layout>
       <div
-        className="mb-28 flex flex-col xl:flex-row
+        className="mb-28
       "
       >
-        <div className="xl:w-1/2 flex-shrink-0">
+        <div className="w-full">
           <SubHeader text="Process v. Outcomes: A Note" color="bg-pink" />
-          <ReactMarkdown className="px-5 xl:ml-12 lg:mt-12 font-work-sans text-2xl">
-            {content.process1}
-          </ReactMarkdown>
-        </div>
-        <div className="mt-12 xl:mt-32 text-xl md:text-4xl">
-          <ReactMarkdown className="lg:leading-10 px-8 py-9 lg:px-20 lg:py-28 lg:mx-12 lg:mt-12 rounded-55 bg-pink bg-opacity-25 font-work-sans text-center">
-            {content.process2}
-          </ReactMarkdown>
+          <div className="px-5 xl:ml-12 lg:mt-12 font-work-sans text-2xl">
+            <ReactMarkdown>{content.process1}</ReactMarkdown>
+            <ReactMarkdown>{content.process2}</ReactMarkdown>
+          </div>
         </div>
       </div>
       <div className="text-center">

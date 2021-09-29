@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 
+import BackToMap from '../../components/BackToMap';
 import Image from '../../components/Image';
 import Layout from '../../components/Layout';
 
@@ -103,7 +104,6 @@ function GuideEndPage() {
           {content.readMore}
         </ReactMarkdown>
       </div>
-
       <div className="w-full flex flex-col text-center items-center">
         <ReactMarkdown className="md:w-3/4 lg:w-2/5 font-work-sans text-3xl leading-10">
           {content.share}
@@ -114,6 +114,11 @@ function GuideEndPage() {
           alt="A cartoonish drawing of a boy tending a garden"
           className="mt-9"
         />
+      </div>
+      <div className="container mx-auto w-full">
+        <div className="mt-10 md:mt-0 md:w-1/2 lg:w-5/12">
+          <BackToMap />
+        </div>
       </div>
     </Layout>
   );
