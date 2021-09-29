@@ -166,6 +166,8 @@ function TeamPage() {
           Many scholars have contributed to the project without a formal
           connection to the grant. Their work provided fresh perspectives and
           needed insight into the fields of media literacy and social justice.
+          We want to thank Aaron Stier-Cohen for their assistance in this
+          project.
         </div>
 
         <h3 className="block my-14 font-bourbon text-xl">Special Thanks</h3>
