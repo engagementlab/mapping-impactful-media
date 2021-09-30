@@ -156,9 +156,9 @@ function IndexPage() {
                 alt="Logo for Emerson College"
               />
               <Image
-                imgId="texas-am"
-                width={243}
-                alt="Logo for Texas A&M University"
+                imgId="syracuse"
+                width={263}
+                alt="Logo for Syracuse University"
               />
               <Image
                 imgId="iowa"
