@@ -30,12 +30,12 @@ function ReportPage() {
         <div className="w-1/2 hidden xl:block">
           <Image
             imgId="report-4"
-            width={620}
+            width={227}
             alt="A cartoonish drawing of a boy tending a garden in front of a large orange circle."
           />
           <Image
             imgId="report-2"
-            width={620}
+            width={227}
             alt={`A cartoonish drawing of the side-view of the bottom three-quarters of a woman's head. On the other top quarter above her head are drawings of a wifi signal symbol, flowers and plants, and circles, as well as a red thought bubble that has the words "How does this make me feel?" in it. All of this is on top of a peach-colored circle.`}
           />
         </div>
@@ -73,12 +73,12 @@ function ReportPage() {
         <div className="w-1/2 hidden xl:block">
           <Image
             imgId="report-3"
-            width={620}
+            width={227}
             alt={`A cartoonish drawing of a young woman carrying a bag full of carrots and bread. The bag has the words "Save the Earth" on it. The drawing is on top of a pink circle.`}
           />
           <Image
             imgId="report-1"
-            width={620}
+            width={227}
             alt={`A cartoonish drawing of a professorial-looking person in front of a chalkboard. They are holding a red book with the title "Civic Media", and the chalkboard has the words "How can media literacy be used to empower diverse voices?" on it. The drawing is on top of a yellow circle.`}
           />
         </div>

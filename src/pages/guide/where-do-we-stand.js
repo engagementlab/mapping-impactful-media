@@ -64,7 +64,7 @@ function GuidePage() {
               {content.enabling}
             </ReactMarkdown>
           </div>
-          <div className="mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
+          <div className="mx-4 lg:ml-16 mt-9 lg:mt-0">
             <Image
               imgId="where-do-we-stand-1"
               width={650}

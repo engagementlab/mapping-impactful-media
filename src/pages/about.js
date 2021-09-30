@@ -119,7 +119,7 @@ function AboutPage() {
               3
             </div>
           </div>
-          <div className="relative p-4 xl:p-0 mt-14 md:ml-64 xl:ml-80 md:w-1/2 lg:w-1/3">
+          <div className="relative p-4 xl:p-0 mt-14 md:ml-64 xl:ml-80 md:w-1/2 lg:w-1/4">
             {ReactHtmlParser(phase3Heading)}
           </div>
           <div className="p-4 mt-0 xl:mt-14 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 leading-9">

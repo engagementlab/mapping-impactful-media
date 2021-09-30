@@ -27,14 +27,18 @@ class Image extends Component {
         ? ``
         : `mapping-impactful-media/img/`;
     const cloudImage = cld.image(`${prefix}${this.props.imgId}`);
-    let plugins = [responsive([800, 1000, 1400])];
+    let plugins = [];
 
     // Create image transforms
     cloudImage.addTransformation(this.props.transforms || `f_auto,dpr_auto`);
 
     // If lazyload not set to false, enable
     if (this.props.lazy === undefined)
-      plugins.push(lazyload(), placeholder(`blur`));
+      plugins.push(
+        responsive([800, 1000, 1400]),
+        lazyload(),
+        placeholder(`blur`)
+      );
 
     return (
       <AdvancedImage
