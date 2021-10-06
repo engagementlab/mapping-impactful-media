@@ -44,7 +44,7 @@ function AboutPage() {
           </h1>
         </div>
         <div className="container mx-auto p-5 flex flex-col-reverse md:flex-row">
-          <div className="w-full md:w-3/4 xl:w-5/12 xl:pt-32 xl:ml-36 font-work-sans text-2xl md:text-3xl leading-9 list-inside">
+          <div className="w-full md:w-3/4 xl:w-5/12 xl:pt-32 xl:ml-36 font-work-sans">
             <ReactMarkdown>
               {aboutContent.elApi.allMimAboutPages[0].intro}
             </ReactMarkdown>
@@ -59,7 +59,7 @@ function AboutPage() {
         </div>
 
         <div className="flex justify-center">
-          <div className="lg:w-3/4 xl:w-1/3 px-6 lg:px-24 py-16 font-work-sans text-2xl md:text-3xl bg-pink">
+          <div className="lg:w-3/4 xl:w-1/3 px-6 lg:px-24 py-16 font-work-sans bg-pink">
             <ReactMarkdown>
               {aboutContent.elApi.allMimAboutPages[0].assumptions}
             </ReactMarkdown>
@@ -83,7 +83,7 @@ function AboutPage() {
           <div className="relative z-10 font-geotica text-9xl text-right md:text-left md:ml-64 xl:ml-80 -mt-20">
             1
           </div>
-          <div className="p-4 xl:p-0 mt-14 md:ml-64 xl:ml-80 xl:w-2/5 leading-9">
+          <div className="p-4 xl:p-0 mt-14 md:ml-64 xl:ml-80 xl:w-2/5 font-work-sans leading-9">
             {ReactHtmlParser(aboutContent.elApi.allMimAboutPages[0].phase1Html)}
           </div>
         </div>
@@ -100,10 +100,10 @@ function AboutPage() {
               2
             </h1>
           </div>
-          <div className="relative mt-14 md:left-1/2 md:w-1/3 lg:w-1/4">
+          <div className="relative mt-14 md:left-1/2 md:w-1/3 lg:w-1/4 font-work-sans">
             {ReactHtmlParser(phase2Heading)}
           </div>
-          <div className="p-4 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 leading-9">
+          <div className="p-4 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 font-work-sans leading-9">
             {ReactHtmlParser(phase2Content)}
           </div>
         </div>
@@ -120,14 +120,14 @@ function AboutPage() {
               3
             </div>
           </div>
-          <div className="relative p-4 xl:p-0 mt-14 md:ml-64 xl:ml-80 md:w-1/2 lg:w-1/4">
+          <div className="relative p-4 xl:p-0 mt-14 md:ml-64 xl:ml-80 md:w-1/2 lg:w-1/4 font-work-sans">
             {ReactHtmlParser(phase3Heading)}
           </div>
-          <div className="p-4 mt-0 xl:mt-14 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 leading-9">
+          <div className="p-4 mt-0 xl:mt-14 md:ml-64 xl:p-0 xl:ml-80 xl:w-2/5 font-work-sans leading-9">
             {ReactHtmlParser(phase3Content)}
           </div>
         </div>
-        <div className="p-4 mt-0 xl:mt-14 md:ml-64 xl:w-2/5 leading-9">
+        <div className="p-4 mt-0 xl:mt-14 md:ml-64 xl:w-2/5 font-work-sans leading-9">
           <h2 className="relative mt-20">Contact</h2>
           {ReactHtmlParser(aboutContent.elApi.allMimAboutPages[0].contactHtml)}
         </div>
