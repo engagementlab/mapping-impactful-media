@@ -11,18 +11,23 @@ class Footer extends Component {
           </h3>
 
           <p className="lg:mx-20 italic text-sm leading-6">
-            Initial support for the research project is made possible through a
-            grant from Facebook. To ensure the independence and integrity of
-            this research effort, NAMLE will maintain full authority regarding
-            project strategy, budget, personnel decisions, or research
-            activities. Facebook will not have direct control over the research
-            design, methodology, analysis, or findings. NAMLE and any research
-            authors will maintain exclusive copyright over all products and
-            freely disseminate those products to advance the media literacy
-            field. Initial support for the research project is made possible
-            through a grant from Facebook.
+            Initial support for the research project is made possible through
+            the National Association for Media Literacy Education and Facebook.
+            To ensure the independence and integrity of this research effort,
+            NAMLE maintains full authority regarding project strategy, budget,
+            personnel decisions, or research activities. Facebook has no control
+            over the research design, methodology, analysis, or findings. NAMLE
+            and any research authors will maintain exclusive copyright over all
+            products and freely disseminate those products to advance the media
+            literacy field.
           </p>
-          <ul className="pt-5 font-work-sans"></ul>
+          <p className="lg:mx-20 italic text-sm leading-6">
+            For inquiries with NAMLE, contact Michelle Ciulla Lipkin:
+            mciullalipkin[at]namle.net.
+            <br />
+            For inquiries regarding the Mapping Impactful Media Literacy
+            Project, contact Paul Mihailidis: paul_mihailidis[at]emerson.edu.
+          </p>
         </div>
         <div>
           <Image
