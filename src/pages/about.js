@@ -67,7 +67,7 @@ function AboutPage() {
         </div>
 
         {/* <!-- Phases --> */}
-        <h4 className="mb-28 mt-28 lg:ml-80 font-work-sans text-2xl lg:w-2/5 text-center">
+        <h4 className="p-5 mb-28 mt-28 lg:ml-80 font-work-sans text-2xl lg:w-2/5 text-center">
           To address these assumptions, this project advances an “ecosystem
           approach” to research that is comprised of the following three phases:
         </h4>
@@ -127,7 +127,7 @@ function AboutPage() {
             {ReactHtmlParser(phase3Content)}
           </div>
         </div>
-        <div className="p-4 mt-0 xl:mt-14 md:ml-64 xl:w-2/5 font-work-sans leading-9">
+        <div className="p-4 mt-0 xl:mt-14 md:ml-5 xl:ml-36 w-full md:w-5/6 font-work-sans leading-9">
           <h2 className="relative mt-20">Contact</h2>
           {ReactHtmlParser(aboutContent.elApi.allMimAboutPages[0].contactHtml)}
         </div>

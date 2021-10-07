@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../components/Layout';
-import Button from '../components/Button';
+// import Button from '../components/Button';
 import Image from '../components/Image';
 
 function ReportPage() {
