@@ -11,9 +11,8 @@ function GuideContextPage() {
       "
       >
         <p>
-          Before you enter into this space, we have provided some background,
-          context, and information that will help your journey here be
-          meaningful, transparent, and equity-driven.
+          Click the questions below to learn more about the terms used in this
+          field guide.
         </p>
       </div>
       <div
