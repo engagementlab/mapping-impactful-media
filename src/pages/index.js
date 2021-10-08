@@ -108,8 +108,8 @@ function IndexPage() {
             Mapping impactful media literacy practices involve the dedicated
             efforts of critical media literacy scholars, practitioners and
             activists from across the United States. The lead research team is
-            made up of four scholars and supported by our advisory group, design
-            team, and research partners in Australia.
+            made up of seven scholars and supported by our advisory board,
+            design team, and research partners in Australia.
           </p>
           <Button
             label="See the full team"
