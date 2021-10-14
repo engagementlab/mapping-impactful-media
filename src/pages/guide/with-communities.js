@@ -29,8 +29,7 @@ function GuidePage() {
     <Layout>
       <div className="container mx-auto mt-14 mb-14 xl:mt-16 flex flex-col items-center">
         <SubHeader
-          text="4. With (And Not For) 
-          Communities"
+          text="4. With Communities"
           color="bg-peach"
           className="text-center w-full md:w-8/12"
         />

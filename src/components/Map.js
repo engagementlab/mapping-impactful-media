@@ -42,7 +42,7 @@ const Map = (props) => {
         color: `#f2aaac`,
         center: [w * 0.79, h - h * 0.63],
         page: `with-communities`,
-        label: `With\n(not for)\ncommunities`,
+        label: `With Communities`,
         labelPos: [w * 0.05, h * 0.1],
       },
       {
