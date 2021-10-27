@@ -1,9 +1,10 @@
 #!/bin/bash
 
-echo "Running static build."
+echo "Running production build."
 
 # Source/load nvm
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh;
 
-nvm use;
-npm run build-ci;
+nvm install --legacy-peer-deps;
+npm i;
+npm run build;

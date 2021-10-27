@@ -88,9 +88,9 @@ dist
 out
 
 # Azure Functions artifacts
-bin
 obj
 appsettings.json
 local.settings.json
 
 build/*
+.lighthouseci

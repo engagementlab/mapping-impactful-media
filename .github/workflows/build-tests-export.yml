@@ -4,6 +4,7 @@ env:
   AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
   CI: true
   DB_URI: ${{ secrets.DB_URI }}
+  API_URL: ${{ secrets.API_URL }}
   NODE_ENV: staging
   ACTIONS_RUNNER_DEBUG: true
 jobs:
@@ -38,8 +39,7 @@ jobs:
       - name: Install global packages
         run : npm install -g pa11y-ci @lhci/cli@0.6.x
     
-      - name: Build static build of client
-        working-directory: ./client
+      - name: Build client
         run: chmod 777 ./scripts/build.sh && ./scripts/build.sh
 
       # Deploy static build to Azure storage if succeeded and commit DB export and build, if on prod PR

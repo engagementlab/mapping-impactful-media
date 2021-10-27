@@ -4,6 +4,7 @@
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh;
 
 nvm use;
+npm run clean;
 npm i -g pm2;
 npm i;
 
