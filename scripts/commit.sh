@@ -2,7 +2,7 @@
 
 echo "Commit staging database and generated static app."
 
-cp -R ./build ./bin/app
+cp -R ./public ./bin/app
 
 git config --global user.name "ELDevBot"
 git config --global user.email engagementlab@emerson.edu
