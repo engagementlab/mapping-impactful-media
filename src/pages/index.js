@@ -34,7 +34,7 @@ function IndexPage() {
       <div>
         <div className="lg:mx-20 xl:ml-96 flex flex-col-reverse lg:flex-row items-center">
           <h1 className="w-3/4 lg:w-1/3 font-work-sans font-bold text-orange text-3xl md:text-6xl">
-            Exploring Media literacy practices for just and equitable futures.
+            exploring media literacy practices for just and equitable futures.
           </h1>
           <div>
             <Image
