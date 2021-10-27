@@ -50,7 +50,7 @@ function ReportPage() {
           </h2>
 
           {/* Mobile only */}
-          <div className="w-full xl:hidden flex flex-row">
+          <div className="w-full xl:hidden flex flex-row justify-center">
             <Image
               imgId="report-4"
               width={175}
@@ -70,6 +70,19 @@ function ReportPage() {
             link={content.elApi.allMimReportPages[0].reportFile.publicUrl}
             className="xl:w-1/2"
           />
+          {/* Mobile only */}
+          <div className="w-full xl:hidden flex flex-row justify-center">
+            <Image
+              imgId="report-3"
+              width={175}
+              alt={`A cartoonish drawing of a young woman carrying a bag full of carrots and bread. The bag has the words "Save the Earth" on it. The drawing is on top of a pink circle.`}
+            />
+            <Image
+              imgId="report-1"
+              width={175}
+              alt={`A cartoonish drawing of a professorial-looking person in front of a chalkboard. They are holding a red book with the title "Civic Media", and the chalkboard has the words "How can media literacy be used to empower diverse voices?" on it. The drawing is on top of a yellow circle.`}
+            />
+          </div>
         </div>
         <div className="w-1/2 hidden xl:block">
           <Image
