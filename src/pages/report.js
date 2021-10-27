@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import Layout from '../components/Layout';
 // import Button from '../components/Button';
 import Image from '../components/Image';
+import Button from '../components/Button';
 
 function ReportPage() {
   const content = useStaticQuery(graphql`
@@ -64,11 +65,11 @@ function ReportPage() {
           <ReactMarkdown className="text-center leading-10 xl:mx-20">
             {content.elApi.allMimReportPages[0].blurb}
           </ReactMarkdown>
-          {/* <Button
+          <Button
             label="Download Full Report"
             link={content.elApi.allMimReportPages[0].reportFile.publicUrl}
             className="xl:w-1/2"
-          /> */}
+          />
         </div>
         <div className="w-1/2 hidden xl:block">
           <Image
