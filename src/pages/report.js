@@ -65,11 +65,11 @@ function ReportPage() {
           <ReactMarkdown className="text-center leading-10 xl:mx-20">
             {content.elApi.allMimReportPages[0].blurb}
           </ReactMarkdown>
-          {/* <Button
+          <Button
             label="Download Full Report"
             link={content.elApi.allMimReportPages[0].reportFile.publicUrl}
             className="xl:w-1/2"
-          /> */}
+          />
           {/* Mobile only */}
           <div className="w-full xl:hidden flex flex-row justify-center">
             <Image
