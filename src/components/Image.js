@@ -35,9 +35,9 @@ class Image extends Component {
     // If lazyload not set to false, enable
     if (this.props.lazy === undefined)
       plugins.push(
-        responsive([800, 1000, 1400]),
-        lazyload(),
-        placeholder(`blur`)
+        responsive([800, 1000, 1400])
+        // lazyload(),
+        // placeholder(`blur`)
       );
 
     return (
