@@ -20,6 +20,7 @@ function GuidePage() {
           mediaPrompt2
           withNotFor
           withNotForPrompt
+          learningGuide
         }
       }
     }
@@ -42,8 +43,8 @@ function GuidePage() {
             </div>
 
             <div className="px-6 py-4 mt-28 bg-peach font-bourbon text-2xl">
-              Goal: To Evaluate If Your Practice Includes Avenues For Building A
-              Collaborative Space With The Community You Serve
+              Goal: To explore how media can bring communities together across
+              cultures, across differences, and across divides
             </div>
           </div>
           <div className="flex flex-col items-center">
@@ -161,6 +162,11 @@ function GuidePage() {
               {content.withNotForPrompt}
             </ReactMarkdown>
           </div>
+        </div>
+        <div className="flex justify-center items-center p-4 mb-24">
+          <ReactMarkdown className="font-work-sans text-2xl">
+            {content.learningGuide}
+          </ReactMarkdown>
         </div>
         <GuideFooter link="/guide/where-do-we-stand" />
       </div>

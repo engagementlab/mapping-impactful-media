@@ -19,6 +19,7 @@ function GuidePage() {
           capacity
           margins
           marginsPrompt
+          learningGuide
         }
       }
     }
@@ -41,8 +42,8 @@ function GuidePage() {
             </div>
 
             <div className="px-6 py-4 mt-28 bg-hibiscus font-bourbon text-2xl">
-              Goal: To evaluate if your practice includes avenues for building a
-              collaborative space with the community you serve.
+              Goal: To build enabling media environments that support healthy
+              democratic futures for all
             </div>
           </div>
           <div className="flex flex-col items-center">
@@ -99,6 +100,11 @@ function GuidePage() {
               {content.marginsPrompt}
             </ReactMarkdown>
           </div>
+        </div>
+        <div className="flex justify-center items-center p-4 mb-24">
+          <ReactMarkdown className="font-work-sans text-2xl">
+            {content.learningGuide}
+          </ReactMarkdown>
         </div>
         <GuideFooter link="/guide/complete" />
       </div>

@@ -20,6 +20,7 @@ function GuidePage() {
           caringWithPrompt
           careful
           carefulPrompt
+          learningGuide
         }
       }
     }
@@ -124,6 +125,11 @@ function GuidePage() {
               alt={`A drawing of two people climbing a ladder. The person near the top is lending their hand to the lower person.`}
             />
           </div>
+        </div>
+        <div className="flex justify-center items-center p-4 mb-24">
+          <ReactMarkdown className="font-work-sans text-2xl">
+            {content.learningGuide}
+          </ReactMarkdown>
         </div>
       </div>
       <GuideFooter link="/guide/imagining-inclusive-futures" />

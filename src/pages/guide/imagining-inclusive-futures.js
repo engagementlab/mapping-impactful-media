@@ -22,6 +22,7 @@ function GuidePage() {
           voicePrompt
           practicing
           practicingPrompt
+          learningGuide
         }
       }
     }
@@ -186,6 +187,11 @@ function GuidePage() {
               </ReactMarkdown>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center items-center p-4 mb-24">
+          <ReactMarkdown className="font-work-sans text-2xl">
+            {content.learningGuide}
+          </ReactMarkdown>
         </div>
         <GuideFooter link="/guide/with-communities" />
       </div>
