@@ -18,6 +18,7 @@ function GuidePage() {
           resourcesPrompt
           atStake
           story
+          learningGuide
         }
       }
     }
@@ -67,8 +68,8 @@ function GuidePage() {
             </ReactMarkdown>
 
             <div className="px-6 py-4 bg-bee font-bourbon text-2xl">
-              Goal: To build more equity in media literacy education through the
-              use of Standpoint
+              Goal: To develop self-awareness of our social location at the
+              start of any media literacy learning experience
             </div>
           </div>
           <div className="relative rounded-55 bg-bee bg-opacity-25 p-5 mx-4 lg:p-16 lg:ml-16 mt-9 lg:mt-0">
@@ -194,6 +195,11 @@ function GuidePage() {
               alt="A cartoonish drawing of an orange question mark."
             />
           </div>
+        </div>
+        <div className="flex justify-center items-center p-4 mb-24">
+          <ReactMarkdown className="font-work-sans text-2xl">
+            {content.learningGuide}
+          </ReactMarkdown>
         </div>
         <GuideFooter link="/guide/who-cares" />
       </div>
